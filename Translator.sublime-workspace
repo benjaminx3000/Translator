@@ -1,0 +1,985 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"wordpress",
+				"wordpress"
+			],
+			[
+				"widt",
+				"widget"
+			],
+			[
+				"vis",
+				"visited"
+			],
+			[
+				"entr",
+				"entry-header"
+			],
+			[
+				"error",
+				"error_log"
+			],
+			[
+				"p",
+				"p"
+			],
+			[
+				"paddin",
+				"padding-right"
+			],
+			[
+				"fan",
+				"fancy"
+			],
+			[
+				"Start",
+				"StartupWI"
+			],
+			[
+				"event",
+				"events"
+			],
+			[
+				"co",
+				"Could"
+			],
+			[
+				"com",
+				"companies"
+			],
+			[
+				"a",
+				"answer"
+			],
+			[
+				"li",
+				"link	Tag"
+			],
+			[
+				"hea",
+				"head	Tag"
+			],
+			[
+				"mysql_err",
+				"mysql_error"
+			],
+			[
+				"ph",
+				"phone_number"
+			],
+			[
+				"liste",
+				"listen"
+			],
+			[
+				"w",
+				"write"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"hi",
+				"height"
+			],
+			[
+				"bo",
+				"border	border-right: size style color"
+			],
+			[
+				"fig",
+				"figcaption"
+			],
+			[
+				"ca",
+				"caption	Tag"
+			],
+			[
+				"op",
+				"opacity	opacity: [for Safari, FF & IE]"
+			],
+			[
+				"lin",
+				"line-height"
+			],
+			[
+				"eve",
+				"event-info"
+			],
+			[
+				"ms",
+				"moz-box-sizing"
+			],
+			[
+				"evet",
+				"event-info"
+			],
+			[
+				"we",
+				"webkit-box-sizing"
+			],
+			[
+				"bord",
+				"border-box"
+			],
+			[
+				"r",
+				"right"
+			],
+			[
+				"righ",
+				"rightColumnContent"
+			],
+			[
+				"su",
+				"success"
+			],
+			[
+				"lo",
+				"location"
+			],
+			[
+				"che",
+				"checkForm"
+			],
+			[
+				"Reg",
+				"RegistrationForm"
+			],
+			[
+				"c",
+				"click"
+			],
+			[
+				"Registration",
+				"RegistrationSubmit"
+			],
+			[
+				"re",
+				"relative"
+			],
+			[
+				"Regi",
+				"RegistrationBlock"
+			],
+			[
+				"box-s",
+				"box-shadow"
+			],
+			[
+				"bac",
+				"background	background-image: url"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"emai",
+				"Email"
+			],
+			[
+				"bor",
+				"border-box"
+			],
+			[
+				"padd",
+				"padding	padding: V H"
+			],
+			[
+				"in",
+				"input	Tag"
+			],
+			[
+				"i",
+				"img	Tag"
+			],
+			[
+				"di",
+				"dig-in"
+			],
+			[
+				"wid",
+				"widget-title"
+			],
+			[
+				"even",
+				"eventsListWidget"
+			],
+			[
+				"fun",
+				"function_exists"
+			],
+			[
+				"func",
+				"function"
+			],
+			[
+				"th",
+				"th	Tag"
+			],
+			[
+				"do",
+				"domain"
+			],
+			[
+				"fou",
+				"fourohfour"
+			],
+			[
+				"app",
+				"App"
+			],
+			[
+				"post",
+				"postURL"
+			],
+			[
+				"mer",
+				"MERGE0"
+			],
+			[
+				"fire",
+				"fireEvent"
+			],
+			[
+				"for",
+				"formData"
+			],
+			[
+				"va",
+				"vertical-align"
+			],
+			[
+				"inli",
+				"inline"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"box",
+				"box-sizing"
+			],
+			[
+				"no",
+				"none"
+			],
+			[
+				"dis",
+				"display	display: block"
+			],
+			[
+				"le",
+				"left"
+			],
+			[
+				"moz",
+				"moz-box-sizing"
+			],
+			[
+				"back",
+				"background	background-position: position"
+			],
+			[
+				"add",
+				"addlArtistsHeader"
+			],
+			[
+				"over",
+				"overflow-y"
+			],
+			[
+				"arti",
+				"artist"
+			],
+			[
+				"art",
+				"artist_name"
+			],
+			[
+				"ar",
+				"artists"
+			],
+			[
+				"additions",
+				"additional_artists_template"
+			],
+			[
+				"rel",
+				"relatedActs"
+			],
+			[
+				"clo",
+				"color	color: name"
+			],
+			[
+				"colo",
+				"colophon"
+			],
+			[
+				"list-style",
+				"list-style-type"
+			],
+			[
+				"list",
+				"list	list-style-type: roman-alpha-greek"
+			],
+			[
+				"webkit-box",
+				"webkit-box-sizing"
+			],
+			[
+				"border-",
+				"border-box"
+			],
+			[
+				"text",
+				"text	text-shadow: color-hex x y blur"
+			],
+			[
+				"h",
+				"h1	Tag"
+			],
+			[
+				"exp",
+				"exports"
+			],
+			[
+				"padding-l",
+				"padding-left"
+			],
+			[
+				"fe",
+				"FAF6E6"
+			],
+			[
+				"mo",
+				"moz-border-radius"
+			],
+			[
+				"webkit",
+				"webkit-border-radius"
+			],
+			[
+				"he",
+				"Helvetica"
+			],
+			[
+				"rea",
+				"repeat-x"
+			],
+			[
+				"s",
+				"solid"
+			],
+			[
+				"en",
+				"entry-meta"
+			],
+			[
+				"ce",
+				"center"
+			],
+			[
+				"Rec",
+				"RecentContainer"
+			],
+			[
+				"tra",
+				"TransitionDuration"
+			],
+			[
+				"col",
+				"color	color: hex"
+			],
+			[
+				"par",
+				"parseInt"
+			],
+			[
+				"func_get",
+				"func_get_args"
+			],
+			[
+				"_",
+				"$_: POST['…']"
+			],
+			[
+				"outer",
+				"outerheight"
+			],
+			[
+				"font",
+				"font: font-size: size"
+			],
+			[
+				"displ",
+				"display: display: block"
+			],
+			[
+				"cent",
+				"centeredItem"
+			],
+			[
+				"te",
+				"textarea"
+			],
+			[
+				"res",
+				"resizable"
+			],
+			[
+				"color",
+				"color: color: name"
+			],
+			[
+				"cons",
+				"console"
+			],
+			[
+				"to",
+				"top_height"
+			],
+			[
+				"hei",
+				"height"
+			],
+			[
+				"lis",
+				"list: list-style-type: other"
+			],
+			[
+				"dec",
+				"decoration"
+			],
+			[
+				"visi",
+				"visibility: visibility: type"
+			],
+			[
+				"con",
+				"content"
+			],
+			[
+				"cont",
+				"content"
+			],
+			[
+				"sh",
+				"shadow"
+			],
+			[
+				"sta",
+				"static"
+			],
+			[
+				"v",
+				"vertical: vertical-align: type"
+			],
+			[
+				"padding",
+				"padding: padding: T R B L"
+			],
+			[
+				"sea",
+				"searchVal"
+			],
+			[
+				"typ",
+				"type"
+			],
+			[
+				"utility",
+				"utilityNav"
+			],
+			[
+				"top",
+				"top"
+			],
+			[
+				"margin",
+				"margin: margin: T R B L"
+			],
+			[
+				"al",
+				"align"
+			],
+			[
+				"tet",
+				"text"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/Java/Ant.sublime-build",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"fet",
+				"Fetch"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 176.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/katieliesch/Sites/wordpress/wp-content/themes/Translator/Translator.sublime-workspace",
+		"/Users/katieliesch/Sites/Translator/github.php",
+		"/Users/katieliesch/Sites/Translator/help.html",
+		"/Users/katieliesch/Sites/Translator/help",
+		"/Users/katieliesch/Sites/Translator/css/style.jss",
+		"/Users/katieliesch/Sites/Translator/readme.md",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/stage.translatordigitalcafe.com/pinstripe/Pinstripe.plist",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/apps.translatordigitalcafe.com/abk/signup/ABK.ipa",
+		"/Users/katieliesch/Downloads/ABK_Sign_Up.mobileprovision",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/apps.translatordigitalcafe.com/abk/signup/ABK.plist",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/apps.translatordigitalcafe.com/abk/signup/index.html",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/apps.translatordigitalcafe.com/abk/signup/ABK Signup App.plist",
+		"/Users/katieliesch/Documents/Titanium Studio Workspace/ABK Signup App/Release/index.html",
+		"/Users/katieliesch/Documents/titanium/Egg-Vestment/Info.plist",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/2c63811f-cb1c-414f-9bdd-a3adfd740108/wp-content/themes/twentyeleven/footer.php",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/apps.translatordigitalcafe.com/abk/signup/MCAPI.class.php",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/stage.translatordigitalcafe.com/pinstripe/index.html",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/apps.translatordigitalcafe.com/translator/signup/api/mailchimp-api-class/examples/mcapi_listSubscribe.php",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/apps.translatordigitalcafe.com/translator/signup/api/api-interface.php",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/aa931fc8-bb40-4157-8c9c-724c22f2deec/public_html/css/styles.css",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/apps.translatordigitalcafe.com/translator/signup/api-interface.php",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/apps.translatordigitalcafe.com/translator/signup/api/info.log",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/aa931fc8-bb40-4157-8c9c-724c22f2deec/public_html/index.php",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/aa931fc8-bb40-4157-8c9c-724c22f2deec/public_html/js/script.js",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/aa931fc8-bb40-4157-8c9c-724c22f2deec/public_html/events/launch-event.php",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/aa931fc8-bb40-4157-8c9c-724c22f2deec/public_html/js/jquery.quicksand.js",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/apps.translatordigitalcafe.com/startupWI/votingApp.php",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/apps.translatordigitalcafe.com/startupWI/vote-test.php",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/apps.translatordigitalcafe.com/startupWI/results.php",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/aa931fc8-bb40-4157-8c9c-724c22f2deec/public_html/index.html",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/mkeshindig.com/list.tpl.php",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/2c63811f-cb1c-414f-9bdd-a3adfd740108/ben/votingApp.php",
+		"/Users/katieliesch/Documents/Freelance/Translator/StartupWisc/votingApp.php",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/mkeshindig.com/register.php",
+		"/Users/katieliesch/Documents/Freelance/Translator/StartupWisc/tropo-webapi-php/tropo.class.php",
+		"/Users/katieliesch/Sites/Node/app.js",
+		"/Users/katieliesch/Sites/Node/HelloWorld.js",
+		"/Users/katieliesch/Sites/Node/chat.js",
+		"/Users/katieliesch/Sites/Node/views/about.jade",
+		"/Users/katieliesch/Sites/Node/public/stylesheets/style.styl",
+		"/Users/katieliesch/Sites/Node/html/css/style.css",
+		"/Users/katieliesch/Sites/Node/html/index.html",
+		"/Users/katieliesch/Downloads/h5bp-initializr-3.0/index.html",
+		"/Users/katieliesch/Sites/Node/views/layout.jade",
+		"/Users/katieliesch/Sites/Node/views/index.jade",
+		"/Users/katieliesch/Sites/Node/settings",
+		"/Users/katieliesch/Sites/Node/chat.html",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/translatorlab.com/css/main.css",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/translatorlab.com/events/chris-guillebeau.php",
+		"/Users/katieliesch/Documents/Titanium Studio Workspace/Translator Signup App/Resources/ui/components/Form.js",
+		"/Users/katieliesch/Documents/Freelance/Translator/StartupWisc/update.csv",
+		"/Users/katieliesch/Documents/Freelance/Translator/StartupWisc/Startup Wisc- Save the Date.html",
+		"/Users/katieliesch/Documents/Freelance/Translator/StartupWisc/Event Email/email.html",
+		"/Users/katieliesch/Documents/Freelance/Translator/HelloWorld/helloword/helloworld.py",
+		"/Users/katieliesch/Documents/Freelance/Translator/HelloWorld/HelloWorld.py",
+		"/Users/katieliesch/Documents/Freelance/Translator/HelloWorld/helloword/app.yaml",
+		"/Users/katieliesch/Documents/Freelance/Translator/StartupWisc/Event Email/gener8tor-update.csv",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/2c63811f-cb1c-414f-9bdd-a3adfd740108/benandkatearegreat/index.html",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/translatorlab.com/js/script.js",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/translatordigitalcafe.com/wp-content/themes/twentyeleven/index.php",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/translatordigitalcafe.com/wp-content/themes/twentyeleven/page.php",
+		"/Users/katieliesch/Downloads/h5bp-initializr-3.0/.htaccess",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/translatorlab.com/includes/footer.php",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/translatorlab.com/events/austin-kleon.php",
+		"/Users/katieliesch/Desktop/atendees.csv",
+		"/Users/katieliesch/Documents/Freelance/Translator/ABK/email/html/save-the-date.html",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/translatorlab.com/index.html",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/c63eea89-3f6c-4d1f-a696-6516121394da/var/www/httpdocs/abkdev/abkdrupal/sites/all/themes/abktheme/node.tpl.php",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/08d30ae3-e94c-4a03-b6e4-8a5cf1a09135/var/www/httpdocs/abkdrupal/sites/all/themes/abktheme/node-product.tpl.php",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/c63eea89-3f6c-4d1f-a696-6516121394da/var/www/httpdocs/abkdev/abkdrupal/sites/all/themes/abktheme/node-product.tpl.php",
+		"/Users/katieliesch/Downloads/mcapi-simple-subscribe-jquery/inc/store-address.php",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/translatorlab.com/index.test.html",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/mkeshindig.com/signup.php",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/translatorlab.com/register.php",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/mkeshindig.com/response.php",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/mkeshindig.com/js/plugins.js",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/mkeshindig.com/splash.php",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/mkeshindig.com/js/script.js",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/translatorlab.com/js/plugins.js",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/mkeshindig.com/index.php",
+		"/Users/katieliesch/Documents/unityWorkSpace/DinnerSpinner/DinnerSpinner/Assets/MyAssets/Scripts/Spinner.cs",
+		"/Users/katieliesch/Documents/unityWorkSpace/DinnerSpinner/DinnerSpinner/Assets/MyAssets/Scripts/constrainedDrag.cs",
+		"/Users/katieliesch/Documents/unityWorkSpace/DinnerSpinner/DinnerSpinner/Assets/MyAssets/Scripts/UI.cs",
+		"/Users/katieliesch/Documents/unityWorkSpace/DinnerSpinner/DinnerSpinner/Assets/MyAssets/Scripts/DinnerSpinner.cs",
+		"/Users/katieliesch/Documents/unityWorkSpace/DinnerSpinner/DinnerSpinner/Assets/MyAssets/Scripts/Menues/Nav.cs",
+		"/Users/katieliesch/Documents/unityWorkSpace/DinnerSpinner/DinnerSpinner/Assets/MyAssets/Scripts/Manager.cs",
+		"/Users/katieliesch/Documents/Freelance/Translator/Shindig Multi Act/multiAct_files/saved_resource",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/apps.translatordigitalcafe.com/translator/signup/index.html",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/translatordigitalcafe.com/app/proxie.php",
+		"/Users/katieliesch/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/stage.translatordigitalcafe.com/pinstripe/properties.txt",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/46bafd8d-46ca-47c1-ab35-7aea73999d63/vintageelkhartlake.com/wp-content/themes/wine-o/header.php",
+		"/Users/katieliesch/Documents/Freelance/Translator/invivo/stylins.css",
+		"/Users/katieliesch/Documents/Freelance/Translator/Pinstripe/Pinstrip App/to-do.txt",
+		"/Users/katieliesch/Documents/Titanium Studio Workspace/Pinstripe iPad/Resources/model/rpo.js",
+		"/Users/katieliesch/Documents/Freelance/Translator/invivo/Massage Therapy   Invivo_files/style.css",
+		"/Users/katieliesch/Documents/Titanium Studio Workspace/Pinstripe iPad/Resources/model/Questionaire.js",
+		"/Users/katieliesch/Documents/Freelance/Translator/Tranlsator",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/5bb67cdf-e408-48d7-b217-b67a2d34df1c/public_html/milwaukeebrewing.com/wp-content/themes/mbc/page.php",
+		"/Users/katieliesch/Sites/CanvasLab/index.html",
+		"/Users/katieliesch/Sites/CanvasLab/js/script.js",
+		"/Users/katieliesch/Documents/Freelance/Translator/iphone.svg",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/5bb67cdf-e408-48d7-b217-b67a2d34df1c/public_html/milwaukeebrewing.com/wp-content/themes/mbc/single.php",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/5bb67cdf-e408-48d7-b217-b67a2d34df1c/public_html/milwaukeebrewing.com/wp-content/themes/mbc/taxonomy.php",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/5bb67cdf-e408-48d7-b217-b67a2d34df1c/www/mbc/.htaccess",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/5bb67cdf-e408-48d7-b217-b67a2d34df1c/public_html/mbc/.htaccess",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/5bb67cdf-e408-48d7-b217-b67a2d34df1c/public_html/milwaukeebrewing.com/.htaccess",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/5bb67cdf-e408-48d7-b217-b67a2d34df1c/www/.htaccess",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/5bb67cdf-e408-48d7-b217-b67a2d34df1c/public_html/.htaccess",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/translatordigitalcafe.com/wp-config.php",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/translatordigitalcafe.com/wp-content/themes/translator/style.css",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/translatordigitalcafe.com/wp-activate.php",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/translatordigitalcafe.com/wp-config.php.old",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/translatordigitalcafe.com/index.php",
+		"/Users/katieliesch/Documents/Freelance/Translator/wp-config.php",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/translatordigitalcafe.com/wp-includes/plugin.php",
+		"/Users/katieliesch/Downloads/wordpress-1/wp-includes/http.php",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/home/deziner13/dev.translatordigitalcafe.com/wp-config.php",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/home/deziner13/logs/translatordigitalcafe.com/http/error.log",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/home/deziner13/logs/translatordigitalcafe.com/http/http.12879206/analog/translatordigitalcafe.com.daily.conf",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/home/deziner13/logs/translatordigitalcafe.com/http/http.12879206/error.log",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/home/deziner13/logs/translatordigitalcafe.com/http/error.log.0",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/home/deziner13/logs/translatordigitalcafe.com/http/error.log.2012-04-09",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/home/deziner13/logs/translatordigitalcafe.com/http/error.log.2012-04-08",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/home/deziner13/logs/translatordigitalcafe.com/http/error.log.2012-04-05.gz",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/home/deziner13/logs/translatordigitalcafe.com/http/access.log",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/translatordigitalcafe.com/.htaccess",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/translatordigitalcafe.com/LiveSearchSiteAuth.xml"
+	],
+	"find":
+	{
+		"height": 33.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"h2",
+			"left",
+			"#access",
+			"requireonce",
+			"require_once",
+			"errorCo",
+			"a",
+			"already subscribed",
+			"error",
+			"style=\"font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; font-size: 13px; line-height: 18px; -webkit-text-size-adjust: auto; \"",
+			"\"color: rgb(51, 51, 51); font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; font-size: 13px; line-height: 18px; -webkit-text-size-adjust: auto; \"",
+			"label",
+			"headercontact",
+			" {",
+			"\\n",
+			"btn-toolkit",
+			"script.js",
+			"entrepreneurs",
+			"us",
+			"packed",
+			"us",
+			"one",
+			"\\n",
+			"print",
+			"$tropo->say",
+			"$tropy->say",
+			"print",
+			"_log",
+			"\\t(.*?)\\n",
+			"[<|>]",
+			" ",
+			"(?<=\\n)\\n",
+			"com",
+			"[(|)]",
+			" ",
+			"utility",
+			"monkeyrewards",
+			"std_footer",
+			"templateContainer",
+			"http:./.",
+			"\\t",
+			"\\n",
+			"\\n\n	border-top-color: #e8e8d8;\n	border-top-width: 1px;\n\n	border-right-style: solid;\n	border-right-color: #e8e8d8;\n	border-right-width: 1px;\n\n	border-bottom-style: solid;\n	border-bottom-color: #e8e8d8;\n	border-bottom-width: 1px;\n\n	border-left-style: solid;\n	border-left-color: #e8e8d8;\n	border-left-width: 1px;",
+			"\n	border-top-color: #e8e8d8;\n	border-top-width: 1px;\n\n	border-right-style: solid;\n	border-right-color: #e8e8d8;\n	border-right-width: 1px;\n\n	border-bottom-style: solid;\n	border-bottom-color: #e8e8d8;\n	border-bottom-width: 1px;\n\n	border-left-style: solid;\n	border-left-color: #e8e8d8;\n	border-left-width: 1px;",
+			"border-top-style: solid;\n	border-top-color: #e8e8d8;\n	border-top-width: 1px;\n\n	border-right-style: solid;\n	border-right-color: #e8e8d8;\n	border-right-width: 1px;\n\n	border-bottom-style: solid;\n	border-bottom-color: #e8e8d8;\n	border-bottom-width: 1px;\n\n	border-left-style: solid;\n	border-left-color: #e8e8d8;\n	border-left-width: 1px;",
+			"Cheif",
+			"br ",
+			"br",
+			"pics/fb",
+			"toggle",
+			"  ",
+			"mod_re",
+			"small",
+			"event-info",
+			"td",
+			"../",
+			"=\"../",
+			"templateCont",
+			"jpg",
+			"link",
+			"prehead",
+			"templatePre",
+			".bodyContent",
+			"templateCont",
+			"templateConteiner",
+			"600",
+			" \\| ",
+			" | ",
+			"lunch",
+			"rightColumnContent",
+			"sidebar",
+			"^\\S+\\.\\S+",
+			"^\\S+\\.+\\S+",
+			"^\\S+\\.\\S+",
+			"^\\S+\\.\\S{3}+/g",
+			"paypal",
+			"listSub",
+			"bbb",
+			"cons",
+			"the const",
+			"regins",
+			"RegisterLunch",
+			"	",
+			"									",
+			"        ",
+			"      ",
+			"form",
+			"weight",
+			"’",
+			"\" />",
+			"&laquo;",
+			"&raquo;",
+			"”",
+			"“",
+			"’",
+			"tour",
+			"	",
+			" />",
+			"cursor",
+			"<?",
+			"			",
+			"u=4f0df1102a56ea0f4cc811f93&id=8d4e83ef68&MERGE0=ben%40translatordigitalcafe.com&MERGE1=ben%40translatordigitalcafe.com&MERGE2=&MERGE3=Alpha+Beta+Karma&MERGE4=&group%5B7421%5D%5B1%5D=1&group%5B7421%5D%5B2%5D=1",
+			"&group%5B7421%5D%5B1%5D=1",
+			"&group%5B7",
+			"red",
+			"API",
+			"<br>",
+			"<td align=\"left\">",
+			"<td align=\"right\" class=\"formLabel\">",
+			"<(td|.td|\\n)*?>",
+			"<(tr|.tr|\\n)*?>",
+			"	",
+			"		",
+			"reverse",
+			"	",
+			"999999",
+			"profile",
+			".plus",
+			"\\n",
+			"•",
+			"			",
+			"  ",
+			"proposed",
+			"        ",
+			"		",
+			"featured",
+			"product-quick-look",
+			"#modal"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"",
+			" ",
+			", ",
+			"tropo->say",
+			"print",
+			"_log",
+			"print",
+			"//_log",
+			"",
+			", ",
+			",",
+			"",
+			" ,",
+			"",
+			" ",
+			"/",
+			"606",
+			"\\n",
+			"/\\n",
+			"\\n",
+			"&#39;",
+			"\"",
+			"&raquo;",
+			"”",
+			"&laquo;",
+			"“",
+			"",
+			"<td align=\"left\">",
+			"",
+			"c1c2c2",
+			"",
+			"•\\t",
+			"",
+			"h3",
+			" ",
+			"",
+			"th",
+			"",
+			"\"",
+			"\\\"",
+			" .small,",
+			"",
+			"\\n",
+			"",
+			"=> array(\\n\\t'website' => 'website',\\n \\t'map' => 'map',\\n\\t 'opentable' => 'opentable'),\\n",
+			"=> array(\\n'website' => 'website',\\n 'map' => 'map',\\n 'opentable' => 'opentable'),\\n",
+			"=> array('website' => 'website',\\n 'map' => 'map',\\n 'opentable' => 'opentable'),\\n",
+			".bann",
+			"",
+			"sites/all/",
+			"offset",
+			".view-header",
+			".shops",
+			"../../..",
+			"../../../",
+			"<a style=\"color: #e54630;\"",
+			"page-brands",
+			"brands-page",
+			"//console",
+			"",
+			".item, .views-row",
+			".nice-menu",
+			"@include horizontal-nav()",
+			".item, .views-row",
+			"href=\"../../../clothing/new-arrivals\"",
+			"default/files/",
+			"category_pictures/product-",
+			"pictures/product-"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 27.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"read",
+				"README.md"
+			],
+			[
+				"inde",
+				"index.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 200.0,
+	"status_bar_visible": true
+}
