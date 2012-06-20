@@ -4,6 +4,29 @@
 	// require_once 'postTypes/t_lab.php';
 	//require_once( 'postTypes/t_product_studio.php' );
 	// require_once 'postTypes/t_xsmke.php';
+
+//Taxonomy
+add_action( 'init', 'create_event_types' );
+function create_event_types() {
+ $labels = array(
+    'name' => _x( 'Event-Types', 'taxonomy general name' ),
+    'singular_name' => _x( 'Event-Type', 'taxonomy singular name' ),
+    'search_items' =>  __( 'Search Event-Types' ),
+    'all_items' => __( 'All Event-Types' ),
+    'parent_item' => __( 'Parent Event-Type' ),
+    'parent_item_colon' => __( 'Parent Event-Type:' ),
+    'edit_item' => __( 'Edit Event-Type' ),
+    'update_item' => __( 'Update Event-Type' ),
+    'add_new_item' => __( 'Add New Event-Type' ),
+    'new_item_name' => __( 'New Location Event-Type' ),
+  ); 	
+
+  register_taxonomy('event-type','t_event',array(
+    'hierarchical' => true,
+    'labels' => $labels
+  ));
+}
+
 /*-------------------------------------------------------------------------------------------*/
 /* t_client Post Type */
 /*-------------------------------------------------------------------------------------------*/
