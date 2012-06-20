@@ -212,6 +212,58 @@ class t_xsmke {
 
 $t_xsmke = new t_xsmke();	
 
+/*-------------------------------------------------------------------------------------------*/
+/* Event Post Type */
+/*-------------------------------------------------------------------------------------------*/
+
+class t_event {
+	
+	function t_event() {
+		add_action('init',array($this,'create_post_type'));
+	}
+	
+	function create_post_type() {
+		$labels = array(
+		    'name' => 'Events',
+		    'singular_name' => 'Event',
+		    'add_new' => 'Add New Event',
+		    'all_items' => 'All Events',
+		    'add_new_item' => 'Add Event',
+		    'edit_item' => 'Edit Event',
+		    'new_item' => 'New Event',
+		    'view_item' => 'View Event',
+		    'search_items' => 'Search Events',
+		    'not_found' =>  'No evets found',
+		    'not_found_in_trash' => 'No event found in trash',
+		    'parent_item_colon' => 'Parent Event Post:',
+		    'menu_name' => 'Events'
+		);
+		$args = array(
+			'labels' => $labels,
+			'description' => "A description for your post type",
+			'public' => true,
+			'exclude_from_search' => false,
+			'publicly_queryable' => true,
+			'show_ui' => true, 
+			'show_in_nav_menus' => true, 
+			'show_in_menu' => true,
+			'show_in_admin_bar' => true,
+			'menu_position' => 25,
+			// 'menu_icon' => '/absolute/url/to/icon',
+			'capability_type' => 'post',
+			'hierarchical' => true,
+			'supports' => array('title','editor','custom-fields','page-attributes'),
+			'has_archive' => true,
+			'rewrite' => array('slug' => 'events', 'with_front' => 'before-your-slug'),
+			'query_var' => true,
+			'can_export' => true
+		); 
+		register_post_type('t_event',$args);
+	}
+}
+
+$t_event = new t_event();	
+
 
 	
 
