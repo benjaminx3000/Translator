@@ -46,7 +46,7 @@ class t_client {
 			'hierarchical' => true,
 			'supports' => array('title','editor','excerpt','custom-fields','page-attributes','post-formats'),
 			'has_archive' => true,
-			'rewrite' => array('slug' => 'your-slug', 'with_front' => 'before-your-slug'),
+			// 'rewrite' => array('slug' => 'your-slug', 'with_front' => 'before-your-slug'),
 			'query_var' => true,
 			'can_export' => true
 		); 
@@ -98,7 +98,7 @@ class t_lab {
 			'hierarchical' => true,
 			'supports' => array('title','editor','excerpt','custom-fields','page-attributes','post-formats'),
 			'has_archive' => true,
-			'rewrite' => array('slug' => 'your-slug', 'with_front' => 'before-your-slug'),
+			// 'rewrite' => array('slug' => 'your-slug', 'with_front' => 'before-your-slug'),
 			'query_var' => true,
 			'can_export' => true
 		); 
@@ -150,7 +150,7 @@ class t_product_studio {
 			'hierarchical' => true,
 			'supports' => array('title','editor','excerpt','custom-fields','page-attributes','post-formats'),
 			'has_archive' => true,
-			'rewrite' => array('slug' => 'your-slug', 'with_front' => 'before-your-slug'),
+			// 'rewrite' => array('slug' => 'your-slug', 'with_front' => 'before-your-slug'),
 			'query_var' => true,
 			'can_export' => true
 		); 
@@ -202,7 +202,7 @@ class t_xsmke {
 			'hierarchical' => true,
 			'supports' => array('title','editor','excerpt','custom-fields','page-attributes','post-formats'),
 			'has_archive' => true,
-			'rewrite' => array('slug' => 'your-slug', 'with_front' => 'before-your-slug'),
+			// 'rewrite' => array('slug' => 'your-slug', 'with_front' => 'before-your-slug'),
 			'query_var' => true,
 			'can_export' => true
 		); 
