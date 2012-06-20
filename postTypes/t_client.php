@@ -1,30 +1,30 @@
 <?php
 
 /*-------------------------------------------------------------------------------------------*/
-/* t_product_studio Post Type */
+/* t_client Post Type */
 /*-------------------------------------------------------------------------------------------*/
 
-class t_product_studio {
+class t_client {
 	
-	function t_product_studio() {
+	function t_client() {
 		add_action('init',array($this,'create_post_type'));
 	}
 	
 	function create_post_type() {
 		$labels = array(
-		    'name' => 'Product',
-		    'singular_name' => 'Product',
+		    'name' => 'Client Posts',
+		    'singular_name' => 'Client Post',
 		    'add_new' => 'Add New',
-		    'all_items' => 'All Products',
-		    'add_new_item' => 'Add New Product',
-		    'edit_item' => 'Edit Product',
-		    'new_item' => 'New Product',
-		    'view_item' => 'View Product',
-		    'search_items' => 'Search Products',
-		    'not_found' =>  'No products found',
+		    'all_items' => 'All Client Posts',
+		    'add_new_item' => 'Add New Client Post',
+		    'edit_item' => 'Edit Client Post',
+		    'new_item' => 'New Client Post',
+		    'view_item' => 'View Client Post',
+		    'search_items' => 'Search Client Posts',
+		    'not_found' =>  'No Posts found',
 		    'not_found_in_trash' => 'No Posts found in trash',
-		    'parent_item_colon' => 'Parent Product:',
-		    'menu_name' => 'Product Studio'
+		    'parent_item_colon' => 'Parent Client Post:',
+		    'menu_name' => 'Client Post'
 		);
 		$args = array(
 			'labels' => $labels,
@@ -37,7 +37,7 @@ class t_product_studio {
 			'show_in_menu' => true,
 			'show_in_admin_bar' => true,
 			'menu_position' => 20,
-			'menu_icon' => '/absolute/url/to/icon',
+			//'menu_icon' => '/absolute/url/to/icon',
 			'capability_type' => 'page',
 			'hierarchical' => true,
 			'supports' => array('title','editor','excerpt','custom-fields','page-attributes','post-formats'),
@@ -46,10 +46,10 @@ class t_product_studio {
 			'query_var' => true,
 			'can_export' => true
 		); 
-		register_post_type('t_product_studio',$args);
+		register_post_type('t_client',$args);
 	}
 }
 
-$t_product_studio = new t_product_studio();					
+$t_client = new t_client();					
 ?>
 				
