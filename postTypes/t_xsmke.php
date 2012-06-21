@@ -50,6 +50,8 @@ class t_xsmke {
 	}
 }
 
-$t_xsmke = new t_xsmke();					
+$t_xsmke = new t_xsmke();	
+
+				
 ?>
 				

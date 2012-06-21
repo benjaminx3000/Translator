@@ -1,0 +1,43 @@
+/*
+Theme Name: Translator
+Description: Awesome Translator Theme 
+Author: Ben
+Template: twentyeleven
+*/
+
+//@import "css/hbp";
+@import "../twentyeleven/style.css";
+
+//Mixins
+@mixin nav-inline{
+	list-style-type: none;
+	padding: 5px;
+	display: inline;
+}
+
+/*
+colors
+
+
+*/
+
+
+//main styles
+#Utility{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	margin: 0;
+	padding: 0;
+	li{
+		@include nav-inline;
+	}	
+}
+
+
+
+@import "css/helpers";
+
+
+
+
