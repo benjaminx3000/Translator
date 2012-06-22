@@ -7,8 +7,12 @@ Template: twentyeleven
 @import url(../twentyeleven/style.css);
 /*
 colors
-
-
+$gray: #464646;
+$red: #d71921;
+$orange: #f58337;
+$yellow: #fecf5c;
+$green: #86ac90;
+$blue: #008eb0;
 */
 #Utility {
   position: absolute;
@@ -20,6 +24,67 @@ colors
     list-style-type: none;
     padding: 5px;
     display: inline; }
+
+.singular .hentry,
+.singular.page .hentry {
+  margin: 0;
+  padding: 10px 20px; }
+
+.singular .entry-header, .singular .entry-content, .singular footer.entry-meta, .singular #comments-title {
+  padding: auto;
+  margin: 0 auto;
+  width: auto; }
+
+.entry-content, .entry-summary {
+  padding: 0; }
+
+.home .t_client,
+.home .t_lab,
+.home .open-lab,
+.home .t_product_studio,
+.home .t_xsmke,
+.home .xsmke,
+.home .post {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  color: #464646; }
+  .home .t_client h1, .home .t_client h2,
+  .home .t_lab h1,
+  .home .t_lab h2,
+  .home .open-lab h1,
+  .home .open-lab h2,
+  .home .t_product_studio h1,
+  .home .t_product_studio h2,
+  .home .t_xsmke h1,
+  .home .t_xsmke h2,
+  .home .xsmke h1,
+  .home .xsmke h2,
+  .home .post h1,
+  .home .post h2 {
+    color: #fff;
+    text-transform: uppercase; }
+  .home .t_client a,
+  .home .t_lab a,
+  .home .open-lab a,
+  .home .t_product_studio a,
+  .home .t_xsmke a,
+  .home .xsmke a,
+  .home .post a {
+    color: #fff; }
+.home .t_client {
+  background: #000; }
+.home .t_lab,
+.home .open-lab {
+  background: #008eb0; }
+.home .t_product_studio {
+  background: #fecf5c; }
+.home .t_xsmke,
+.home .xsmke {
+  background: #d71921; }
+.home .post {
+  background: #86ac90; }
+
+.collapsable {
+  display: none; }
 
 /* ==|== media queries ======================================================
    EXAMPLE Media Query for Responsive Design.

@@ -1,10 +1,12 @@
 <?php
-	//Custom post types
-	// require_once 'postTypes/t_client.php';
-	// require_once 'postTypes/t_lab.php';
-	//require_once( 'postTypes/t_product_studio.php' );
-	// require_once 'postTypes/t_xsmke.php';
-
+add_action('admin_init', 'load_admin_scripts');
+function load_admin_scripts(){
+	wp_enqueue_script('main',
+		get_stylesheet_directory_uri() . '/js/main.js',
+		array('jquery', 'jquery-ui-core', 'jquery-ui-datepicker'));
+	wp_enqueue_style( 'jquery-ui', get_stylesheet_directory_uri() . '/css/jquery-ui.css' );
+	
+}
 //Taxonomy
 add_action( 'init', 'create_event_types' );
 function create_event_types() {
@@ -279,13 +281,95 @@ class t_event {
 			'has_archive' => true,
 			'rewrite' => array('slug' => 'events', 'with_front' => 'before-your-slug'),
 			'query_var' => true,
-			'can_export' => true
+			'can_export' => true,
+			'register_meta_box_cb' => 'add_events_metaboxes'
 		); 
 		register_post_type('t_event',$args);
 	}
 }
 
-$t_event = new t_event();	
+$t_event = new t_event();
+
+
+//Meta boxes for events
+
+// Add the Events Meta Boxes
+function add_events_metaboxes() {
+	add_meta_box('wpt_events_date', 'Event Date', 'wpt_events_date', 't_event', 'normal', 'high');
+    add_meta_box('wpt_events_location', 'Event Location', 'wpt_events_location', 't_event', 'side', 'default');
+}
+// The Event Location Metabox
+function wpt_events_date() {
+    global $post;
+    // Noncename needed to verify where the data originated
+    echo '<input type="hidden" name="eventmeta_noncename" id="eventmeta_noncename" value="' .
+    wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
+    // Get the date data if its already been entered
+    $date = get_post_meta($post->ID, '_event_date', true);
+    // Echo out the field
+    echo '<input type="date" name="_event_date" value="' . $date  . '" class="widefat" />';
+}
+
+function wpt_events_location() {
+    global $post;
+    // Noncename needed to verify where the data originated
+    echo '<input type="hidden" name="eventmeta_noncename" id="eventmeta_noncename" value="' .
+    wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
+    // Get the location data if its already been entered
+    $location = get_post_meta($post->ID, '_location', true);
+    // Echo out the field
+    echo '<input type="text" name="_location" value="' . $location  . '" class="widefat" />';
+}
+
+// Save the Metabox Data
+function wpt_save_events_meta($post_id, $post) {
+    // verify this came from the our screen and with proper authorization,
+    // because save_post can be triggered at other times
+    if ( !wp_verify_nonce( $_POST['eventmeta_noncename'], plugin_basename(__FILE__) )) {
+    return $post->ID;
+    }
+    // Is the user allowed to edit the post or page?
+    if ( !current_user_can( 'edit_post', $post->ID ))
+        return $post->ID;
+    // OK, we're authenticated: we need to find and save the data
+    // We'll put it into an array to make it easier to loop though.
+    $events_meta['_event_date'] = $_POST['_event_date'];
+    $events_meta['_location'] = $_POST['_location'];
+    // Add values of $events_meta as custom fields
+    foreach ($events_meta as $key => $value) { // Cycle through the $events_meta array!
+        if( $post->post_type == 'revision' ) return; // Don't store custom data twice
+        $value = implode(',', (array)$value); // If $value is an array, make it a CSV (unlikely)
+        if(get_post_meta($post->ID, $key, FALSE)) { // If the custom field already has a value
+            update_post_meta($post->ID, $key, $value);
+        } else { // If the custom field doesn't have a value
+            add_post_meta($post->ID, $key, $value);
+        }
+        if(!$value) delete_post_meta($post->ID, $key); // Delete if blank
+    }
+}
+add_action('save_post', 'wpt_save_events_meta', 1, 2); // save the custom fields
+
+
+//Fitler to add class names based on taxonomy
+add_filter( 'post_class', 'mysite_post_class', 10, 3 );
+if( !function_exists( 'mysite_post_class' ) ) {
+    /**
+     * Append taxonomy terms to post class.
+     * @since 2010-07-10
+     */
+    function mysite_post_class( $classes, $class, $ID ) {
+        $taxonomy = 'event-type';
+        $terms = get_the_terms( (int) $ID, $taxonomy );
+        if( !empty( $terms ) ) {
+            foreach( (array) $terms as $order => $term ) {
+                if( !in_array( $term->slug, $classes ) ) {
+                    $classes[] = $term->slug;
+                }
+            }
+        }
+        return $classes;
+    }
+}
 
 
 	

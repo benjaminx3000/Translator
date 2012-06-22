@@ -17,10 +17,19 @@ Template: twentyeleven
 
 /*
 colors
-
-
+$gray: #464646;
+$red: #d71921;
+$orange: #f58337;
+$yellow: #fecf5c;
+$green: #86ac90;
+$blue: #008eb0;
 */
-
+$gray: #464646;
+$red: #d71921;
+$orange: #f58337;
+$yellow: #fecf5c;
+$green: #86ac90;
+$blue: #008eb0;
 
 //main styles
 #Utility{
@@ -33,7 +42,47 @@ colors
 		@include nav-inline;
 	}	
 }
+.singular .hentry,
+.singular.page .hentry{
+	margin: 0;
+	padding: 10px 20px;
+}
+.singular .entry-header, .singular .entry-content, .singular footer.entry-meta, .singular #comments-title {
+	padding: auto;
+	margin: 0 auto;
+	width: auto;
+}
+.entry-content, .entry-summary {
+	padding: 0;
+}
 
+
+
+
+.home{
+	.t_client,
+	.t_lab,
+	.open-lab,
+	.t_product_studio,
+	.t_xsmke,
+	.xsmke,
+	.post{
+		border-top: 1px solid rgba(255, 255, 255, 0.3);
+		h1, h2{color: #fff; text-transform: uppercase;}
+		a{color: #fff}
+		color: $gray;}
+	.t_client{background: #000}
+	.t_lab,
+	.open-lab{background: $blue}
+	.t_product_studio{background: $yellow}
+	.t_xsmke,
+	.xsmke{background: $red}
+	.post{background: $green}
+}
+
+.collapsable{
+	display: none;
+}
 
 
 @import "css/helpers";
