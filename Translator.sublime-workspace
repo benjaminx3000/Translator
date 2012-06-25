@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"jquer",
+				"jquery-ui-datepicker"
+			],
+			[
+				"jque",
+				"jquery-ui"
+			],
+			[
+				"locat",
+				"_location"
+			],
+			[
 				"p",
 				"php"
 			],
@@ -502,36 +514,16 @@
 			[
 				"sea",
 				"searchVal"
-			],
-			[
-				"typ",
-				"type"
-			],
-			[
-				"utility",
-				"utilityNav"
-			],
-			[
-				"top",
-				"top"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"contents": "",
+			"file": "style.scss",
 			"settings":
 			{
-				"buffer_size": 0,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "functions.php",
-			"settings":
-			{
-				"buffer_size": 9252,
+				"buffer_size": 1340,
 				"line_ending": "Unix"
 			}
 		},
@@ -539,42 +531,55 @@
 			"file": "page-calendar.php",
 			"settings":
 			{
-				"buffer_size": 965,
+				"buffer_size": 1100,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "style.scss",
+			"file": "functions.php",
 			"settings":
 			{
-				"buffer_size": 425,
+				"buffer_size": 12858,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/2c63811f-cb1c-414f-9bdd-a3adfd740108/wp-content/themes/bestwifeever/style.css",
+			"file": "page-home.php",
 			"settings":
 			{
-				"buffer_size": 2154,
+				"buffer_size": 1587,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "<?php\n/**\n * The template used for displaying page content in page.php\n *\n * @package WordPress\n * @subpackage Twenty_Eleven\n * @since Twenty Eleven 1.0\n */\n?>\n\n<article id=\"post-<?php the_ID(); ?>\" <?php post_class(); ?>>\n	<header class=\"entry-header\">\n		<h1 class=\"entry-title\"><?php the_title(); ?></h1>\n	</header><!-- .entry-header -->\n\n	<div class=\"entry-content\">\n		<?php the_content(); ?>\n		<?php wp_link_pages( array( 'before' => '<div class=\"page-link\"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>\n	</div><!-- .entry-content -->\n		<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class=\"edit-link\">', '</span>' ); ?>\n	</footer><!-- .entry-meta -->\n</article><!-- #post-<?php the_ID(); ?> -->\n",
-			"file": "/Users/katieliesch/Sites/wordpress/wp-content/themes/twentyeleven/content-page.php",
-			"file_size": 717,
-			"file_write_time": 1340309968000000,
+			"file": "index.php",
 			"settings":
 			{
-				"buffer_size": 748,
+				"buffer_size": 1876,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "css/_mixins.scss",
+			"file": "/Users/katieliesch/Sites/wordpress/wp-content/themes/twentyeleven/content.php",
 			"settings":
 			{
-				"buffer_size": 3613,
+				"buffer_size": 3695,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/main.js",
+			"settings":
+			{
+				"buffer_size": 146,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/jquery-ui.css",
+			"settings":
+			{
+				"buffer_size": 23013,
 				"line_ending": "Unix"
 			}
 		}
@@ -611,6 +616,15 @@
 	},
 	"file_history":
 	[
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/home/deziner13/translatordigitalcafe.com/wp-content/plugins/the-events-calendar/lib/tribe-templates.class.php",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/home/deziner13/translatordigitalcafe.com/wp-content/plugins/the-events-calendar/lib/the-events-calendar.class.php",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/home/deziner13/translatordigitalcafe.com/wp-content/plugins/the-events-calendar/the-events-calendar.php",
+		"/Users/katieliesch/Sites/wordpress/wp-content/themes/Translator/functions.php",
+		"/Users/katieliesch/Sites/wordpress/wp-content/themes/Translator/page-calendar.php",
+		"/Users/katieliesch/Sites/wordpress/wp-content/themes/Translator/style.scss",
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/2c63811f-cb1c-414f-9bdd-a3adfd740108/wp-content/themes/bestwifeever/style.css",
+		"/Users/katieliesch/Sites/wordpress/wp-content/themes/Translator/css/_mixins.scss",
+		"/Users/katieliesch/Sites/wordpress/wp-content/themes/twentyeleven/content-page.php",
 		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/translatordigitalcafe.com/robots.txt",
 		"/Users/katieliesch/Documents/Aptana Studio 3 Workspace/Shindig Desktop/css/_mixins.scss",
 		"/Users/katieliesch/Sites/wordpress/wp-content/themes/Translator/css/_hbp.scss",
@@ -643,7 +657,6 @@
 		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/cron/tweets.php",
 		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/translatordigitalcafe.com/wp-content/themes/translator/single.php",
 		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/translatordigitalcafe.com/wp-content/themes/translator/sidebar.php",
-		"/Users/katieliesch/Sites/wordpress/wp-content/themes/Translator/functions.php",
 		"/Users/katieliesch/Downloads/translator/comments-popup.php",
 		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/logs/translatordigitalcafe.com/http.12879206.bak/error.log",
 		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/logs/translatordigitalcafe.com/http.12879206.bak/access.log",
@@ -730,15 +743,7 @@
 		"/Users/katieliesch/Desktop/atendees.csv",
 		"/Users/katieliesch/Documents/Freelance/Translator/ABK/email/html/save-the-date.html",
 		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/translatorlab.com/index.html",
-		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/c63eea89-3f6c-4d1f-a696-6516121394da/var/www/httpdocs/abkdev/abkdrupal/sites/all/themes/abktheme/node.tpl.php",
-		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/08d30ae3-e94c-4a03-b6e4-8a5cf1a09135/var/www/httpdocs/abkdrupal/sites/all/themes/abktheme/node-product.tpl.php",
-		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/c63eea89-3f6c-4d1f-a696-6516121394da/var/www/httpdocs/abkdev/abkdrupal/sites/all/themes/abktheme/node-product.tpl.php",
-		"/Users/katieliesch/Downloads/mcapi-simple-subscribe-jquery/inc/store-address.php",
-		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/translatorlab.com/index.test.html",
-		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/mkeshindig.com/signup.php",
-		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/translatorlab.com/register.php",
-		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/mkeshindig.com/response.php",
-		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/6246ff1b-7cc8-46e0-8ba8-ec5e7012ee24/mkeshindig.com/js/plugins.js"
+		"/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/c63eea89-3f6c-4d1f-a696-6516121394da/var/www/httpdocs/abkdev/abkdrupal/sites/all/themes/abktheme/node.tpl.php"
 	],
 	"find":
 	{
@@ -762,6 +767,23 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"h1",
+			"date-picker",
+			"	",
+			"_location",
+			"_ben",
+			"_date",
+			"_location",
+			"‘",
+			"’",
+			"‘register_meta_box_cb’",
+			"’",
+			"\\}",
+			"}",
+			"_t",
+			"\\b\\w",
+			"'",
+			"h1",
 			"nav-inline",
 			"h2",
 			"div",
@@ -872,24 +894,7 @@
 			"weight",
 			"’",
 			"\" />",
-			"&laquo;",
-			"&raquo;",
-			"”",
-			"“",
-			"’",
-			"tour",
-			"	",
-			" />",
-			"cursor",
-			"<?",
-			"			",
-			"u=4f0df1102a56ea0f4cc811f93&id=8d4e83ef68&MERGE0=ben%40translatordigitalcafe.com&MERGE1=ben%40translatordigitalcafe.com&MERGE2=&MERGE3=Alpha+Beta+Karma&MERGE4=&group%5B7421%5D%5B1%5D=1&group%5B7421%5D%5B2%5D=1",
-			"&group%5B7421%5D%5B1%5D=1",
-			"&group%5B7",
-			"red",
-			"API",
-			"<br>",
-			"<td align=\"left\">"
+			"&laquo;"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -897,6 +902,10 @@
 		"regex": true,
 		"replace_history":
 		[
+			"\\}\\n",
+			"}\\n",
+			".t_",
+			"\\.\\b\\w",
 			"",
 			" ",
 			", ",
@@ -975,49 +984,49 @@
 	"groups":
 	[
 		{
-			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"file": "style.scss",
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 1340,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1308,
+								1308
 							]
 						],
 						"settings":
 						{
-							"auto_name": "",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/SASS/Syntaxes/SASS.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 713.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "functions.php",
+					"file": "page-calendar.php",
 					"settings":
 					{
-						"buffer_size": 9252,
+						"buffer_size": 1100,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7888,
-								7895
+								776,
+								776
 							]
 						],
 						"settings":
@@ -1026,25 +1035,25 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3976.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "page-calendar.php",
+					"file": "functions.php",
 					"settings":
 					{
-						"buffer_size": 965,
+						"buffer_size": 12858,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								827,
-								827
+								1302,
+								1302
 							]
 						],
 						"settings":
@@ -1060,25 +1069,28 @@
 				},
 				{
 					"buffer": 3,
-					"file": "style.scss",
+					"file": "page-home.php",
 					"settings":
 					{
-						"buffer_size": 425,
+						"buffer_size": 1587,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								397,
-								397
+								489,
+								489
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
+							"spell_check": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": false
 						},
-						"translation.x": 0.0,
+						"translation.x": 5.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -1086,57 +1098,77 @@
 				},
 				{
 					"buffer": 4,
-					"file": "/private/var/folders/1d/xhfpbd0j4c58k92z2xhqq0jh0000gn/T/2c63811f-cb1c-414f-9bdd-a3adfd740108/wp-content/themes/bestwifeever/style.css",
+					"file": "index.php",
 					"settings":
 					{
-						"buffer_size": 2154,
+						"buffer_size": 1876,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 5,
-					"file": "/Users/katieliesch/Sites/wordpress/wp-content/themes/twentyeleven/content-page.php",
-					"settings":
-					{
-						"buffer_size": 748,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								747,
-								747
+								446,
+								446
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 106.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/katieliesch/Sites/wordpress/wp-content/themes/twentyeleven/content.php",
+					"settings":
+					{
+						"buffer_size": 3695,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								317,
+								477
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 1467.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "js/main.js",
+					"settings":
+					{
+						"buffer_size": 146,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								133,
+								133
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1145,11 +1177,11 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "css/_mixins.scss",
+					"buffer": 7,
+					"file": "css/jquery-ui.css",
 					"settings":
 					{
-						"buffer_size": 3613,
+						"buffer_size": 23013,
 						"regions":
 						{
 						},
@@ -1162,12 +1194,10 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/SASS/Syntaxes/SASS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/CSS/CSS.tmLanguage"
 						},
-						"translation.x": 0.0,
-						"translation.y": 951.0,
+						"translation.x": 1.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1192,18 +1222,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.5,
 			1.0
 		],
 		"rows":

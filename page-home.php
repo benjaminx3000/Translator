@@ -12,7 +12,7 @@ get_header(); ?>
 
 					<?php get_template_part( 'content', 'page' ); ?>
 
-					<?php comments_template( '', true ); ?>
+					
 
 				<?php endwhile; // end of the loop. ?>
 
@@ -36,6 +36,8 @@ get_header(); ?>
 						</div>
 					</div>
 					<?php endwhile; ?>
+
+					<?php comments_template( '', true ); ?>
 				 
 
 			</div><!-- #content -->
