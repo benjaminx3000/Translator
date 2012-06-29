@@ -1,12 +1,22 @@
 <?php
+//this adds jquery ui for the datepicker on the enent post type metabox :P
 add_action('admin_init', 'load_admin_scripts');
 function load_admin_scripts(){
 	wp_enqueue_script('main',
 		get_stylesheet_directory_uri() . '/js/main.js',
 		array('jquery', 'jquery-ui-core', 'jquery-ui-datepicker'));
 	wp_enqueue_style( 'jquery-ui', get_stylesheet_directory_uri() . '/css/jquery-ui.css' );
-	
 }
+//load custom scripts
+add_action('wp_enqueue_scripts', 'load_custom_scripts');
+function load_custom_scripts(){
+	wp_register_script('fancybox', get_stylesheet_directory_uri() .'/js/lib/source/jquery.fancybox.pack.js' );
+	wp_enqueue_script('main',
+		get_stylesheet_directory_uri() . '/js/main.js', //this is hack!!! make a separate script for admin panel!!
+		array('jquery', 'fancybox'));
+	wp_enqueue_style( 'fancyboxStyle', get_stylesheet_directory_uri() . '/js/lib/source/jquery.fancybox.css' );
+}
+
 //Taxonomy
 add_action( 'init', 'create_event_types' );
 function create_event_types() {
@@ -27,6 +37,60 @@ function create_event_types() {
     'hierarchical' => true,
     'labels' => $labels
   ));
+}
+//Widget Areas
+
+
+add_action('widgets_init', 'register_my_widgets');
+function register_my_widgets(){
+	register_sidebar( array(
+		'name' => __( 'Home Page Sidebar', 'Translator' ),
+		'id' => 't-sidebar-1',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+	register_sidebar( array(
+		'name' => __( 'Client Sidebar', 'Translator' ),
+		'id' => 't-sidebar-2',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+	register_sidebar( array(
+		'name' => __( 'Lab Sidebar', 'Translator' ),
+		'id' => 't-sidebar-3',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+	register_sidebar( array(
+		'name' => __( 'Product Studio Sidebar', 'Translator' ),
+		'id' => 't-sidebar-4',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+	register_sidebar( array(
+		'name' => __( 'XSMKE Sidebar', 'Translator' ),
+		'id' => 't-sidebar-5',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+	register_sidebar( array(
+		'name' => __( 'Calendar Sidebar', 'Translator' ),
+		'id' => 't-sidebar-6',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
 }
 
 /*-------------------------------------------------------------------------------------------*/
@@ -295,8 +359,8 @@ $t_event = new t_event();
 
 // Add the Events Meta Boxes
 function add_events_metaboxes() {
-	add_meta_box('wpt_events_date', 'Event Date', 'wpt_events_date', 't_event', 'normal', 'high');
-    add_meta_box('wpt_events_location', 'Event Location', 'wpt_events_location', 't_event', 'side', 'default');
+	add_meta_box('wpt_events_date', 'Event Info', 'wpt_events_date', 't_event', 'normal', 'high');
+    //add_meta_box('wpt_events_location', 'Event Location', 'wpt_events_location', 't_event', 'side', 'default');
 }
 // The Event Location Metabox
 function wpt_events_date() {
@@ -307,18 +371,27 @@ function wpt_events_date() {
     // Get the date data if its already been entered
     $date = get_post_meta($post->ID, '_event_date', true);
     // Echo out the field
-    echo '<input type="date" name="_event_date" value="' . $date  . '" class="widefat" />';
+    echo '<label for="_event_date">Event Date</label>';
+    echo '<input type="text" name="_event_date" value="' . $date  . '" class="datepicker " />';
+
+    echo '<input type="hidden" name="eventmeta_noncename" id="eventmeta_noncename" value="' .
+    wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
+    // Get the location data if its already been entered
+    $location = get_post_meta($post->ID, '_location', true);
+    // Echo out the field
+    echo '<label for="_location">Event Location</label>';
+    echo '<input type="text" name="_location" value="' . $location  . '" class="" />';
 }
 
 function wpt_events_location() {
-    global $post;
+    //global $post;
     // Noncename needed to verify where the data originated
     echo '<input type="hidden" name="eventmeta_noncename" id="eventmeta_noncename" value="' .
     wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
     // Get the location data if its already been entered
     $location = get_post_meta($post->ID, '_location', true);
     // Echo out the field
-    echo '<input type="text" name="_location" value="' . $location  . '" class="widefat" />';
+    echo '<input type="text" name="_location" value="' . $location  . '" class="" />';
 }
 
 // Save the Metabox Data

@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying the calendar page.
+ * The template for displaying the home page.
  *
  */
 

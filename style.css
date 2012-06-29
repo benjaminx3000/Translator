@@ -86,6 +86,9 @@ $blue: #008eb0;
 .collapsable {
   display: none; }
 
+#SignupForm {
+  display: none; }
+
 /* ==|== media queries ======================================================
    EXAMPLE Media Query for Responsive Design.
    This example overrides the primary ('mobile first') styles
