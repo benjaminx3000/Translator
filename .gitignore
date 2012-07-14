@@ -52,5 +52,5 @@ build/buildinfo.properties
 build/config/buildinfo.properties
 
 #custom
-js/lib/demo
-js/lib/lib
+js/lib/demo/
+js/lib/lib/

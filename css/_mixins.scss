@@ -1,3 +1,11 @@
+// nav
+@mixin nav-inline{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline;
+}
+
 /* BACKGROUND GRADIENT */
 @mixin background-gradient($startColor: #3C3C3C, $endColor: #999999) {
     background-color: $startColor;
@@ -93,10 +101,22 @@
     -webkit-transition: $what $length $easing;
     -ms-transition:     $what $length $easing;
     transition:         $what $length $easing;
-
+}
+@mixin transform-origin($x:50%, $y:50%){
+    -ms-transform-origin:$x $y;
+    -webkit-transform-origin:$x $y;
+    -moz-transform-origin:$x $y;
+    -o-transform-origin:$x $y; 
+    transform-origin:$x $y;
 }
 @mixin scale($scale: 0.5){
   -moz-transform:scale($scale);
   -webkit-transform:scale($scale);
   transform:scale($scale)
+}
+@mixin rotate($rotate: 90deg){
+    -ms-transform:rotate($rotate); 
+    -moz-transform:rotate($rotate);
+    -webkit-transform:rotate($rotate);
+    transform:rotate($rotate)
 }

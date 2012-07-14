@@ -5,92 +5,347 @@ Author: Ben
 Template: twentyeleven
 */
 
-//@import "css/hbp";
-@import "../twentyeleven/style.css";
+@import url("http://fonts.googleapis.com/css?family=Montserrat");
+@import "css/hbp", "css/mixins";
+//@import "../twentyeleven/style.css";
 
 //Mixins
-@mixin nav-inline{
-	list-style-type: none;
-	padding: 5px;
-	display: inline;
-}
+
+
 
 /*
 colors
 $gray: #464646;
+$light-gray: #7d7d7d;
+$near-white: #ebebeb;
 $red: #d71921;
 $orange: #f58337;
 $yellow: #fecf5c;
 $green: #86ac90;
 $blue: #008eb0;
+$light-blue: #8fb5c5
 */
 $gray: #464646;
+$light-gray: #7d7d7d;
+$near-white: #ebebeb;
 $red: #d71921;
 $orange: #f58337;
 $yellow: #fecf5c;
 $green: #86ac90;
 $blue: #008eb0;
+$light-blue: #8fb5c5;
 
-//main styles
-#Utility{
-	position: absolute;
-	top: 20px;
-	right: 20px;
-	margin: 0;
-	padding: 0;
-	li{
-		@include nav-inline;
-	}	
+/*
+	Typography
+*/
+
+.Montserrat {
+	font:{
+		family:'Montserrat', Helvetica, sans-serif;;
+		weight: normal;
+	}
 }
-.singular .hentry,
-.singular.page .hentry{
-	margin: 0;
-	padding: 10px 20px;
+
+h1,h2,h3{
+	@extend .Montserrat;
+	margin: 1em 0;
+	line-height: 1.2em;
 }
-.singular .entry-header, .singular .entry-content, .singular footer.entry-meta, .singular #comments-title {
-	padding: auto;
+
+h1{font-size: 54px};
+h2{font-size: 36px};
+h3{font-size: 24px};
+
+body {
+	background: $light-blue;
+	p {line-height: 1.5em;}
+	color: $gray;
+	font: {
+		family: Arial, sans-serif;
+		size: 14px;
+		weight: normal;
+	}
+}
+
+a {
+	color: $blue;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.nav-link{
+	color: $light-gray;
+	font-size: 13px;
+	vertical-align: top;
+	letter-spacing: 0px;//0.01em;
+	@extend .Montserrat;
+	@include transition(color, 0.25s);
+	&:hover{
+		color: $near-white;
+	}
+}
+
+/*...Common elements */
+input[type="text"],
+input[type="email"],
+input[type="number"]{
+	background: $yellow none;
+	height: 25px;
+	font-size: 16px;
+	color: $gray;
+	border: 0 none;
+	@include box-sizing;
+	@include box-shadow-inset(1px, 1px, 2px);
+	@extend .Montserrat;
+	text-transform: lowercase;
+	&:focus{
+		background-color: lighten($yellow, 10);
+		outline-color: $near-white;
+	}
+}
+/*Main Styles*/
+/*Header Region*/
+$header-margin: 48px;
+$header-width: 965px + ($header-margin * 2);
+#branding{
+	height: 75px;
+	position: relative;
+	.content{
+		background: #000;
+		width: $header-width;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		margin-left: - $header-width / 2;
+	}
+	.left{
+		position: absolute;
+		left: 0;
+		right: 50%;
+		height: 75px;
+		background: $blue;
+	}
+	.right{
+		background: #000;
+		position: relative;
+		left: 50%;
+		right: 0;
+		height: 75px;
+	}
+}
+
+	#site-title{
+		width: 255px;
+		height: 75px;
+		margin-left: $header-margin;
+		background: $gray url("css/img/translator-logo.png") 25px 10px no-repeat;
+		@extend .ir;
+	}
+
+	#Utility{
+		position: absolute;
+		top: 9px;
+		right: 0;
+		margin: 0;
+		padding: 0;
+		display: inline-block;
+		ul{
+			margin-top: -4px;
+			float: right;
+		}
+		li{
+			@include nav-inline;
+			margin-right: 20px;
+		}
+		a{
+			@extend .nav-link;
+		}	
+	}
+		.search-container{
+			float: right;
+			margin-right: $header-margin;
+			position: relative;
+			.field{
+				width: 150px;
+				padding: 0 0 0 25px;
+				background: $yellow url(css/img/search-icon.png) 5px 50% no-repeat;
+				@include transition(all, 0.5s);
+				&:focus{
+					width: 250px;
+					@include box-shadow(0, 0, 2px, $near-white);
+				}
+			}
+		}
+			#searchform{display: inline-block;}
+			#searchsubmit{display: none;}
+
+	#menu-main-navigation{
+		position: absolute;
+		right: $header-margin;
+		bottom: 12px;
+		margin: 0;
+		padding: 0;
+		li{
+			@include nav-inline;
+			//font-size: 13px;
+			text-transform: uppercase;
+			a{@extend .nav-link;//could use flexi-box for this.
+				padding-left: 56px;}
+		}
+	}
+
+/*Main Content*/
+
+/*Content Areas
+#primary
+	|__	#content
+		|__#ContentTop
+		|__#ContentBottom
+*/
+
+.body{
+	width: 965px;
 	margin: 0 auto;
-	width: auto;
-}
-.entry-content, .entry-summary {
-	padding: 0;
 }
 
+#ContentTop{
+	@extend .body;
+	h1{color: $near-white;}
+}
+#ContentBottom{}
 
-
-
-.home{
+.translator-feed{
+	.entry-content{@extend .body;}
+	.preview{
+		position: relative;
+		height: 74px;
+		text-align: center;
+		overflow: hidden;
+		h2{
+			position: relative;
+			top: -4px;
+			display: inline;
+		}
+	}
+	.plus{
+		display: inline-block;
+		width: 75px;
+		height: 75px;
+		margin: 0 0 0 32px;
+		background: rgba(255, 255, 255, 0.6);
+		&.left{margin: 0 32px 0 0;}
+		svg{
+			margin-top: (75px - 35) / 2;
+		}
+	}
+	//post type colors
 	.t_client,
 	.t_lab,
 	.open-lab,
 	.t_product_studio,
 	.t_xsmke,
+	.t_event,
 	.xsmke,
 	.post{
-		border-top: 1px solid rgba(255, 255, 255, 0.3);
+		color: $gray;
+		border-top: 1px solid rgba(255, 255, 255,1);
 		h1, h2{color: #fff; text-transform: uppercase;}
 		a{color: #fff}
-		color: $gray;}
-	.t_client{background: #000}
+	}
+	.t_client{
+			background: #000;
+			.plus{background: $green;}
+			polygon{fill: #000;}
+	}
 	.t_lab,
-	.open-lab{background: $blue}
-	.t_product_studio{background: $yellow}
+	.open-lab{
+		background: $blue;
+		.plus{background: $near-white;}
+		polygon{fill: $blue;}
+	}
+	.t_product_studio{
+		background: $yellow;
+		.plus{background: $red;}
+		polygon{fill: $yellow;}
+	}
 	.t_xsmke,
-	.xsmke{background: $red}
-	.post{background: $green}
+	.xsmke{
+		background: $red;
+		.plus{background: $orange;}
+		polygon{fill: $red;}
+	}
+	.post{
+		background: $green;
+		.plus{background: $red;}
+		polygon{fill: $green;}
+	}
+}
+.entry-content{
+	h2{margin: 0; padding: 0;}
 }
 
-.collapsable{
-	display: none;
-}
-
+/*Footer*/
 #SignupForm{
 	display: none;
 }
+/*Styles*/
+/* Assistive text */
+.assistive-text {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+}
 
+#access a.assistive-text:active,
+#access a.assistive-text:focus {
+	background: #eee;
+	border-bottom: 1px solid #ddd;
+	color: #1982d1;
+	clip: auto !important;
+	font-size: 12px;
+	position: absolute;
+	text-decoration: underline;
+	top: 0;
+	left: 7.6%;
+}
+
+.collapsable{
+	height: 0;
+	overflow-y: hidden;
+	@include transition(all, 1.0s);
+}
+	// .translator-feed .entry-content:hover .collapsable{
+	// 		height: 250px;
+	// }
+.bubble{
+	position: absolute;
+	top: 100px;
+}
+
+
+.plus polygon{
+	@include transform-origin;
+	@include transition(all, 0.25s);
+	@include rotate(0);
+}
+.plus:hover polygon{
+	@include rotate(-90deg);
+}
+svg:hover .bubble{
+	-webkit-animation: bubbleY 2.0s infinite;
+}
+svg:hover .bubble path{
+	-webkit-animation: bubbleX 0.5s infinite;
+}
+
+@-webkit-keyframes bubbleX{
+	  0% {-webkit-transform: translate( -5px, 0);}
+	 50% {-webkit-transform: translate(  5px, 0);}
+	100% {-webkit-transform: translate( -5px, 0);}
+}
+@-webkit-keyframes bubbleY{
+	  0% {-webkit-transform: translate( 0, 0);}
+	100% {-webkit-transform: translate( 0, -30px);}
+}
 
 @import "css/helpers";
-
-
-
-

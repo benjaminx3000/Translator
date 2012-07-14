@@ -29,16 +29,6 @@ get_header(); ?>
 				<?php endwhile; ?>
 				
 				<?php
-				//custom post types
-				// $args = array( 'post_type' => 'acme_product', 'posts_per_page' => 10 );
-				// $loop = new WP_Query( $args );
-				// print_r( get_post_types() );
-				// while ( $loop->have_posts() ) : $loop->the_post();
-				// 	the_title();
-				// 	echo '<div class="entry-content">';
-				// 	the_content();
-				// 	echo '</div>';
-				// endwhile;
 				?>
 
 				<?php twentyeleven_content_nav( 'nav-below' ); ?>

@@ -4,90 +4,724 @@ Description: Awesome Translator Theme
 Author: Ben
 Template: twentyeleven
 */
-@import url(../twentyeleven/style.css);
+@import url("http://fonts.googleapis.com/css?family=Montserrat");
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ *
+ * Detailed information about this CSS: h5bp.com/css
+ *
+ * ==|== normalize ==========================================================
+ */
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block; }
+
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+audio:not([controls]) {
+  display: none; }
+
+[hidden] {
+  display: none; }
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ * 2. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
+ */
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+  color: #222; }
+
+body {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.4; }
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+a {
+  color: #00e; }
+
+a:visited {
+  color: #551a8b; }
+
+a:hover {
+  color: #06e; }
+
+a:focus {
+  outline: thin dotted; }
+
+/*
+ * Improve readability when focused and hovered in all browsers: h5bp.com/h
+ */
+a:hover,
+a:active {
+  outline: 0; }
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b,
+strong {
+  font-weight: bold; }
+
+blockquote {
+  margin: 1em 40px; }
+
+dfn {
+  font-style: italic; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+ins {
+  background: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+/*
+ * Redeclare monospace font family: h5bp.com/j
+ */
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em; }
+
+/*
+ * Improve readability of pre-formatted text
+ */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+q {
+  quotes: none; }
+
+q:before,
+q:after {
+  content: "";
+  content: none; }
+
+small {
+  font-size: 85%; }
+
+/*
+ * Position subscript and superscript content without affecting line-height: h5bp.com/k
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+ul,
+ol {
+  margin: 1em 0;
+  padding: 0 0 0 40px; }
+
+dd {
+  margin: 0 0 0 40px; }
+
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0; }
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * 1. Improve image quality when scaled in IE7: h5bp.com/d
+ * 2. Remove the gap between images and borders on image containers: h5bp.com/i/440
+ */
+img {
+  border: 0;
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic; }
+
+/*
+ * Correct overflow not hidden in IE9
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+figure {
+  margin: 0; }
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+form {
+  margin: 0; }
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/*
+ * Indicate that 'label' will shift focus to the associated form element
+ */
+label {
+  cursor: pointer; }
+
+/*
+ * 1. Correct color not inheriting in IE6/7/8/9
+ * 2. Correct alignment displayed oddly in IE6/7
+ */
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+  *margin-left: -7px; }
+
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle; }
+
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ */
+button,
+input {
+  line-height: normal; }
+
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ * 3. Correct inner spacing displayed oddly in IE7 (doesn't effect IE6)
+ */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+  *overflow: visible; }
+
+/*
+ * Re-set default cursor for disabled elements
+ */
+button[disabled],
+input[disabled] {
+  cursor: default; }
+
+/*
+ * Consistent box sizing and appearance
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  *width: 13px;
+  *height: 13px; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none; }
+
+/*
+ * Remove inner padding and border in FF3/4: h5bp.com/l
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/*
+ * 1. Remove default vertical scrollbar in IE6/7/8/9
+ * 2. Allow only vertical resizing
+ */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical; }
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td {
+  vertical-align: top; }
+
+/* =============================================================================
+   Chrome Frame Prompt
+   ========================================================================== */
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+/* BACKGROUND GRADIENT */
+/* BACKGROUND SIZE */
+/* BORDER RADIUS */
+/* BOX SHADOW */
+/* BOX SIZING */
+/* COLUMNS */
+/* OPACITY */
+/* TRANSITION */
 /*
 colors
 $gray: #464646;
+$light-gray: #7d7d7d;
+$near-white: #ebebeb;
 $red: #d71921;
 $orange: #f58337;
 $yellow: #fecf5c;
 $green: #86ac90;
 $blue: #008eb0;
+$light-blue: #8fb5c5
 */
+/*
+	Typography
+*/
+.Montserrat, h1, h2, h3, .nav-link, #Utility a, #menu-main-navigation li a, input[type="text"],
+input[type="email"],
+input[type="number"] {
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-weight: normal; }
+
+h1, h2, h3 {
+  margin: 1em 0;
+  line-height: 1.2em; }
+
+h1 {
+  font-size: 54px; }
+
+h2 {
+  font-size: 36px; }
+
+h3 {
+  font-size: 24px; }
+
+body {
+  background: #8fb5c5;
+  color: #464646;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal; }
+  body p {
+    line-height: 1.5em; }
+
+a {
+  color: #008eb0;
+  text-decoration: none;
+  font-weight: bold; }
+
+.nav-link, #Utility a, #menu-main-navigation li a {
+  color: #7d7d7d;
+  font-size: 13px;
+  vertical-align: top;
+  letter-spacing: 0px;
+  -moz-transition: color 0.25s ease-in-out;
+  -o-transition: color 0.25s ease-in-out;
+  -webkit-transition: color 0.25s ease-in-out;
+  -ms-transition: color 0.25s ease-in-out;
+  transition: color 0.25s ease-in-out; }
+  .nav-link:hover, #Utility a:hover, #menu-main-navigation li a:hover {
+    color: #ebebeb; }
+
+/*...Common elements */
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  background: #fecf5c none;
+  height: 25px;
+  font-size: 16px;
+  color: #464646;
+  border: 0 none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.4);
+  text-transform: lowercase; }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="number"]:focus {
+    background-color: #fede8f;
+    outline-color: #ebebeb; }
+
+/*Main Styles*/
+/*Header Region*/
+#branding {
+  height: 75px;
+  position: relative; }
+  #branding .content {
+    background: #000;
+    width: 1061px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -530.5px; }
+  #branding .left {
+    position: absolute;
+    left: 0;
+    right: 50%;
+    height: 75px;
+    background: #008eb0; }
+  #branding .right {
+    background: #000;
+    position: relative;
+    left: 50%;
+    right: 0;
+    height: 75px; }
+
+#site-title {
+  width: 255px;
+  height: 75px;
+  margin-left: 48px;
+  background: #464646 url("css/img/translator-logo.png") 25px 10px no-repeat; }
+
 #Utility {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 9px;
+  right: 0;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  display: inline-block; }
+  #Utility ul {
+    margin-top: -4px;
+    float: right; }
   #Utility li {
     list-style-type: none;
-    padding: 5px;
-    display: inline; }
+    padding: 0;
+    margin: 0;
+    display: inline;
+    margin-right: 20px; }
 
-.singular .hentry,
-.singular.page .hentry {
+.search-container {
+  float: right;
+  margin-right: 48px;
+  position: relative; }
+  .search-container .field {
+    width: 150px;
+    padding: 0 0 0 25px;
+    background: #fecf5c url(css/img/search-icon.png) 5px 50% no-repeat;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
+    .search-container .field:focus {
+      width: 250px;
+      -webkit-box-shadow: 0 0 2px #ebebeb;
+      -moz-box-shadow: 0 0 2px #ebebeb;
+      box-shadow: 0 0 2px #ebebeb; }
+
+#searchform {
+  display: inline-block; }
+
+#searchsubmit {
+  display: none; }
+
+#menu-main-navigation {
+  position: absolute;
+  right: 48px;
+  bottom: 12px;
   margin: 0;
-  padding: 10px 20px; }
-
-.singular .entry-header, .singular .entry-content, .singular footer.entry-meta, .singular #comments-title {
-  padding: auto;
-  margin: 0 auto;
-  width: auto; }
-
-.entry-content, .entry-summary {
   padding: 0; }
+  #menu-main-navigation li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline;
+    text-transform: uppercase; }
+    #menu-main-navigation li a {
+      padding-left: 56px; }
 
-.home .t_client,
-.home .t_lab,
-.home .open-lab,
-.home .t_product_studio,
-.home .t_xsmke,
-.home .xsmke,
-.home .post {
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  color: #464646; }
-  .home .t_client h1, .home .t_client h2,
-  .home .t_lab h1,
-  .home .t_lab h2,
-  .home .open-lab h1,
-  .home .open-lab h2,
-  .home .t_product_studio h1,
-  .home .t_product_studio h2,
-  .home .t_xsmke h1,
-  .home .t_xsmke h2,
-  .home .xsmke h1,
-  .home .xsmke h2,
-  .home .post h1,
-  .home .post h2 {
+/*Main Content*/
+/*Content Areas
+#primary
+	|__	#content
+		|__#ContentTop
+		|__#ContentBottom
+*/
+.body, #ContentTop, .translator-feed .entry-content {
+  width: 965px;
+  margin: 0 auto; }
+
+#ContentTop h1 {
+  color: #ebebeb; }
+
+.translator-feed .preview {
+  position: relative;
+  height: 74px;
+  text-align: center;
+  overflow: hidden; }
+  .translator-feed .preview h2 {
+    position: relative;
+    top: -4px;
+    display: inline; }
+.translator-feed .plus {
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+  margin: 0 0 0 32px;
+  background: rgba(255, 255, 255, 0.6); }
+  .translator-feed .plus.left {
+    margin: 0 32px 0 0; }
+  .translator-feed .plus svg {
+    margin-top: 20px; }
+.translator-feed .t_client,
+.translator-feed .t_lab,
+.translator-feed .open-lab,
+.translator-feed .t_product_studio,
+.translator-feed .t_xsmke,
+.translator-feed .t_event,
+.translator-feed .xsmke,
+.translator-feed .post {
+  color: #464646;
+  border-top: 1px solid white; }
+  .translator-feed .t_client h1, .translator-feed .t_client h2,
+  .translator-feed .t_lab h1,
+  .translator-feed .t_lab h2,
+  .translator-feed .open-lab h1,
+  .translator-feed .open-lab h2,
+  .translator-feed .t_product_studio h1,
+  .translator-feed .t_product_studio h2,
+  .translator-feed .t_xsmke h1,
+  .translator-feed .t_xsmke h2,
+  .translator-feed .t_event h1,
+  .translator-feed .t_event h2,
+  .translator-feed .xsmke h1,
+  .translator-feed .xsmke h2,
+  .translator-feed .post h1,
+  .translator-feed .post h2 {
     color: #fff;
     text-transform: uppercase; }
-  .home .t_client a,
-  .home .t_lab a,
-  .home .open-lab a,
-  .home .t_product_studio a,
-  .home .t_xsmke a,
-  .home .xsmke a,
-  .home .post a {
+  .translator-feed .t_client a,
+  .translator-feed .t_lab a,
+  .translator-feed .open-lab a,
+  .translator-feed .t_product_studio a,
+  .translator-feed .t_xsmke a,
+  .translator-feed .t_event a,
+  .translator-feed .xsmke a,
+  .translator-feed .post a {
     color: #fff; }
-.home .t_client {
+.translator-feed .t_client {
   background: #000; }
-.home .t_lab,
-.home .open-lab {
+  .translator-feed .t_client .plus {
+    background: #86ac90; }
+  .translator-feed .t_client polygon {
+    fill: #000; }
+.translator-feed .t_lab,
+.translator-feed .open-lab {
   background: #008eb0; }
-.home .t_product_studio {
+  .translator-feed .t_lab .plus,
+  .translator-feed .open-lab .plus {
+    background: #ebebeb; }
+  .translator-feed .t_lab polygon,
+  .translator-feed .open-lab polygon {
+    fill: #008eb0; }
+.translator-feed .t_product_studio {
   background: #fecf5c; }
-.home .t_xsmke,
-.home .xsmke {
+  .translator-feed .t_product_studio .plus {
+    background: #d71921; }
+  .translator-feed .t_product_studio polygon {
+    fill: #fecf5c; }
+.translator-feed .t_xsmke,
+.translator-feed .xsmke {
   background: #d71921; }
-.home .post {
+  .translator-feed .t_xsmke .plus,
+  .translator-feed .xsmke .plus {
+    background: #f58337; }
+  .translator-feed .t_xsmke polygon,
+  .translator-feed .xsmke polygon {
+    fill: #d71921; }
+.translator-feed .post {
   background: #86ac90; }
+  .translator-feed .post .plus {
+    background: #d71921; }
+  .translator-feed .post polygon {
+    fill: #86ac90; }
 
-.collapsable {
-  display: none; }
+.entry-content h2 {
+  margin: 0;
+  padding: 0; }
 
+/*Footer*/
 #SignupForm {
   display: none; }
+
+/*Styles*/
+/* Assistive text */
+.assistive-text {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px); }
+
+#access a.assistive-text:active,
+#access a.assistive-text:focus {
+  background: #eee;
+  border-bottom: 1px solid #ddd;
+  color: #1982d1;
+  clip: auto !important;
+  font-size: 12px;
+  position: absolute;
+  text-decoration: underline;
+  top: 0;
+  left: 7.6%; }
+
+.collapsable {
+  height: 0;
+  overflow-y: hidden;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out; }
+
+.bubble {
+  position: absolute;
+  top: 100px; }
+
+.plus polygon {
+  -ms-transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  -ms-transform: rotate(0);
+  -moz-transform: rotate(0);
+  -webkit-transform: rotate(0);
+  transform: rotate(0); }
+
+.plus:hover polygon {
+  -ms-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg); }
+
+svg:hover .bubble {
+  -webkit-animation: bubbleY 2.0s infinite; }
+
+svg:hover .bubble path {
+  -webkit-animation: bubbleX 0.5s infinite; }
+
+@-webkit-keyframes bubbleX {
+  0% {
+    -webkit-transform: translate(-5px, 0); }
+
+  50% {
+    -webkit-transform: translate(5px, 0); }
+
+  100% {
+    -webkit-transform: translate(-5px, 0); } }
+
+@-webkit-keyframes bubbleY {
+  0% {
+    -webkit-transform: translate(0, 0); }
+
+  100% {
+    -webkit-transform: translate(0, -30px); } }
 
 /* ==|== media queries ======================================================
    EXAMPLE Media Query for Responsive Design.
@@ -102,12 +736,11 @@ $blue: #008eb0;
 /*
  * Image replacement
  */
-.ir {
+.ir, #site-title {
   border: 0;
   font: 0/0 a;
   text-shadow: none;
-  color: transparent;
-  background-color: transparent; }
+  color: transparent; }
 
 /*
  * Hide from both screenreaders and browsers: h5bp.com/u
@@ -187,7 +820,7 @@ $blue: #008eb0;
   /*
    * Don't show links for images, or javascript/internal links
    */
-  .ir a:after,
+  .ir a:after, #site-title a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: ""; }

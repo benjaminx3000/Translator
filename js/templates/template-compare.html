@@ -1,0 +1,42 @@
+<style type="text/css">
+	#DebuglTool{
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.logged-in #DebuglTool{
+		top: 40px;
+	}
+	#DebuglTool input,
+	#DebuglTool button{
+		display: inline;
+		z-index: 10;
+	}
+	#TemplateContainer{
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		overflow: hidden;
+		text-align: center;
+		-webkit-transition: all 0.25s;
+		pointer-events: none;
+		opacity: 0;
+	}
+	.logged-in #TemplateContainer{
+		top: 28px;		
+	}
+	#TemplateImage{
+		top: 0;
+		right: 50%;
+	}
+</style>
+
+<div id="DebuglTool">
+	<!-- <input id="TemplateFile" type="file" /> -->
+	<button id="templateCompare">on</button>
+</div>
+<div id="TemplateContainer">
+	<img id="TemplateImage" src="wp-content/themes/Translator/css/img/template.jpg">
+</div>
