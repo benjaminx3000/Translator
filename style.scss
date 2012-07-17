@@ -48,7 +48,7 @@ $light-blue: #8fb5c5;
 
 h1,h2,h3{
 	@extend .Montserrat;
-	margin: 1em 0;
+	margin: 1em 0 0.1em;
 	line-height: 1.2em;
 }
 
@@ -204,13 +204,15 @@ $header-width: 965px + ($header-margin * 2);
 */
 
 .body{
-	width: 965px;
+	width: 960px;
 	margin: 0 auto;
 }
 
 #ContentTop{
 	@extend .body;
 	h1{color: $near-white;}
+	p{color: $near-white; line-height: 1.8em; margin: 0 5px;}
+	//.svg-container{width: 762px; margin: 0 auto;}
 }
 #ContentBottom{}
 
@@ -284,6 +286,86 @@ $header-width: 965px + ($header-margin * 2);
 	h2{margin: 0; padding: 0;}
 }
 
+/*Home Page*/
+#fun-nav{
+	width: 762px;
+	height: 254px;
+	margin: 0 auto;
+	position: relative;
+	h3{
+		position: absolute;
+		@extend .nav-link;
+		color: $near-white;
+	}
+}
+	#folio{
+		@include transition;
+		position: absolute;
+		top: 50%;
+		margin-top: - 140px/2;
+		left: 0;
+		-webkit-transform-style: preserve-3d;
+		-webkit-transform:rotateY(0);
+		width:158px; height:142px;
+		h3{
+			top: 65px;
+			left: 54px;
+		}
+		.fun-nav_folio-back {
+			-webkit-transform-origin: 50% 100%;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+		.fun-nav_folio-front{
+			@include transition;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			-webkit-transform-origin: 50% 100%;
+			-webkit-transform:rotateX(0);
+		}
+		&:hover{
+			-webkit-transform:rotateY(20deg);
+			.fun-nav_folio-front{
+				-webkit-transform:rotateX(-30deg);		
+			}
+		}
+	}
+	#flask{
+		width:105px; height:179px;
+		position: absolute;
+		top: 50%;
+		left: 308px;
+		margin-top: - 179px/2;
+		h3{
+			top: 55px;
+			left: -20px;
+		}
+		&:hover{}
+	}
+	#lamp{
+		width:189px; height:188px;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		margin-top: - 188px/2;
+		h3{
+			top: 75px;
+			left: 10px;
+		}
+		.fun-nav_lamp{position: absolute;}
+		.fun-nav_light-ray{
+			@include transition;
+			opacity: 0.0;
+			position: absolute;
+			top: 77px;
+			left: -57px;
+		}
+		&:hover .fun-nav_light-ray{ opacity: 0.6;}
+	}
+	/*End Fun Nav*/ 
+
 /*Footer*/
 #SignupForm{
 	display: none;
@@ -348,4 +430,4 @@ svg:hover .bubble path{
 	100% {-webkit-transform: translate( 0, -30px);}
 }
 
-@import "css/helpers";
+@import "css/helpers", "css/nav";

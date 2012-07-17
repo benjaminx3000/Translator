@@ -375,14 +375,14 @@ $light-blue: #8fb5c5
 /*
 	Typography
 */
-.Montserrat, h1, h2, h3, .nav-link, #Utility a, #menu-main-navigation li a, input[type="text"],
+.Montserrat, h1, h2, h3, .nav-link, #Utility a, #menu-main-navigation li a, #fun-nav h3, input[type="text"],
 input[type="email"],
 input[type="number"] {
   font-family: 'Montserrat', Helvetica, sans-serif;
   font-weight: normal; }
 
 h1, h2, h3 {
-  margin: 1em 0;
+  margin: 1em 0 0.1em;
   line-height: 1.2em; }
 
 h1 {
@@ -408,7 +408,7 @@ a {
   text-decoration: none;
   font-weight: bold; }
 
-.nav-link, #Utility a, #menu-main-navigation li a {
+.nav-link, #Utility a, #menu-main-navigation li a, #fun-nav h3 {
   color: #7d7d7d;
   font-size: 13px;
   vertical-align: top;
@@ -418,7 +418,7 @@ a {
   -webkit-transition: color 0.25s ease-in-out;
   -ms-transition: color 0.25s ease-in-out;
   transition: color 0.25s ease-in-out; }
-  .nav-link:hover, #Utility a:hover, #menu-main-navigation li a:hover {
+  .nav-link:hover, #Utility a:hover, #menu-main-navigation li a:hover, #fun-nav h3:hover {
     color: #ebebeb; }
 
 /*...Common elements */
@@ -539,11 +539,15 @@ input[type="number"] {
 		|__#ContentBottom
 */
 .body, #ContentTop, .translator-feed .entry-content {
-  width: 965px;
+  width: 960px;
   margin: 0 auto; }
 
 #ContentTop h1 {
   color: #ebebeb; }
+#ContentTop p {
+  color: #ebebeb;
+  line-height: 1.8em;
+  margin: 0 5px; }
 
 .translator-feed .preview {
   position: relative;
@@ -641,6 +645,91 @@ input[type="number"] {
   margin: 0;
   padding: 0; }
 
+/*Home Page*/
+#fun-nav {
+  width: 762px;
+  height: 254px;
+  margin: 0 auto;
+  position: relative; }
+  #fun-nav h3 {
+    position: absolute;
+    color: #ebebeb; }
+
+#folio {
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  position: absolute;
+  top: 50%;
+  margin-top: -70px;
+  left: 0;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform: rotateY(0);
+  width: 158px;
+  height: 142px; }
+  #folio h3 {
+    top: 65px;
+    left: 54px; }
+  #folio .fun-nav_folio-back {
+    -webkit-transform-origin: 50% 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0; }
+  #folio .fun-nav_folio-front {
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    -webkit-transform-origin: 50% 100%;
+    -webkit-transform: rotateX(0); }
+  #folio:hover {
+    -webkit-transform: rotateY(20deg); }
+    #folio:hover .fun-nav_folio-front {
+      -webkit-transform: rotateX(-30deg); }
+
+#flask {
+  width: 105px;
+  height: 179px;
+  position: absolute;
+  top: 50%;
+  left: 308px;
+  margin-top: -89.5px; }
+  #flask h3 {
+    top: 55px;
+    left: -20px; }
+
+#lamp {
+  width: 189px;
+  height: 188px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -94px; }
+  #lamp h3 {
+    top: 75px;
+    left: 10px; }
+  #lamp .fun-nav_lamp {
+    position: absolute; }
+  #lamp .fun-nav_light-ray {
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    opacity: 0.0;
+    position: absolute;
+    top: 77px;
+    left: -57px; }
+  #lamp:hover .fun-nav_light-ray {
+    opacity: 0.6; }
+
+/*End Fun Nav*/
 /*Footer*/
 #SignupForm {
   display: none; }
@@ -853,3 +942,44 @@ svg:hover .bubble path {
   h2,
   h3 {
     page-break-after: avoid; } }
+/* ----------------------------------------------------
+   created with http://www.texturepacker.com 
+   ----------------------------------------------------
+   $TexturePacker:SmartUpdate:7705c64e9de3b256eaccc8415671aeb7$
+   ----------------------------------------------------
+
+   usage: <span class="{-spritename-} sprite"></span>
+
+   replace {-spritename-} with the sprite you like to use
+
+*/
+.sprite {
+  display: inline-block;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-image: url(css/nav.png); }
+
+.fun-nav_bubble {
+  width: 17px;
+  height: 17px;
+  background-position: -2px -2px; }
+
+.fun-nav_flask {
+  width: 105px;
+  height: 179px;
+  background-position: -21px -2px; }
+
+.fun-nav_folio-front, .fun-nav_folio-back {
+  width: 156px;
+  height: 140px;
+  background-position: -288px -2px; }
+
+.fun-nav_lamp {
+  width: 189px;
+  height: 188px;
+  background-position: -2px -183px; }
+
+.fun-nav_light-ray {
+  width: 188px;
+  height: 96px;
+  background-position: -193px -183px; }
