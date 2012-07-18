@@ -27,7 +27,7 @@
 					<label for="mce-EMAIL">Subscribe to our mailing list</label>
 					<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
 
-					<input type="text" value="" name="FNAME" class="fname" id="mce-FNAME"  placeholder="lirst name">
+					<input type="text" value="" name="FNAME" class="fname" id="mce-FNAME"  placeholder="first name">
 
 					<input type="text" value="" name="LNAME" class="lname" id="mce-LNAME" placeholder="last name">
 					<div class="clear">

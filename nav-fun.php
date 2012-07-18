@@ -9,7 +9,7 @@
 		<div id="flask">
 			<h3>LAB</h3>
 			<div class="sprite fun-nav_flask"></div>
-			<div class="sprite fun-nav_bubble"></div>
+			<!-- <div class="wrapper"><div class="sprite fun-nav_bubble"></div></div> -->
 		</div><!-- end flask -->
 
 		<div id="lamp">
