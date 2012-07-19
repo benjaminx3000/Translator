@@ -10,11 +10,11 @@ function load_admin_scripts(){
 //load custom scripts
 add_action('wp_enqueue_scripts', 'load_custom_scripts');
 function load_custom_scripts(){
-	wp_register_script('fancybox', get_stylesheet_directory_uri() .'/js/lib/source/jquery.fancybox.pack.js' );
+	wp_register_script('fancybox', get_stylesheet_directory_uri() .'/js/fancyBox/source/jquery.fancybox.pack.js' );
 	wp_enqueue_script('main',
 		get_stylesheet_directory_uri() . '/js/main.js', //this is hack!!! make a separate script for admin panel!!
 		array('jquery', 'fancybox'));
-	wp_enqueue_style( 'fancyboxStyle', get_stylesheet_directory_uri() . '/js/lib/source/jquery.fancybox.css' );
+	wp_enqueue_style( 'fancyboxStyle', get_stylesheet_directory_uri() . '/js/fancyBox/source/jquery.fancybox.css' );
 }
 
 //Taxonomy
@@ -221,7 +221,7 @@ class t_product_studio {
 		    'not_found' =>  'No products found',
 		    'not_found_in_trash' => 'No Posts found in trash',
 		    'parent_item_colon' => 'Parent Product:',
-		    'menu_name' => 'Product Studio'
+		    'menu_name' => 'Studio'
 		);
 		$args = array(
 			'labels' => $labels,

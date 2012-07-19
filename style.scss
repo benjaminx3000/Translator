@@ -127,7 +127,7 @@ $header-width: 965px + ($header-margin * 2);
 	}
 	.right{
 		background: #000;
-		position: relative;
+		position: absolute;
 		left: 50%;
 		right: 0;
 		height: 75px;
@@ -391,7 +391,7 @@ $header-width: 965px + ($header-margin * 2);
 @-webkit-keyframes bubbleY {
 	0%   {top: 100px}
 	75%  {opacity: 1.0;}
-	100% {opacity: 0; top: -20px}
+	100% {opacity: 0; top: 0}
 }
 
 	/*End Fun Nav*/ 

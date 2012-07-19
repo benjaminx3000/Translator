@@ -463,7 +463,7 @@ input[type="number"] {
     background: #008eb0; }
   #branding .right {
     background: #000;
-    position: relative;
+    position: absolute;
     left: 50%;
     right: 0;
     height: 75px; }
@@ -764,7 +764,7 @@ input[type="number"] {
 
   100% {
     opacity: 0;
-    top: -20px; } }
+    top: 0; } }
 
 /*End Fun Nav*/
 /*Footer*/
