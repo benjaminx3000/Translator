@@ -538,7 +538,7 @@ input[type="number"] {
 		|__#ContentTop
 		|__#ContentBottom
 */
-.body, #ContentTop, .translator-feed .entry-content {
+.body, #ContentTop, .translator-feed .entry-content, #contact-footer {
   width: 960px;
   margin: 0 auto; }
 
@@ -649,7 +649,7 @@ input[type="number"] {
 #fun-nav {
   width: 762px;
   height: 254px;
-  margin: 0 auto;
+  margin: 0 auto 8px;
   position: relative; }
   #fun-nav h3 {
     position: absolute;
@@ -768,6 +768,39 @@ input[type="number"] {
 
 /*End Fun Nav*/
 /*Footer*/
+#colophon {
+  height: 170px;
+  background: #464646;
+  position: relative;
+  color: #7d7d7d; }
+
+#contact-footer {
+  position: relative; }
+
+#social {
+  color: #ebebeb;
+  position: absolute;
+  top: 28px;
+  right: 97px; }
+  #social p {
+    line-height: 1.1em;
+    margin: 0.8em 0; }
+
+#copyright {
+  position: relative;
+  top: 28px; }
+
+.facebook, .twitter {
+  height: 32px;
+  width: 32px;
+  margin-right: 4px;
+  background: url(css/img/social-icons.png) 0 0;
+  display: inline-block; }
+
+.twitter {
+  margin-right: 0;
+  background-position: -34px 0; }
+
 #SignupForm {
   display: none; }
 

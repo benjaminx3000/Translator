@@ -59,10 +59,15 @@ function templateCompare($){
 			//$(image).attr('src', file.val());
 		});
 
+		$(document).on('keyup', function(e){
+			if(e.keyCode == 27){
+				$(toggle).click();
+			}
+		});
 		$(toggle).toggle(
 			function(e){
 				$(this).text('off');
-				$(image).css({'opacity' : '1'});
+				$(image).css({'opacity' : '.6'});
 		}, function(e){
 			$(this).text('on');
 			$(image).css({'opacity' : '0'});

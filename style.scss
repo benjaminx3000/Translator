@@ -161,6 +161,7 @@ $header-width: 965px + ($header-margin * 2);
 			@extend .nav-link;
 		}	
 	}
+		
 		.search-container{
 			float: right;
 			margin-right: $header-margin;
@@ -290,7 +291,7 @@ $header-width: 965px + ($header-margin * 2);
 #fun-nav{
 	width: 762px;
 	height: 254px;
-	margin: 0 auto;
+	margin: 0 auto 8px;
 	position: relative;
 	h3{
 		position: absolute;
@@ -397,6 +398,43 @@ $header-width: 965px + ($header-margin * 2);
 	/*End Fun Nav*/ 
 
 /*Footer*/
+#colophon{
+	height: 170px;
+	background: $gray;
+	position: relative;
+	color: $light-gray;
+}
+	#contact-footer{
+		@extend .body;
+		position: relative;
+	}
+		#social{
+			color: $near-white;
+			position: absolute;
+			top: 28px;
+			right: 97px;
+			p{
+				line-height: 1.1em;
+				margin: 0.8em 0;
+				
+			}
+		}
+		#copyright{
+			position: relative;
+			top: 28px;
+		}
+		.facebook, .twitter {
+			height: 32px;
+			width: 32px;
+			margin-right: 4px;
+			background: url(css/img/social-icons.png) 0 0;
+			display: inline-block;
+		}
+		.twitter{
+			margin-right: 0;
+			background-position: -34px 0;
+		}
+
 #SignupForm{
 	display: none;
 }

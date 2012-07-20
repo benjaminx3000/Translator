@@ -13,7 +13,19 @@
 	</div><!-- #main -->
 
 	<footer id="colophon" role="contentinfo">
-
+				<div id="contact-footer">
+					<span id="copyright">&copy; Copyright <?php echo date('Y'); ?> Translaor, LLC</span>
+					<div id="social">
+						<a href="#" class="facebook"></a>
+						<a href="#" class="twitter"></a>
+						<p>
+							Translator<br>
+							415 E. Menomonee St. <br>
+							Milwaukee, WI 53202 <br>
+							414.801.1032 
+						</p>
+					</div>
+		</div>
 			<?php
 				/* A sidebar in the footer? Yep. You can can customize
 				 * your footer with three columns of widgets.
