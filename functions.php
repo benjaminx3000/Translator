@@ -16,6 +16,10 @@ function load_custom_scripts(){
 		array('jquery', 'fancybox'));
 	wp_enqueue_style( 'fancyboxStyle', get_stylesheet_directory_uri() . '/js/fancyBox/source/jquery.fancybox.css' );
 }
+// register custom image sizes
+if ( function_exists( 'add_image_size' ) ) { 
+	add_image_size( 'post-image', 510, 9999 ); //300 pixels wide (and unlimited height)
+}
 
 //Taxonomy
 add_action( 'init', 'create_event_types' );
@@ -394,6 +398,8 @@ function wpt_events_location() {
     echo '<input type="text" name="_location" value="' . $location  . '" class="" />';
 }
 
+
+//TO DO: This is breaking
 // Save the Metabox Data
 function wpt_save_events_meta($post_id, $post) {
     // verify this came from the our screen and with proper authorization,

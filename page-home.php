@@ -17,7 +17,7 @@
 				?>
 
 				<div id="ContentBottom" class="translator-feed">
-					<?php $count = 0; ?>
+					<?php $count = 0; global $more;?>
 					<?php  while ( $loop->have_posts() ) : $loop->the_post() ; ?>
 					<div id="<?php the_ID(); ?>" <?php post_class(); ?>>
 						<div class="entry-content">
@@ -68,10 +68,9 @@
 								</div>
 								<?php } ?>
 							</div>
-							<div class="collapsable">
-								<?php the_content(); ?>
-								<?php edit_post_link( __( 'Edit', 'Translator' ), '<span class="edit-link">', '</span>' ); ?>
-								<?php the_taxonomies(); ?>
+							<div class="collapsable content">
+								<?php $more = 0; ?>
+								<?php get_template_part('content', 'post') ?>
 								<?php $count ++; ?>
 							</div>
 						</div>

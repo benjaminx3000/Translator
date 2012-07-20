@@ -5,6 +5,7 @@ Author: Ben
 Template: twentyeleven
 */
 @import url("http://fonts.googleapis.com/css?family=Montserrat");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,700");
 /*
  * HTML5 Boilerplate
  *
@@ -381,6 +382,14 @@ input[type="number"] {
   font-family: 'Montserrat', Helvetica, sans-serif;
   font-weight: normal; }
 
+.Open-Sans, body {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-weight: 400; }
+
+.Open-Sans-Bold, .summary h2, .summary h3 {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-weight: 700; }
+
 h1, h2, h3 {
   margin: 1em 0 0.1em;
   line-height: 1.2em; }
@@ -397,16 +406,14 @@ h3 {
 body {
   background: #8fb5c5;
   color: #464646;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  font-weight: normal; }
+  font-size: 14px; }
   body p {
     line-height: 1.5em; }
 
 a {
   color: #008eb0;
   text-decoration: none;
-  font-weight: bold; }
+  font-weight: normal; }
 
 .nav-link, #Utility a, #menu-main-navigation li a, #fun-nav h3 {
   color: #7d7d7d;
@@ -538,7 +545,7 @@ input[type="number"] {
 		|__#ContentTop
 		|__#ContentBottom
 */
-.body, #ContentTop, .translator-feed .entry-content, #contact-footer {
+.body, #ContentTop, #contact-footer {
   width: 960px;
   margin: 0 auto; }
 
@@ -554,10 +561,21 @@ input[type="number"] {
   height: 74px;
   text-align: center;
   overflow: hidden; }
-  .translator-feed .preview h2 {
+  .translator-feed .preview h1, .translator-feed .preview h2 {
     position: relative;
     top: -4px;
-    display: inline; }
+    display: inline;
+    color: #fff;
+    text-transform: uppercase; }
+  .translator-feed .preview a {
+    color: #fff; }
+.translator-feed .content {
+  background: #ebebeb; }
+.translator-feed .article {
+  width: 790px;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 77px; }
 .translator-feed .plus {
   display: inline-block;
   width: 75px;
@@ -578,32 +596,6 @@ input[type="number"] {
 .translator-feed .post {
   color: #464646;
   border-top: 1px solid white; }
-  .translator-feed .t_client h1, .translator-feed .t_client h2,
-  .translator-feed .t_lab h1,
-  .translator-feed .t_lab h2,
-  .translator-feed .open-lab h1,
-  .translator-feed .open-lab h2,
-  .translator-feed .t_product_studio h1,
-  .translator-feed .t_product_studio h2,
-  .translator-feed .t_xsmke h1,
-  .translator-feed .t_xsmke h2,
-  .translator-feed .t_event h1,
-  .translator-feed .t_event h2,
-  .translator-feed .xsmke h1,
-  .translator-feed .xsmke h2,
-  .translator-feed .post h1,
-  .translator-feed .post h2 {
-    color: #fff;
-    text-transform: uppercase; }
-  .translator-feed .t_client a,
-  .translator-feed .t_lab a,
-  .translator-feed .open-lab a,
-  .translator-feed .t_product_studio a,
-  .translator-feed .t_xsmke a,
-  .translator-feed .t_event a,
-  .translator-feed .xsmke a,
-  .translator-feed .post a {
-    color: #fff; }
 .translator-feed .t_client {
   background: #000; }
   .translator-feed .t_client .plus {
@@ -644,6 +636,31 @@ input[type="number"] {
 .entry-content h2 {
   margin: 0;
   padding: 0; }
+.entry-content .author {
+  font-size: 18px;
+  text-transform: none; }
+
+h2.post-title {
+  margin: 32px 0 30px; }
+
+.article h2 {
+  font-size: 40px;
+  color: #464646; }
+.article p {
+  margin-top: 0; }
+.article a {
+  color: #008eb0; }
+
+.image-gallery {
+  width: 510px;
+  float: right; }
+
+.summary {
+  width: 236px;
+  float: left; }
+  .summary h2, .summary h3 {
+    color: #7d7d7d;
+    font-size: 16px; }
 
 /*Home Page*/
 #fun-nav {
@@ -825,7 +842,6 @@ input[type="number"] {
   left: 7.6%; }
 
 .collapsable {
-  height: 0;
   overflow-y: hidden;
   -moz-transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out;
@@ -920,15 +936,17 @@ input[type="number"] {
 /*
  * Contain floats: h5bp.com/q
  */
-.clearfix:before,
-.clearfix:after {
+.clearfix:before, .translator-feed .article:before,
+.clearfix:after,
+.translator-feed .article:after, .translator-feed
+.article:after {
   content: "";
   display: table; }
 
-.clearfix:after {
+.clearfix:after, .translator-feed .article:after {
   clear: both; }
 
-.clearfix {
+.clearfix, .translator-feed .article {
   *zoom: 1; }
 
 /* ==|== print styles =======================================================
