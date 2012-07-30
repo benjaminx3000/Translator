@@ -8,10 +8,6 @@ Template: twentyeleven
 @import url("http://fonts.googleapis.com/css?family=Montserrat");
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:400,700");
 @import "css/hbp", "css/mixins";
-//@import "../twentyeleven/style.css";
-
-//Mixins
-
 
 
 /*
@@ -229,6 +225,7 @@ $header-width: 965px + ($header-margin * 2);
 
 .translator-feed{
 	.preview{
+		@include box-shadow-inset(1px, 1px, 2px, rgba(255, 255, 255, 0.75) );	
 		position: relative;
 		height: 74px;
 		text-align: center;
@@ -249,6 +246,7 @@ $header-width: 965px + ($header-margin * 2);
 		padding-bottom: 77px;
 	}
 	.plus{
+		@include box-shadow-inset(1px, 1px, 2px, rgba(255, 255, 255, 0.75) );	
 		display: inline-block;
 		width: 75px;
 		height: 75px;
@@ -269,7 +267,7 @@ $header-width: 965px + ($header-margin * 2);
 	.xsmke,
 	.post{
 		color: $gray;
-		border-top: 1px solid rgba(255, 255, 255,1);
+		//border-top: 1px solid rgba(255, 255, 255,1);
 	}
 	.t_client{
 			background: #000;
@@ -507,9 +505,12 @@ h2.post-title{
 }
 
 .collapsable{
-	//height: 0;
+	height: 0;
 	overflow-y: hidden;
-	@include transition(all, 1.0s);
+	@include transition(all, 0.6s);
+}
+.collapsable.expanded{
+	height: auto;
 }
 	// .translator-feed .entry-content:hover .collapsable{
 	// 		height: 250px;
@@ -522,10 +523,10 @@ h2.post-title{
 
 .plus polygon{
 	@include transform-origin;
-	@include transition(all, 0.25s);
+	@include transition(all, 0.6s);
 	@include rotate(0);
 }
-.plus:hover polygon{
+.plus.open polygon{
 	@include rotate(-90deg);
 }
 

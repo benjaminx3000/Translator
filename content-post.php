@@ -15,9 +15,12 @@
 			  );
 			  $attachments = get_posts( $args );
 			     if ( $attachments ) {
-			        foreach ( $attachments as $attachment ) {
-			           echo wp_get_attachment_image( $attachment->ID, 'post-image' );
-			          }
+			        echo wp_get_attachment_image( $attachments[0]->ID, 'post-image' );
+			        // foreach ( $attachments as $attachment ) {
+			        //    echo wp_get_attachment_image( $attachment->ID, 'post-image' );
+			        //   }
+			     } else {
+			     	echo ('<img src=' . get_stylesheet_directory_uri() . '/img/chicken.jpg');
 			     }
 		 ?>
 	</div>

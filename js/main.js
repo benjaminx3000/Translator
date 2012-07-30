@@ -7,6 +7,7 @@ function init($){
 	$('a[href="#SignupForm"]').fancybox();
 	templateCompare($);
 	navigation($);
+	initUI($);
 }
 
 function adminInit($){
@@ -17,11 +18,36 @@ function adminInit($){
     });
 }
 
+function initUI($){
+	var preview = $('.preview'),
+		collapser,
+		lastArticle,
+		height,
+		plus;
+
+	$(preview).click(function(e){
+		e.preventDefault();
+		//find the collapsable content
+		collapser = $(this).siblings('.collapsable');
+		//if it's not the same as from the last click,
+		//then close the last one and open the new
+		if(collapser != lastArticle){
+			$(lastArticle).height(0);
+			$(plus).removeClass('open');
+			height = $(collapser).find('.article').outerHeight();
+			plus = $(this).find('.plus');
+			$(plus).addClass('open');
+			$(collapser).height(height);
+			lastArticle = $(collapser);
+		}
+	});
+}
+
+//fun navigation thingie
 function navigation($){
 	var bubble,
 		t,
 		count = 0;
-
 
 	$('#flask').hover(function(e){
 		console.log('Hovering- shoud setInterval');
