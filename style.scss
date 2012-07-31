@@ -143,6 +143,7 @@ $header-width: 965px + ($header-margin * 2);
 	#site-title{
 		width: 255px;
 		height: 75px;
+		float: left;
 		margin-left: $header-margin;
 		background: $gray url("css/img/translator-logo.png") 25px 10px no-repeat;
 		@extend .ir;
@@ -217,7 +218,7 @@ $header-width: 965px + ($header-margin * 2);
 
 #ContentTop{
 	@extend .body;
-	h1{color: $near-white;}
+	h1, h2{color: $near-white;}
 	p{color: $near-white; line-height: 1.8em; margin: 0 5px;}
 	//.svg-container{width: 762px; margin: 0 auto;}
 }

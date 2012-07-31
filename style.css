@@ -478,6 +478,7 @@ input[type="number"] {
 #site-title {
   width: 255px;
   height: 75px;
+  float: left;
   margin-left: 48px;
   background: #464646 url("css/img/translator-logo.png") 25px 10px no-repeat; }
 
@@ -549,7 +550,7 @@ input[type="number"] {
   width: 960px;
   margin: 0 auto; }
 
-#ContentTop h1 {
+#ContentTop h1, #ContentTop h2 {
   color: #ebebeb; }
 #ContentTop p {
   color: #ebebeb;

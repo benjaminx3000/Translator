@@ -2,50 +2,17 @@
 
 		<div id="primary">
 			<div id="content" role="main">
-				<div id="ContentTop">
-					<?php while ( have_posts() ) : the_post(); ?>
-						<?php the_content(); ?>
-						<?php $page_name = $post->post_name; ?>
-					<?php endwhile; // end of the loop. ?>
-				</div><!--End #ContentTop -->
-
-				<?php 
-					$query;
-					switch ($page_name) {
-						case 'client':
-							$query = array('t_client');
-							break;
-						case 'studio':
-						case 'product-studio':
-							$query = array('t_product_studio');
-							break;
-						case 'lab':
-							$query = array('t_lab' , 't_event');
-							break;
-						case 'calendar':
-							$query = array('t_event');
-							break;
-						case 'experience-series':
-							$query = array('t_xsmke', 't_event');
-							break;
-						default:
-							$post_title = get_the_title();
-							break;
-					}
-
-					$args = array( 'post_type' => $query,
-						'posts_per_page' => 10,
-						'orderby' => 'date' );
-					$loop = new WP_Query( $args );
-				?>
 
 				<div id="ContentBottom" class="translator-feed">
 					<?php $count = 0; global $more;?>
-					<?php  while ( $loop->have_posts() ) : $loop->the_post() ; ?>
+					<?php  while ( have_posts() ) : the_post() ; ?>
 					<div id="<?php the_ID(); ?>" <?php post_class(); ?>>
 						<div class="entry-content">
 							<div class="preview">
-								<?php $post_title = get_the_title(); ?>
+								<?php 
+									$post_title = get_the_title() .  " <span class='author'>by " . get_the_author() . "</span>";
+								 ?>
+
 								<?php if($count % 2 == 0) { ?>
 								<div class="svg-container plus left">
 									<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -66,7 +33,7 @@
 								</div>
 								<?php } ?>
 							</div>
-							<div class="collapsable content">
+							<div class="collapsable <?php echo ($count == 0)? 'expanded' : ''; ?> content">
 								<?php $more = 0; ?>
 								<?php get_template_part('content', 'post') ?>
 								<?php $count ++; ?>

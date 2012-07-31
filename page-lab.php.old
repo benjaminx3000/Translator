@@ -5,35 +5,11 @@
 				<div id="ContentTop">
 					<?php while ( have_posts() ) : the_post(); ?>
 						<?php the_content(); ?>
-						<?php $page_name = $post->post_name; ?>
 					<?php endwhile; // end of the loop. ?>
 				</div><!--End #ContentTop -->
 
 				<?php 
-					$query;
-					switch ($page_name) {
-						case 'client':
-							$query = array('t_client');
-							break;
-						case 'studio':
-						case 'product-studio':
-							$query = array('t_product_studio');
-							break;
-						case 'lab':
-							$query = array('t_lab' , 't_event');
-							break;
-						case 'calendar':
-							$query = array('t_event');
-							break;
-						case 'experience-series':
-							$query = array('t_xsmke', 't_event');
-							break;
-						default:
-							$post_title = get_the_title();
-							break;
-					}
-
-					$args = array( 'post_type' => $query,
+					$args = array( 'post_type' => array('t_lab'),
 						'posts_per_page' => 10,
 						'orderby' => 'date' );
 					$loop = new WP_Query( $args );
