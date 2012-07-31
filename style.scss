@@ -301,6 +301,7 @@ $header-width: 965px + ($header-margin * 2);
 .entry-content{
 	h2{margin: 0; padding: 0;}
 	.author{font-size: 18px; text-transform: none;}
+	.secondary-title{font-size: 36px; text-transform: none;}
 }
 h2.post-title{
 	margin: 32px 0 30px;
@@ -315,6 +316,11 @@ h2.post-title{
 	}
 	a{
 		color: $blue;
+	}
+}
+.no-image{
+	.summary{
+		width: 510px;
 	}
 }
 .image-gallery{

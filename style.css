@@ -645,6 +645,9 @@ input[type="number"] {
 .entry-content .author {
   font-size: 18px;
   text-transform: none; }
+.entry-content .secondary-title {
+  font-size: 36px;
+  text-transform: none; }
 
 h2.post-title {
   margin: 32px 0 30px; }
@@ -656,6 +659,9 @@ h2.post-title {
   margin-top: 0; }
 .article a {
   color: #008eb0; }
+
+.no-image .summary {
+  width: 510px; }
 
 .image-gallery {
   width: 510px;

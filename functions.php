@@ -18,7 +18,7 @@ function load_custom_scripts(){
 }
 // register custom image sizes
 if ( function_exists( 'add_image_size' ) ) { 
-	add_image_size( 'post-image', 510, 9999 ); //300 pixels wide (and unlimited height)
+	add_image_size( 'post-image', 510, 600 ); //300 pixels wide (and unlimited height)
 }
 
 //Taxonomy
@@ -378,8 +378,8 @@ function wpt_events_date() {
     echo '<label for="_event_date">Event Date</label>';
     echo '<input type="text" name="_event_date" value="' . $date  . '" class="datepicker " />';
 
-    echo '<input type="hidden" name="eventmeta_noncename" id="eventmeta_noncename" value="' .
-    wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
+    // echo '<input type="hidden" name="eventmeta_noncename" id="eventmeta_noncename" value="' .
+//    wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
     // Get the location data if its already been entered
     $location = get_post_meta($post->ID, '_location', true);
     // Echo out the field
@@ -387,16 +387,6 @@ function wpt_events_date() {
     echo '<input type="text" name="_location" value="' . $location  . '" class="" />';
 }
 
-function wpt_events_location() {
-    //global $post;
-    // Noncename needed to verify where the data originated
-    echo '<input type="hidden" name="eventmeta_noncename" id="eventmeta_noncename" value="' .
-    wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
-    // Get the location data if its already been entered
-    $location = get_post_meta($post->ID, '_location', true);
-    // Echo out the field
-    echo '<input type="text" name="_location" value="' . $location  . '" class="" />';
-}
 
 
 //TO DO: This is breaking
@@ -404,8 +394,11 @@ function wpt_events_location() {
 function wpt_save_events_meta($post_id, $post) {
     // verify this came from the our screen and with proper authorization,
     // because save_post can be triggered at other times
+    if(!array_key_exists('eventmeta_noncename', $_POST)) {
+    	return $post->ID;
+    }
     if ( !wp_verify_nonce( $_POST['eventmeta_noncename'], plugin_basename(__FILE__) )) {
-    return $post->ID;
+    	return $post->ID;
     }
     // Is the user allowed to edit the post or page?
     if ( !current_user_can( 'edit_post', $post->ID ))
@@ -414,6 +407,7 @@ function wpt_save_events_meta($post_id, $post) {
     // We'll put it into an array to make it easier to loop though.
     $events_meta['_event_date'] = $_POST['_event_date'];
     $events_meta['_location'] = $_POST['_location'];
+    echo "it's doing it!";
     // Add values of $events_meta as custom fields
     foreach ($events_meta as $key => $value) { // Cycle through the $events_meta array!
         if( $post->post_type == 'revision' ) return; // Don't store custom data twice
