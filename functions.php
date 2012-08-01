@@ -23,6 +23,7 @@ if ( function_exists( 'add_image_size' ) ) {
 
 //Taxonomy
 add_action( 'init', 'create_event_types' );
+add_action( 'init', 'create_product_names' );
 function create_event_types() {
  $labels = array(
     'name' => _x( 'Event-Types', 'taxonomy general name' ),
@@ -39,6 +40,26 @@ function create_event_types() {
 
   register_taxonomy('event-type','t_event',array(
     'hierarchical' => true,
+    'labels' => $labels
+  ));
+}
+
+function create_product_names() {
+ $labels = array(
+    'name' => _x( 'Product-Name', 'taxonomy general name' ),
+    'singular_name' => _x( 'Product Name', 'taxonomy singular name' ),
+    'search_items' =>  __( 'Search Product Names' ),
+    'all_items' => __( 'All Product Names' ),
+    'parent_item' => __( 'Parent Product Name' ),
+    'parent_item_colon' => __( 'Parent Product Name:' ),
+    'edit_item' => __( 'Edit Product Name' ),
+    'update_item' => __( 'Update Product Name' ),
+    'add_new_item' => __( 'Add New Product Name' ),
+    'new_item_name' => __( 'New Location Product Name' ),
+  ); 	
+
+  register_taxonomy('product-name','t_product_studio',array(
+    'hierarchical' => false,
     'labels' => $labels
   ));
 }
@@ -245,7 +266,8 @@ class t_product_studio {
 			'has_archive' => true,
 			// 'rewrite' => array('slug' => 'your-slug', 'with_front' => 'before-your-slug'),
 			'query_var' => true,
-			'can_export' => true
+			'can_export' => true,
+			'register_meta_box_cb' => 'add_product_name_metaboxes'
 		); 
 		register_post_type('t_product_studio',$args);
 	}
@@ -363,11 +385,17 @@ $t_event = new t_event();
 
 // Add the Events Meta Boxes
 function add_events_metaboxes() {
-	add_meta_box('wpt_events_date', 'Event Info', 'wpt_events_date', 't_event', 'normal', 'high');
-    //add_meta_box('wpt_events_location', 'Event Location', 'wpt_events_location', 't_event', 'side', 'default');
+	add_meta_box('t_events_date', 'Event Info', 't_events_date', 't_event', 'normal', 'high');
 }
+//name
+function add_product_name_metaboxes(){
+	add_meta_box('t_stream_title', 'Feed Title', 't_stream_title', 't_product_studio', 'normal', 'high');
+	add_meta_box('t_stream_title', 'Feed Title', 't_stream_title', 't_client', 'normal', 'high');
+	add_meta_box('t_stream_title', 'Feed Title', 't_event', 't_product_studio', 'normal', 'high');
+}
+
 // The Event Location Metabox
-function wpt_events_date() {
+function t_events_date() {
     global $post;
     // Noncename needed to verify where the data originated
     echo '<input type="hidden" name="eventmeta_noncename" id="eventmeta_noncename" value="' .
@@ -378,8 +406,6 @@ function wpt_events_date() {
     echo '<label for="_event_date">Event Date</label>';
     echo '<input type="text" name="_event_date" value="' . $date  . '" class="datepicker " />';
 
-    // echo '<input type="hidden" name="eventmeta_noncename" id="eventmeta_noncename" value="' .
-//    wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
     // Get the location data if its already been entered
     $location = get_post_meta($post->ID, '_location', true);
     // Echo out the field
@@ -387,13 +413,23 @@ function wpt_events_date() {
     echo '<input type="text" name="_location" value="' . $location  . '" class="" />';
 }
 
+//Studio product and client name metabox
+function t_stream_title(){
+	global $post;
+	echo '<input type="hidden" name="titlemeta_noncename" id="titlemeta_noncename" value="' .
+	wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
+    // Get the date data if its already been entered
+    $stream_title = get_post_meta($post->ID, '_stream_title', true);
+    // Echo out the field
+    echo '<input type="text" name="_stream_title" value="' . $stream_title  . '" class="widefat"/>';
+}
 
 
-//TO DO: This is breaking
 // Save the Metabox Data
-function wpt_save_events_meta($post_id, $post) {
+function t_save_events_meta($post_id, $post) {
     // verify this came from the our screen and with proper authorization,
     // because save_post can be triggered at other times
+
     if(!array_key_exists('eventmeta_noncename', $_POST)) {
     	return $post->ID;
     }
@@ -407,7 +443,6 @@ function wpt_save_events_meta($post_id, $post) {
     // We'll put it into an array to make it easier to loop though.
     $events_meta['_event_date'] = $_POST['_event_date'];
     $events_meta['_location'] = $_POST['_location'];
-    echo "it's doing it!";
     // Add values of $events_meta as custom fields
     foreach ($events_meta as $key => $value) { // Cycle through the $events_meta array!
         if( $post->post_type == 'revision' ) return; // Don't store custom data twice
@@ -420,17 +455,48 @@ function wpt_save_events_meta($post_id, $post) {
         if(!$value) delete_post_meta($post->ID, $key); // Delete if blank
     }
 }
-add_action('save_post', 'wpt_save_events_meta', 1, 2); // save the custom fields
+
+function t_save_stream_title($post_id, $post){
+    // verify this came from the our screen and with proper authorization,
+    // because save_post can be triggered at other times
+
+    if(!array_key_exists('titlemeta_noncename', $_POST)) {
+    	return $post->ID;
+    }
+    if ( !wp_verify_nonce( $_POST['titlemeta_noncename'], plugin_basename(__FILE__) )) {
+    	return $post->ID;
+    }
+    // Is the user allowed to edit the post or page?
+    if ( !current_user_can( 'edit_post', $post->ID ))
+        return $post->ID;
+    // OK, we're authenticated: we need to find and save the data
+    // We'll put it into an array to make it easier to loop though.
+    $name_meta['_stream_title'] = $_POST['_stream_title'];
+    
+    // Add values of $name_meta as custom fields
+    foreach ($name_meta as $key => $value) { // Cycle through the $name_meta array!
+        if( $post->post_type == 'revision' ) return; // Don't store custom data twice
+        $value = implode(',', (array)$value); // If $value is an array, make it a CSV (unlikely)
+        if(get_post_meta($post->ID, $key, FALSE)) { // If the custom field already has a value
+            update_post_meta($post->ID, $key, $value);
+        } else { // If the custom field doesn't have a value
+            add_post_meta($post->ID, $key, $value);
+        }
+        if(!$value) delete_post_meta($post->ID, $key); // Delete if blank
+    }
+}
+add_action('save_post', 't_save_events_meta', 1, 2); // save the custom fields
+add_action('save_post', 't_save_stream_title', 1, 2); // save the custom fields
 
 
 //Fitler to add class names based on taxonomy
-add_filter( 'post_class', 'mysite_post_class', 10, 3 );
-if( !function_exists( 'mysite_post_class' ) ) {
+add_filter( 'post_class', 't_post_class', 10, 3 );
+if( !function_exists( 't_post_class' ) ) {
     /**
      * Append taxonomy terms to post class.
      * @since 2010-07-10
      */
-    function mysite_post_class( $classes, $class, $ID ) {
+    function t_post_class( $classes, $class, $ID ) {
         $taxonomy = 'event-type';
         $terms = get_the_terms( (int) $ID, $taxonomy );
         if( !empty( $terms ) ) {

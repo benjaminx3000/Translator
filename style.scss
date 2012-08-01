@@ -235,7 +235,8 @@ $header-width: 965px + ($header-margin * 2);
 			position: relative;
 			top: -4px;
 			display: inline;
-		color: #fff; text-transform: uppercase;}
+		color: #fff; //text-transform: uppercase;
+	}
 		a{color: #fff}
 	}
 	.content{background: $near-white;}

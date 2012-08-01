@@ -569,8 +569,7 @@ input[type="number"] {
     position: relative;
     top: -4px;
     display: inline;
-    color: #fff;
-    text-transform: uppercase; }
+    color: #fff; }
   .translator-feed .preview a {
     color: #fff; }
 .translator-feed .content {

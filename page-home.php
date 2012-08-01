@@ -23,28 +23,14 @@
 						<div class="entry-content">
 							<div class="preview">
 								<?php $post_type = get_post_type();
-									$post_title;
+									$special_title = $post_title = get_post_meta(get_the_id(), '_stream_title', true);
+									$post_title = get_the_title();
 									switch ($post_type) {
-										case 't_client':
-											$post_title = get_the_title();//needs get_client_name()
-											break;
-										case 't_product_studio':
-											$post_title = get_the_title();//needs get_product_name()
-											break;
-										case 't_lab':
-											$post_title = "OPEN LAB: <span class='secondary-title'>" . get_the_title() . "</span>";
-											break;
-										case 't_event':
-											$post_title = "UPCOMING EVENT: <span class='secondary-title'>" . get_the_title() . "</span>";
-											break;
-										case 't_xsmke':
-											$post_title = "EXPERIENCE SERIES: <span class='secondary-title'>" . get_the_title() . "</span>";
-											break;
 										case 'post':
 											$post_title = get_the_title() .  " <span class='author'>by " . get_the_author() . "</span>";
 											break;
 										default:
-											$post_title = get_the_title();
+											($special_title == '')? $post_title = get_the_title() : $post_title = $special_title;
 											break;
 									}
 								?>
