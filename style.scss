@@ -94,15 +94,35 @@ a {
 	}
 }
 
+$width: 960px;
+$onethird: 960px * 0.33;
+$margin: 44px;
+.two-col{
+	@extend .clearfix;
+}
+.two-over-three{
+	.left{
+		float: left;
+		width: ($onethird * 2) - $margin;
+
+	}
+	.right{
+		float: right;
+		width: $onethird;
+	}
+}
+
 /*...Common elements */
 input[type="text"],
 input[type="email"],
-input[type="number"]{
+input[type="number"],
+textarea{
 	background: $yellow none;
 	height: 25px;
 	font-size: 16px;
 	color: $gray;
 	border: 0 none;
+	width: 100%;
 	@include box-sizing;
 	@include box-shadow-inset(1px, 1px, 2px);
 	@extend .Montserrat;
@@ -112,6 +132,7 @@ input[type="number"]{
 		outline-color: $near-white;
 	}
 }
+textarea{height: auto;}
 /*Main Styles*/
 /*Header Region*/
 $header-margin: 48px;
@@ -229,6 +250,7 @@ $header-width: 965px + ($header-margin * 2);
 		h1,h2{
 			margin-top: 0;
 		}
+		p{margin: 1.2em 5px;}
 		padding: 46px 0;
 	}
 }
@@ -514,7 +536,8 @@ h3.date{
 			margin-right: 0;
 			background-position: -34px 0;
 		}
-
+/*Hidden forms*/
+//#ContentTop .wpcf7,
 #SignupForm{
 	display: none;
 }

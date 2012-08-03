@@ -378,7 +378,8 @@ $light-blue: #8fb5c5
 */
 .Montserrat, h1, h2, h3, .nav-link, #Utility a, #menu-main-navigation li a, #fun-nav h3, input[type="text"],
 input[type="email"],
-input[type="number"] {
+input[type="number"],
+textarea {
   font-family: 'Montserrat', Helvetica, sans-serif;
   font-weight: normal; }
 
@@ -428,15 +429,24 @@ a {
   .nav-link:hover, #Utility a:hover, #menu-main-navigation li a:hover, #fun-nav h3:hover {
     color: #ebebeb; }
 
+.two-over-three .left {
+  float: left;
+  width: 589.6px; }
+.two-over-three .right {
+  float: right;
+  width: 316.8px; }
+
 /*...Common elements */
 input[type="text"],
 input[type="email"],
-input[type="number"] {
+input[type="number"],
+textarea {
   background: #fecf5c none;
   height: 25px;
   font-size: 16px;
   color: #464646;
   border: 0 none;
+  width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -446,9 +456,13 @@ input[type="number"] {
   text-transform: lowercase; }
   input[type="text"]:focus,
   input[type="email"]:focus,
-  input[type="number"]:focus {
+  input[type="number"]:focus,
+  textarea:focus {
     background-color: #fede8f;
     outline-color: #ebebeb; }
+
+textarea {
+  height: auto; }
 
 /*Main Styles*/
 /*Header Region*/
@@ -562,6 +576,8 @@ input[type="number"] {
   padding: 46px 0; }
   #ContentTop.interior-page h1, #ContentTop.interior-page h2 {
     margin-top: 0; }
+  #ContentTop.interior-page p {
+    margin: 1.2em 5px; }
 
 .translator-feed .preview {
   -webkit-box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.75);
@@ -851,6 +867,7 @@ h3.date {
   margin-right: 0;
   background-position: -34px 0; }
 
+/*Hidden forms*/
 #SignupForm {
   display: none; }
 
@@ -973,17 +990,18 @@ h3.date {
 /*
  * Contain floats: h5bp.com/q
  */
-.clearfix:before, .translator-feed .article:before,
+.clearfix:before, .two-col:before, .translator-feed .article:before,
 .clearfix:after,
+.two-col:after,
 .translator-feed .article:after, .translator-feed
 .article:after {
   content: "";
   display: table; }
 
-.clearfix:after, .translator-feed .article:after {
+.clearfix:after, .two-col:after, .translator-feed .article:after {
   clear: both; }
 
-.clearfix, .translator-feed .article {
+.clearfix, .two-col, .translator-feed .article {
   *zoom: 1; }
 
 /* ==|== print styles =======================================================

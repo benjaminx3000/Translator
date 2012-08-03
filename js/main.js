@@ -4,7 +4,7 @@ jQuery(document).ready(function($) {
 
 function init($){
 	console.log('Theme JS Initialized!');	
-	$('a[href="#SignupForm"]').fancybox();
+	$('a[href="#SignupForm"], .fancy').fancybox();
 	templateCompare($);
 	navigation($);
 	initUI($);
