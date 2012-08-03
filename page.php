@@ -48,7 +48,18 @@
 					<div id="<?php the_ID(); ?>" <?php post_class(); ?>>
 						<div class="entry-content">
 							<div class="preview">
-								<?php $post_title = get_the_title(); ?>
+								<?php $post_type = get_post_type();
+									$special_title = $post_title = get_post_meta(get_the_id(), '_stream_title', true);
+									$post_title = get_the_title();
+									switch ($post_type) {
+										case 'post':
+											$post_title = get_the_title() .  " <span class='author'>by " . get_the_author() . "</span>";
+											break;
+										default:
+											($special_title == '')? $post_title = get_the_title() : $post_title = $special_title;
+											break;
+									}
+								?>
 								<?php if($count % 2 == 0) { ?>
 								<div class="svg-container plus left">
 									<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
