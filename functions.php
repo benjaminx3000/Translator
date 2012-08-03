@@ -321,7 +321,8 @@ class t_xsmke {
 			'has_archive' => true,
 			// 'rewrite' => array('slug' => 'your-slug', 'with_front' => 'before-your-slug'),
 			'query_var' => true,
-			'can_export' => true
+			'can_export' => true,
+			'register_meta_box_cb' => 'add_feet_title_metaboxes'
 		); 
 		register_post_type('t_xsmke',$args);
 	}
