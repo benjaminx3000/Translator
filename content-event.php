@@ -23,21 +23,11 @@
 		<?php the_content('Read the full story &gt;'); ?>
 		<?php edit_post_link( __( 'Edit', 'Translator' ), '<span class="edit-link">', '</span>' ); ?>
 	</div>
-	<div class="image-gallery">
-		<?php if(get_post_type() == 't_event') { ?>
-		<div class="event-info">
-			<h3 class="date"><?php echo get_post_meta(get_the_id(), '_event_date', true); ?></h3>
-			<p class="location"><?php echo get_post_meta(get_the_id(), '_location', true); ?></p>
-		</div>
-		<?php } ?>
-		<?php if($has_attachments){
-			echo wp_get_attachment_image( $attachments[0]->ID, 'post-image' );
-	        // foreach ( $attachments as $attachment ) {
-	        //    echo wp_get_attachment_image( $attachment->ID, 'post-image' );
-		} ?>
-	
+	<div class="event-info">
+		<h3 class="date"><?php echo get_post_meta(get_the_id(), '_event_date', true); ?></h3>
+		<p class="location"><?php echo get_post_meta(get_the_id(), '_location', true); ?></p>
 	</div>
 	<div class="comments">
-		<?php // comments_template( '', true ); ?>
+		<?php comments_template( '', true ); ?>
 	</div>
 </div>

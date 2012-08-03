@@ -2,7 +2,7 @@
 
 		<div id="primary">
 			<div id="content" role="main">
-				<div id="ContentTop">
+				<div id="ContentTop" class="interior-page">
 					<?php while ( have_posts() ) : the_post(); ?>
 						<?php the_content(); ?>
 						<?php $page_name = $post->post_name; ?>
@@ -26,10 +26,10 @@
 							$query = array('t_event');
 							break;
 						case 'experience-series':
-							$query = array('t_xsmke', 't_event');
+							$query = array('t_xsmke');
 							break;
 						default:
-							$post_title = get_the_title();
+							$query = array('t_product_studio', 't_event', 't_client', 't_lab', 't_xsmke');
 							break;
 					}
 
@@ -68,7 +68,16 @@
 							</div>
 							<div class="collapsable content">
 								<?php $more = 0; ?>
-								<?php get_template_part('content', 'post') ?>
+								<?php 
+									switch (get_post_type()) {
+										case 't_event':
+											get_template_part('content', 'event');
+											break;
+										default:
+											get_template_part('content', 'post');
+											break;
+									}
+								?>
 								<?php $count ++; ?>
 							</div>
 						</div>

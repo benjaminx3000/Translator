@@ -61,6 +61,9 @@ h1,h2,h3{
 	line-height: 1.2em;
 }
 
+
+
+
 h1{font-size: 54px};
 h2{font-size: 36px};
 h3{font-size: 24px};
@@ -197,8 +200,10 @@ $header-width: 965px + ($header-margin * 2);
 			@include nav-inline;
 			//font-size: 13px;
 			text-transform: uppercase;
-			a{@extend .nav-link;//could use flexi-box for this.
-				padding-left: 56px;}
+			a{
+				@extend .nav-link;//could use flexi-box for this.
+				padding-left: 35px;}
+			&.current-menu-item a{color:$near-white}
 		}
 	}
 
@@ -220,7 +225,12 @@ $header-width: 965px + ($header-margin * 2);
 	@extend .body;
 	h1, h2{color: $near-white;}
 	p{color: $near-white; line-height: 1.8em; margin: 0 5px;}
-	//.svg-container{width: 762px; margin: 0 auto;}
+	&.interior-page{
+		h1,h2{
+			margin-top: 0;
+		}
+		padding: 46px 0;
+	}
 }
 #ContentBottom{}
 
@@ -245,7 +255,10 @@ $header-width: 965px + ($header-margin * 2);
 		width: 790px;
 		margin: 0 auto;
 		position: relative;
-		padding-bottom: 77px;
+		padding: 33px 0 77px;
+		h1, h2{
+			margin-top: 0;
+		}
 	}
 	.plus{
 		@include box-shadow-inset(1px, 1px, 2px, rgba(255, 255, 255, 0.75) );	
@@ -324,6 +337,17 @@ h2.post-title{
 		width: 510px;
 	}
 }
+.event-info{
+	width: 216px;
+	float: right;
+	padding: 10px;
+	background: $light-blue;
+}
+h3.date{
+	margin-top: 0;
+	padding: 3px;
+	background: #FFF;
+}
 .image-gallery{
 	width: 510px;
 	float: right;
@@ -336,6 +360,9 @@ h2.post-title{
 		color: $light-gray;
 		font-size: 16px;
 	}
+}
+.image .summary p{
+	text-align: justify;
 }
 
 

@@ -162,7 +162,8 @@ class t_client {
 			'has_archive' => true,
 			// 'rewrite' => array('slug' => 'your-slug', 'with_front' => 'before-your-slug'),
 			'query_var' => true,
-			'can_export' => true
+			'can_export' => true,
+			'register_meta_box_cb' => 'add_feet_title_metaboxes'
 		); 
 		register_post_type('t_client',$args);
 	}
@@ -214,7 +215,8 @@ class t_lab {
 			'has_archive' => true,
 			// 'rewrite' => array('slug' => 'your-slug', 'with_front' => 'before-your-slug'),
 			'query_var' => true,
-			'can_export' => true
+			'can_export' => true,
+			'register_meta_box_cb' => 'add_feet_title_metaboxes'
 		); 
 		register_post_type('t_lab',$args);
 	}
@@ -267,7 +269,7 @@ class t_product_studio {
 			// 'rewrite' => array('slug' => 'your-slug', 'with_front' => 'before-your-slug'),
 			'query_var' => true,
 			'can_export' => true,
-			'register_meta_box_cb' => 'add_product_name_metaboxes'
+			'register_meta_box_cb' => 'add_feet_title_metaboxes'
 		); 
 		register_post_type('t_product_studio',$args);
 	}
@@ -386,12 +388,15 @@ $t_event = new t_event();
 // Add the Events Meta Boxes
 function add_events_metaboxes() {
 	add_meta_box('t_events_date', 'Event Info', 't_events_date', 't_event', 'normal', 'high');
+	add_meta_box('t_stream_title', 'Feed Title', 't_stream_title', 't_event', 'normal', 'high');
 }
 //name
-function add_product_name_metaboxes(){
+function add_feet_title_metaboxes(){
 	add_meta_box('t_stream_title', 'Feed Title', 't_stream_title', 't_product_studio', 'normal', 'high');
 	add_meta_box('t_stream_title', 'Feed Title', 't_stream_title', 't_client', 'normal', 'high');
-	add_meta_box('t_stream_title', 'Feed Title', 't_event', 't_product_studio', 'normal', 'high');
+	add_meta_box('t_stream_title', 'Feed Title', 't_stream_title', 't_xsmke', 'normal', 'high');
+	add_meta_box('t_stream_title', 'Feed Title', 't_stream_title', 't_lab', 'normal', 'high');
+	add_meta_box('t_stream_title', 'Feed Title', 't_stream_title', 't_event', 'normal', 'high');
 }
 
 // The Event Location Metabox

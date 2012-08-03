@@ -56,7 +56,16 @@
 							</div>
 							<div class="collapsable content">
 								<?php $more = 0; ?>
-								<?php get_template_part('content', 'post') ?>
+								<?php 
+									switch (get_post_type()) {
+										case 't_event':
+											get_template_part('content', 'event');
+											break;
+										default:
+											get_template_part('content', 'post');
+											break;
+									}
+								?>
 								<?php $count ++; ?>
 							</div>
 						</div>

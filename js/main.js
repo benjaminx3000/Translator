@@ -13,7 +13,7 @@ function init($){
 function adminInit($){
 	console.log('Admin JS Initialized!');
     $('input.datepicker').datepicker({
-    	dateFormat: 'MM - mm, DD yy' ,
+    	dateFormat: 'DD<br>MM-d, yy',
     	autoSize: true
     });
 }
