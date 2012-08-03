@@ -224,9 +224,13 @@ $header-width: 965px + ($header-margin * 2);
 			a{
 				@extend .nav-link;//could use flexi-box for this.
 				padding-left: 35px;}
-			&.current-menu-item a{color:$near-white}
+
 		}
 	}
+	.current-menu-item a{
+		color:$near-white !important;
+	} 
+	
 
 /*Main Content*/
 
@@ -536,6 +540,9 @@ h3.date{
 			margin-right: 0;
 			background-position: -34px 0;
 		}
+.wpcf7 p{
+	margin: 0.2em 0;
+}
 /*Hidden forms*/
 //#ContentTop .wpcf7,
 #SignupForm{

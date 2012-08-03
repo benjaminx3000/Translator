@@ -552,8 +552,9 @@ textarea {
     text-transform: uppercase; }
     #menu-main-navigation li a {
       padding-left: 35px; }
-    #menu-main-navigation li.current-menu-item a {
-      color: #ebebeb; }
+
+.current-menu-item a {
+  color: #ebebeb !important; }
 
 /*Main Content*/
 /*Content Areas
@@ -866,6 +867,9 @@ h3.date {
 .twitter {
   margin-right: 0;
   background-position: -34px 0; }
+
+.wpcf7 p {
+  margin: 0.2em 0; }
 
 /*Hidden forms*/
 #SignupForm {

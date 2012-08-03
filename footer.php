@@ -37,11 +37,20 @@
 			<div id="SignupForm">
 				<form action="http://translatordigitalcafe.us2.list-manage2.com/subscribe/post?u=4f0df1102a56ea0f4cc811f93&amp;id=8d4e83ef68" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
 					<label for="mce-EMAIL">Subscribe to our mailing list</label>
-					<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-
-					<input type="text" value="" name="FNAME" class="fname" id="mce-FNAME"  placeholder="first name">
-
-					<input type="text" value="" name="LNAME" class="lname" id="mce-LNAME" placeholder="last name">
+					<p>
+						email<sup>*</sup><br>
+						<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+					</p>
+					
+					<p>
+						first name<br> 
+						<input type="text" value="" name="FNAME" class="fname" id="mce-FNAME"  placeholder="first name">
+					</p>
+					
+					<p>
+						last name<br>
+						<input type="text" value="" name="LNAME" class="lname" id="mce-LNAME" placeholder="last name">
+					</p>
 					<div class="clear">
 						<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
 					</div>

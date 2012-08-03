@@ -28,6 +28,9 @@
 						case 'experience-series':
 							$query = array('t_xsmke');
 							break;
+						case 'about':
+							$query = array();
+							break;
 						default:
 							$query = array('t_product_studio', 't_event', 't_client', 't_lab', 't_xsmke');
 							break;
