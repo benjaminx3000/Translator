@@ -31,7 +31,8 @@ function initUI($){
 		collapser = $(this).siblings('.collapsable');
 		//if it's not the same as from the last click,
 		//then close the last one and open the new
-		if(collapser != lastArticle){
+		if(!lastArticle){
+			console.log(lastArticle);
 			$(lastArticle).height(0);
 			$(plus).removeClass('open');
 			height = $(collapser).find('.article').outerHeight();
@@ -40,6 +41,25 @@ function initUI($){
 			$(collapser).height(height);
 			lastArticle = $(collapser);
 		}
+		if(collapser.attr('id') !== lastArticle.attr('id')){
+			console.log(collapser);
+			console.log(lastArticle);
+			$(lastArticle).height(0);
+			$(plus).removeClass('open');
+			height = $(collapser).find('.article').outerHeight();
+			plus = $(this).find('.plus');
+			$(plus).addClass('open');
+			$(collapser).height(height);
+			lastArticle = $(collapser);
+		} else {
+			if($(collapser).height() == 0){
+				$(collapser).height(height);
+			} else{
+				$(collapser).height(0);
+			}
+
+		}
+		
 	});
 }
 

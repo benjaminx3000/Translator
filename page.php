@@ -80,7 +80,7 @@
 								</div>
 								<?php } ?>
 							</div>
-							<div class="collapsable content">
+							<div id="contetnt<?php the_ID(); ?>" class="collapsable content">
 								<?php $more = 0; ?>
 								<?php 
 									switch (get_post_type()) {

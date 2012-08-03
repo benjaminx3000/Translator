@@ -16,8 +16,8 @@
 				<div id="contact-footer">
 					<span id="copyright">&copy; Copyright <?php echo date('Y'); ?> Translaor, LLC</span>
 					<div id="social">
-						<a href="#" class="facebook"></a>
-						<a href="#" class="twitter"></a>
+						<a href="http://www.facebook.com/translatordigitalcafe" target="_blank" class="facebook"></a>
+						<a href="https://twitter.com/translatorxd" target="_blank" class="twitter"></a>
 						<p>
 							Translator<br>
 							415 E. Menomonee St. <br>
@@ -54,6 +54,7 @@
 					<div class="clear">
 						<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
 					</div>
+					<p>Translator promises never to sell your name or send you spammy emails!</p>
 				</form>
 			</div>
 	</footer><!-- #colophon -->

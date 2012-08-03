@@ -1,28 +1,13 @@
-<?php
-/**
- * The template for displaying all pages.
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
- * different template.
- *
- * @package WordPress
- * @subpackage Twenty_Eleven
- * @since Twenty Eleven 1.0
- */
-
-get_header(); ?>
+<?php get_header(); ?>
 
 		<div id="primary">
 			<div id="content" role="main">
-				<?php while ( have_posts() ) : the_post(); ?>
-				<div class="article body">
-					<h1><?php the_title(); ?></h1>
-					<?php the_content(); ?>
-				</div>
-				<?php endwhile; // end of the loop. ?>
-
+				<div id="ContentTop" class="interior-page">
+					<?php while ( have_posts() ) : the_post(); ?>
+						<h1 class="page-title"><?php the_title() ?></h1>
+						<?php the_content(); ?>
+					<?php endwhile; // end of the loop. ?>
+				</div><!--End #ContentTop -->
 			</div><!-- #content -->
 		</div><!-- #primary -->
 

@@ -587,13 +587,22 @@ h3.date{
 }
 
 
-.plus polygon{
+.plus .plust{
 	@include transform-origin;
 	@include transition(all, 0.6s);
+	@include opacity(1);
 	@include rotate(0);
 }
-.plus.open polygon{
+.plus .minus{
+	@include transition(all, 0.6s);
+	@include opacity(0);
+}
+.plus.open .plust{
+	@include opacity(0);
 	@include rotate(-90deg);
+}
+.plus.open .minus{
+	@include opacity(1);	
 }
 
 @import "css/helpers", "css/nav";
