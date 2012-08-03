@@ -573,6 +573,10 @@ textarea {
   color: #ebebeb;
   line-height: 1.8em;
   margin: 0 5px; }
+#ContentTop ul, #ContentTop ol {
+  color: #ebebeb;
+  line-height: 1.8em;
+  margin: 0 5px; }
 #ContentTop.interior-page {
   padding: 46px 0; }
   #ContentTop.interior-page h1, #ContentTop.interior-page h2 {

@@ -250,6 +250,7 @@ $header-width: 965px + ($header-margin * 2);
 	@extend .body;
 	h1, h2{color: $near-white;}
 	p{color: $near-white; line-height: 1.8em; margin: 0 5px;}
+	ul, ol{color: $near-white; line-height: 1.8em; margin: 0 5px;}
 	&.interior-page{
 		h1,h2{
 			margin-top: 0;
