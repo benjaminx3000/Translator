@@ -64,7 +64,8 @@
 								<div class="svg-container plus left">
 									<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 										 width="35px" height="35px" viewBox="0 0 35 35" enable-background="new 0 0 35 35" xml:space="preserve">
-									<polygon fill="#D71921" points="35,13 22,13 22,0 13,0 13,13 0,13 0,22 13,22 13,35 22,35 22,22 35,22 "/>
+									<polygon class="plust" fill="#D71921" points="35,13 22,13 22,0 13,0 13,13 0,13 0,22 13,22 13,35 22,35 22,22 35,22 "/>
+									<polygon class="minus" fill="#D71921" points="35,13 0,13 0,22 35,22 "/>
 									</svg>
 								</div>
 								<?php } ?>
@@ -75,7 +76,8 @@
 								<div class="svg-container plus">
 									<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 										 width="35px" height="35px" viewBox="0 0 35 35" enable-background="new 0 0 35 35" xml:space="preserve">
-									<polygon fill="#D71921" points="35,13 22,13 22,0 13,0 13,13 0,13 0,22 13,22 13,35 22,35 22,22 35,22 "/>
+									<polygon class="plust" fill="#D71921" points="35,13 22,13 22,0 13,0 13,13 0,13 0,22 13,22 13,35 22,35 22,22 35,22 "/>
+									<polygon class="minus" fill="#D71921" points="35,13 0,13 0,22 35,22 "/>
 									</svg>
 								</div>
 								<?php } ?>
@@ -87,8 +89,10 @@
 										case 't_event':
 											get_template_part('content', 'event');
 											break;
-										default:
+										case 'post' :
 											get_template_part('content', 'post');
+										default:
+											get_template_part('content', 'default');
 											break;
 									}
 								?>

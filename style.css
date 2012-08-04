@@ -709,6 +709,8 @@ h3.date {
 .summary {
   width: 236px;
   float: left; }
+  .summary img {
+    display: none; }
   .summary h2, .summary h3 {
     color: #7d7d7d;
     font-size: 16px; }

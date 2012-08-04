@@ -16,7 +16,9 @@
 	     }
  ?>
 <div class="article <?php echo($has_attachments ? 'image' : 'no-image'); ?>">
-	<h4><?php the_date('F jS, Y', 'posted: '); ?></h4>
+	<?php if(get_post_type() != 'post') { ?>
+	<h2 class="post-title"><?php the_title(); ?></h2>
+	<?php } ?>
 	<div class="summary">
 		<?php the_content('Read the full story &gt;'); ?>
 		<?php edit_post_link( __( 'Edit', 'Translator' ), '<span class="edit-link">', '</span>' ); ?>
