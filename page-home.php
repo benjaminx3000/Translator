@@ -4,7 +4,9 @@
 			<div id="content" role="main">
 				<div id="ContentTop">
 					<?php while ( have_posts() ) : the_post(); ?>
+						<div class="container">
 						<?php the_content(); ?>
+						</div>
 						<?php get_template_part('nav', 'fun'); ?>
 					<?php endwhile; // end of the loop. ?>
 				</div><!--End #ContentTop -->

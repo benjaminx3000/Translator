@@ -385,7 +385,7 @@ $t_event = new t_event();
 
 
 //Meta boxes for events
-
+add_action('add_meta_boxes', 'add_feet_title_metaboxes');
 // Add the Events Meta Boxes
 function add_events_metaboxes() {
 	add_meta_box('t_events_date', 'Event Info', 't_events_date', 't_event', 'normal', 'high');
@@ -398,6 +398,7 @@ function add_feet_title_metaboxes(){
 	add_meta_box('t_stream_title', 'Feed Title', 't_stream_title', 't_xsmke', 'normal', 'high');
 	add_meta_box('t_stream_title', 'Feed Title', 't_stream_title', 't_lab', 'normal', 'high');
 	add_meta_box('t_stream_title', 'Feed Title', 't_stream_title', 't_event', 'normal', 'high');
+	add_meta_box('t_stream_title', 'Feed Title', 't_stream_title', 'page', 'normal', 'high');
 }
 
 // The Event Location Metabox
@@ -491,6 +492,7 @@ function t_save_stream_title($post_id, $post){
         if(!$value) delete_post_meta($post->ID, $key); // Delete if blank
     }
 }
+
 add_action('save_post', 't_save_events_meta', 1, 2); // save the custom fields
 add_action('save_post', 't_save_stream_title', 1, 2); // save the custom fields
 

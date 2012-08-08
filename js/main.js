@@ -54,8 +54,10 @@ function initUI($){
 		} else {
 			if($(collapser).height() == 0){
 				$(collapser).height(height);
+				$(plus).addClass('open');
 			} else{
 				$(collapser).height(0);
+				$(plus).removeClass('open');
 			}
 
 		}

@@ -90,7 +90,7 @@ a {
 	@extend .Montserrat;
 	@include transition(color, 0.25s);
 	&:hover{
-		color: $near-white;
+		color: white;
 	}
 }
 
@@ -129,7 +129,7 @@ textarea{
 	text-transform: lowercase;
 	&:focus{
 		background-color: lighten($yellow, 10);
-		outline-color: $near-white;
+		outline-color: white;
 	}
 }
 textarea{height: auto;}
@@ -204,7 +204,7 @@ $header-width: 965px + ($header-margin * 2);
 				@include transition(all, 0.5s);
 				&:focus{
 					width: 250px;
-					@include box-shadow(0, 0, 2px, $near-white);
+					@include box-shadow(0, 0, 2px, white);
 				}
 			}
 		}
@@ -228,7 +228,7 @@ $header-width: 965px + ($header-margin * 2);
 		}
 	}
 	.current-menu-item a{
-		color:$near-white !important;
+		color:$yellow !important;
 	} 
 	
 
@@ -238,6 +238,7 @@ $header-width: 965px + ($header-margin * 2);
 #primary
 	|__	#content
 		|__#ContentTop
+		|__#ContentMid
 		|__#ContentBottom
 */
 
@@ -246,18 +247,48 @@ $header-width: 965px + ($header-margin * 2);
 	margin: 0 auto;
 }
 
-#ContentTop{
-	@extend .body;
-	h1, h2{color: $near-white;}
-	p{color: $near-white; line-height: 1.8em; margin: 0 5px;}
-	ul, ol{color: $near-white; line-height: 1.8em; margin: 0 5px;}
-	&.interior-page{
-		h1,h2{
-			margin-top: 0;
-		}
-		p{margin: 1.2em 5px;}
-		padding: 46px 0;
+#ContentTop,
+#ContentMid{
+	.container{
+		@extend .body;
+		@extend .clearfix;
+		position: relative;
 	}
+}
+
+#ContentTop{
+	//@extend .body;
+	h1, h2{margin: 0 0 0.4em;color: white;}
+	p{color: white; line-height: 1.8em; margin: 0 5px;}
+	ul, ol{color: white; line-height: 1.8em; margin: 0 5px;}
+	&.interior-page{
+		background: white;
+		h1,h2{margin: 0 0 0.5em; color: $gray;}
+		p{margin: 0 5px 1.2em;color: $light-gray;}
+		.container{padding: 52px 0;}
+		//padding: 46px 0;
+	}
+	.attachment-post-thumbnail{
+		float: right;
+		margin-left: 74px;
+	}
+	.container{padding: 52px 0 0;}
+}
+#ContentMid{
+	background: $light-blue;
+	h1, h2{color: white;}
+	ul{color: white; padding: 0; margin: 0;}
+	li{@include nav-inline; font-size: 18px; margin-right: 34px; display: inline-block;}
+	p{color: $gray;}
+	h2{
+		font-size: 24px;
+		margin: 0;
+		position: absolute;
+		top: -50px ;left: 0;
+		padding: 0.5em;
+		background-color: $light-blue;
+	}
+	.container{padding: 26px 0 52px;}
 }
 #ContentBottom{}
 
@@ -276,7 +307,7 @@ $header-width: 965px + ($header-margin * 2);
 	}
 		a{color: #fff}
 	}
-	.content{background: $near-white;}
+	.content{background: white;}
 	.article{
 		@extend .clearfix;
 		width: 790px;
@@ -319,7 +350,7 @@ $header-width: 965px + ($header-margin * 2);
 	.t_lab,
 	.open-lab{
 		background: $blue;
-		.plus{background: $near-white;}
+		.plus{background: white;}
 		polygon{fill: $blue;}
 	}
 	.t_product_studio{
@@ -404,7 +435,7 @@ h3.date{
 	h3{
 		position: absolute;
 		@extend .nav-link;
-		color: $near-white;
+		color: white;
 	}
 }
 	#folio{
@@ -517,7 +548,7 @@ h3.date{
 		position: relative;
 	}
 		#social{
-			color: $near-white;
+			color: white;
 			position: absolute;
 			top: 28px;
 			right: 97px;

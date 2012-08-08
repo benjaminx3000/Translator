@@ -4,10 +4,38 @@
 			<div id="content" role="main">
 				<div id="ContentTop" class="interior-page">
 					<?php while ( have_posts() ) : the_post(); ?>
+					<div class="container" >
+						<h1><?php echo( get_post_meta(get_the_id(), '_stream_title', true)); ?></h1>
+						<?php 
+							if ( has_post_thumbnail() ) { 
+								the_post_thumbnail();
+							} 
+						?>
 						<?php the_content(); ?>
-						<?php $page_name = $post->post_name; ?>
+
+					</div>
+
 					<?php endwhile; // end of the loop. ?>
 				</div><!--End #ContentTop -->
+				<div id="ContentMid">
+					<div class="container">
+						<?php $page_name = $post->post_name; ?>
+						<?php if($page_name == 'client') { ?>
+						<h2>OFFERINGS</h2>	
+						<ul>
+							<li>User Research</li>
+							<li>Strategy and Planning</li>
+							<li>Brand Development & Design</li>
+							<li>Digital marketing</li>
+							<li>User Experience Strategy & Design</li>
+							<li>Mobile Solutions</li>
+							<li>Social Media Integration</li>
+							<li>Something Else?</li>
+						</ul>
+						<p>We excel at strategy, solutioning and design and have developed a deep network of development partners to help with implementation. Translator also offers services for traditional and digital agencies who need assistance with short or long-term strategic projects and planning.</p>
+						<?php } ?>
+					</div>
+				</div>
 
 				<?php 
 					$query;
@@ -49,7 +77,7 @@
 						<div class="entry-content">
 							<div class="preview">
 								<?php $post_type = get_post_type();
-									$special_title = $post_title = get_post_meta(get_the_id(), '_stream_title', true);
+									$special_title = get_post_meta(get_the_id(), '_stream_title', true);
 									$post_title = get_the_title();
 									switch ($post_type) {
 										case 'post':
