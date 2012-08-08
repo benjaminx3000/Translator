@@ -42,8 +42,6 @@ function initUI($){
 			lastArticle = $(collapser);
 		}
 		if(collapser.attr('id') !== lastArticle.attr('id')){
-			console.log(collapser);
-			console.log(lastArticle);
 			$(lastArticle).height(0);
 			$(plus).removeClass('open');
 			height = $(collapser).find('.article').outerHeight();
@@ -59,8 +57,15 @@ function initUI($){
 				$(collapser).height(0);
 				$(plus).removeClass('open');
 			}
-
 		}
+		var ref = $(this);
+		console.log($(ref).css('margin-top'));
+		var delay = parseFloat($(collapser).css('-webkit-transition-duration'));
+		console.log(delay * 1000);
+		setTimeout(function(){
+			$.scrollTo({left:0, top: $(ref).offset().top}, delay * 1000);
+			console.log("done");
+		}, delay * 1000);
 		
 	});
 }

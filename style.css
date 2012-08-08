@@ -569,9 +569,21 @@ textarea {
   width: 960px;
   margin: 0 auto; }
 
-#ContentTop .container,
-#ContentMid .container {
+#ContentTop,
+#ContentMid {
   position: relative; }
+  #ContentTop .container,
+  #ContentMid .container {
+    position: relative;
+    z-index: 1; }
+  #ContentTop .box,
+  #ContentMid .box {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    background: #464646; }
 
 #ContentTop h1, #ContentTop h2 {
   margin: 0 0 0.4em;
@@ -627,7 +639,9 @@ textarea {
     padding: 0.5em;
     background-color: #8fb5c5; }
   #ContentMid .container {
-    padding: 26px 0 52px; }
+    width: 993px;
+    background: #8fb5c5;
+    padding: 26px 33px 52px 0; }
 
 .translator-feed .preview {
   -webkit-box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.75);

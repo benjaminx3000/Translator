@@ -35,6 +35,7 @@
 						<p>We excel at strategy, solutioning and design and have developed a deep network of development partners to help with implementation. Translator also offers services for traditional and digital agencies who need assistance with short or long-term strategic projects and planning.</p>
 						<?php } ?>
 					</div>
+					<div class="box"></div>
 				</div>
 
 				<?php 

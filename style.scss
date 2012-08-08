@@ -249,10 +249,20 @@ $header-width: 965px + ($header-margin * 2);
 
 #ContentTop,
 #ContentMid{
+	position: relative;
 	.container{
 		@extend .body;
 		@extend .clearfix;
 		position: relative;
+		z-index: 1; 
+	}
+	.box{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 50%;
+		right: 0;
+		background: $gray;
 	}
 }
 
@@ -288,7 +298,9 @@ $header-width: 965px + ($header-margin * 2);
 		padding: 0.5em;
 		background-color: $light-blue;
 	}
-	.container{padding: 26px 0 52px;}
+	.container{
+		width: 960 + 33px;
+		background: $light-blue; padding: 26px 33px 52px 0;}
 }
 #ContentBottom{}
 

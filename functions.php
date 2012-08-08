@@ -11,9 +11,10 @@ function load_admin_scripts(){
 add_action('wp_enqueue_scripts', 'load_custom_scripts');
 function load_custom_scripts(){
 	wp_register_script('fancybox', get_stylesheet_directory_uri() .'/js/fancyBox/source/jquery.fancybox.pack.js' );
+	wp_register_script('plugins', get_stylesheet_directory_uri() .'/js/plugins.js' );
 	wp_enqueue_script('main',
 		get_stylesheet_directory_uri() . '/js/main.js', //this is hack!!! make a separate script for admin panel!!
-		array('jquery', 'fancybox'));
+		array('jquery', 'fancybox', 'plugins'));
 	wp_enqueue_style( 'fancyboxStyle', get_stylesheet_directory_uri() . '/js/fancyBox/source/jquery.fancybox.css' );
 }
 // register custom image sizes
