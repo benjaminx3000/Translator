@@ -10,6 +10,6 @@
 <p style="color:#fff; font-size: 18px;">Sales &amp; Business Development Acceleration</p>
 	</div>
 	<div class="right">
-		<?php echo do_shortcode('[contact-form-7 id="538" title="Open Lab: suggest a topic"]'); ?>
+		<?php echo do_shortcode('[contact-form-7 id="494" title="Drop us a line"]'); ?>
 	</div>
 </div>
