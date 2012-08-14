@@ -411,6 +411,9 @@ body {
   body p {
     line-height: 1.5em; }
 
+p:first-child {
+  margin-top: 0; }
+
 a {
   color: #008eb0;
   text-decoration: none;
@@ -428,6 +431,23 @@ a {
   transition: color 0.25s ease-in-out; }
   .nav-link:hover, #Utility a:hover, #menu-main-navigation li a:hover, #fun-nav h3:hover {
     color: white; }
+
+/* Tabs */
+.tab-nav li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: inline;
+  display: inline-block; }
+
+.no-js .tab {
+  display: block; }
+
+.tab {
+  display: none; }
+
+.tab.current {
+  display: block; }
 
 .two-over-three .left {
   float: left;
@@ -598,6 +618,9 @@ textarea {
     right: 0;
     background: #464646; }
 
+.page-title {
+  margin: 0; }
+
 #ContentTop h1, #ContentTop h2 {
   margin: 0 0 0.4em;
   color: white; }
@@ -619,7 +642,10 @@ textarea {
     color: #7d7d7d; }
   #ContentTop.interior-page .container {
     padding: 52px 0; }
-#ContentTop .attachment-post-thumbnail {
+#ContentTop.lab.interior-page h1.page-title {
+  margin: 0; }
+#ContentTop .attachment-post-thumbnail,
+#ContentTop .wp-post-image {
   float: right;
   margin-left: 74px; }
 #ContentTop .container {
@@ -627,13 +653,13 @@ textarea {
 
 #ContentMid {
   background: #8fb5c5; }
-  #ContentMid h1, #ContentMid h2 {
+  #ContentMid h1, #ContentMid h2, #ContentMid h3 {
     color: white; }
   #ContentMid ul {
     color: white;
     padding: 0;
     margin: 0; }
-  #ContentMid li {
+  #ContentMid .list li {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -643,16 +669,28 @@ textarea {
     display: inline-block; }
   #ContentMid p {
     color: #464646; }
+  #ContentMid .tab-nav {
+    position: absolute;
+    top: -53px;
+    left: 0; }
+  #ContentMid .tab {
+    padding-left: 12px; }
   #ContentMid h2 {
     font-size: 24px;
     margin: 0;
-    position: absolute;
-    top: -50px;
-    left: 0;
     padding: 0.5em;
+    background-color: #fff;
+    border: 1px solid #8fb5c5;
+    color: #8fb5c5; }
+    #ContentMid h2:hover {
+      color: #fecf5c; }
+  #ContentMid .current h2,
+  #ContentMid .current:hover h2 {
+    color: #fff;
     background-color: #8fb5c5; }
+  #ContentMid h3 {
+    font-size: 16px; }
   #ContentMid .container {
-    width: 993px;
     background: #8fb5c5;
     padding: 26px 33px 52px 0; }
 

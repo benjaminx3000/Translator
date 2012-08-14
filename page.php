@@ -1,14 +1,14 @@
 <?php get_header(); ?>
-
+		<?php $page_name = $post->post_name; ?>
 		<div id="primary">
 			<div id="content" role="main">
-				<div id="ContentTop" class="interior-page">
+				<div id="ContentTop" class="interior-page <?php echo $page_name; ?>">
 					<?php while ( have_posts() ) : the_post(); ?>
 					<div class="container" >
-						<h1><?php echo( get_post_meta(get_the_id(), '_stream_title', true)); ?></h1>
+						<h1 class="page-title"><?php echo( get_post_meta(get_the_id(), '_stream_title', true)); ?></h1>
 						<?php 
 							if ( has_post_thumbnail() ) { 
-								the_post_thumbnail();
+								the_post_thumbnail(array(300, 1000));
 							} 
 						?>
 						<?php the_content(); ?>
@@ -19,21 +19,19 @@
 				</div><!--End #ContentTop -->
 				<div id="ContentMid">
 					<div class="container">
-						<?php $page_name = $post->post_name; ?>
-						<?php if($page_name == 'client') { ?>
-						<h2>OFFERINGS</h2>	
-						<ul>
-							<li>User Research</li>
-							<li>Strategy and Planning</li>
-							<li>Brand Development & Design</li>
-							<li>Digital marketing</li>
-							<li>User Experience Strategy & Design</li>
-							<li>Mobile Solutions</li>
-							<li>Social Media Integration</li>
-							<li>Something Else?</li>
-						</ul>
-						<p>We excel at strategy, solutioning and design and have developed a deep network of development partners to help with implementation. Translator also offers services for traditional and digital agencies who need assistance with short or long-term strategic projects and planning.</p>
-						<?php } ?>
+					<?php switch ($page_name) {
+						case 'client' :
+							get_template_part('content', 'client');
+							break;
+						case 'lab' :
+							get_template_part('content', 'lab');
+							break;
+						case 'studio' :
+						case 'product-studio' :
+							get_template_part('content', 'studio');
+							break;
+					} ?>
+						
 					</div>
 					<div class="box"></div>
 				</div>
