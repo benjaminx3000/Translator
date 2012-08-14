@@ -17,7 +17,7 @@
  ?>
 <div class="article <?php echo($has_attachments ? 'image' : 'no-image'); ?>">
 	<div class="summary">
-		<?php echo $post->post_content; ?>
+		<?php echo $post->post_excerpt; ?>
 		<?php edit_post_link( __( 'Edit', 'Translator' ), '<span class="edit-link">', '</span>' ); ?>
 	</div>
 	<div class="image-gallery">

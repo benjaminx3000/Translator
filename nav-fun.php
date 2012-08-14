@@ -2,7 +2,7 @@
 		<a href="<?php echo site_url('/client/') ?>" id="folio">
 			
 			<div class="sprite fun-nav_folio-back"></div>
-			<div class="sprite fun-nav_folio-front"><h3>CLIENT</h3></div>
+			<div class="sprite fun-nav_folio-front"><h3>AGENCY</h3></div>
 			<div class="folio-bottom"></div>
 		</a><!-- end folio -->
 

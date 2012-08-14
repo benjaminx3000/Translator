@@ -466,9 +466,16 @@ textarea {
 
 /*Main Styles*/
 /*Header Region*/
+.admin-bar #branding {
+  top: 28px; }
+
 #branding {
   height: 75px;
-  position: relative; }
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100; }
   #branding .content {
     background: #000;
     width: 1061px;
@@ -568,6 +575,12 @@ textarea {
 #ContentMid .container, #contact-footer {
   width: 960px;
   margin: 0 auto; }
+
+.admin-bar #primary {
+  margin-top: 103px; }
+
+#primary {
+  margin-top: 75px; }
 
 #ContentTop,
 #ContentMid {

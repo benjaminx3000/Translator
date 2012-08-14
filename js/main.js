@@ -63,8 +63,7 @@ function initUI($){
 		var delay = parseFloat($(collapser).css('-webkit-transition-duration'));
 		console.log(delay * 1000);
 		setTimeout(function(){
-			$.scrollTo({left:0, top: $(ref).offset().top}, delay * 1000);
-			console.log("done");
+			$.scrollTo({left:0, top: $(ref).offset().top - parseInt($('#primary').css('marginTop')) + 2}, delay * 1000);
 		}, delay * 1000);
 		
 	});

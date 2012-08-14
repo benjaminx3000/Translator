@@ -137,9 +137,16 @@ textarea{height: auto;}
 /*Header Region*/
 $header-margin: 48px;
 $header-width: 965px + ($header-margin * 2);
+.admin-bar{
+	#branding{top: 28px;}
+}
 #branding{
 	height: 75px;
-	position: relative;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
 	.content{
 		background: #000;
 		width: $header-width;
@@ -245,6 +252,12 @@ $header-width: 965px + ($header-margin * 2);
 .body{
 	width: 960px;
 	margin: 0 auto;
+}
+.admin-bar #primary{
+	margin-top: 75px + 28px;
+}
+#primary{
+	margin-top: 75px;
 }
 
 #ContentTop,
