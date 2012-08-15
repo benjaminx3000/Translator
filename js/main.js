@@ -4,10 +4,23 @@ jQuery(document).ready(function($) {
 
 function init($){
 	console.log('Theme JS Initialized!');	
+	var path = window.location.pathname.split('/');
+		path = path[path.length - 2];
 	$('a[href="#SignupForm"], .fancy').fancybox();
 	templateCompare($);
 	navigation($);
 	initUI($);
+	switch(path){
+		case 'lab' :
+			tabInator($, function(index){
+				$('select').find('option').eq(index).attr('selected', 'selected');
+			});
+			break;
+		default :
+			tabInator($);
+			break
+	}
+
 }
 
 function adminInit($){
@@ -91,6 +104,29 @@ function navigation($){
 		console.log('Hover Out- Should clearInterval');
 		clearInterval(t);
 	});
+}
+
+//tabs
+function tabInator($, callback){
+	var	nav = $('.tab-nav li'),
+		currentNav = $('.tab-nav .current'),
+		tabs = $('.tab'),
+		currentTab = $('.tab.current');
+
+	$(nav).click(function updateTab(e){
+		//change out the nav
+		$(currentNav).removeClass('current');
+		currentNav = $(this);
+		$(currentNav).addClass('current');
+		//change out the tabbed content
+		$(currentTab).removeClass('current');
+		currentTab = $(tabs).eq($(this).index());
+		$(currentTab).addClass('current');
+		if(callback){
+			callback($(this).index());
+		}
+	});
+
 }
 
 
