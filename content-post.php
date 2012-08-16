@@ -1,3 +1,4 @@
+?>
 <div class="article">
 	<div class="post-head author-meta">
 		<?php $twitter_handle = get_the_author_meta('twitter_handle'); ?>
@@ -19,6 +20,12 @@
 		</div>
 		<div class="comments">
 			<a href="<?php comments_link(); ?>"><?php comments_number(); ?></a>
+
+			<div class="collapsable">
+				<?php comments_template( '', true ); ?>
+			</div>
+			<?php  ?>
+
 		</div>
 	</div>
 	

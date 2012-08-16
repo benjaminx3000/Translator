@@ -504,6 +504,12 @@ h3.date{
 		margin: 0;
 		width: 680px;
 	}
+	.author-meta,
+	.post-preview,
+	.post-footer
+	{
+		padding: 0 35px 0 85px;
+	}
 	.preview{background: $yellow}
 	.preview .container{background: $green;height: 100%;}
 	#primary{margin-top: 75px;}
@@ -557,19 +563,15 @@ h3.date{
 }
 .tags{margin: 2em 0;}
 .blog-nav{
-	a{
-		font-size: 24px;
-		margin-left: 27px;
-		line-height: 74px;
-		float: left;
-		&:first-child{
-			float: right;
-			margin-right: 27px;
-		}
+	a:hover{
+		color: $yellow;
 	}
-	
 }
 .older{
+	font-size: 24px;
+	float: left;
+	margin-left: 27px;
+	line-height: 74px;
 }
 .newer{
 	font-size: 24px;

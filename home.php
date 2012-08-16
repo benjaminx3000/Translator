@@ -4,7 +4,7 @@
 			<div id="content" role="main" class="blog">
 
 				<div id="ContentBottom" class="translator-feed">
-					<?php $count = 0; global $more;?>
+					<?php $count = 0; global $more; global $withcomments;?>
 					<?php  while ( have_posts() ) : the_post() ; ?>
 					<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 						<div class="entry-content">
@@ -29,7 +29,11 @@
 								</div>
 							</div>
 							<div id="contetnt<?php the_ID(); ?>" class="collapsable expanded content">
-								<?php $more = 0; ?>
+								<?php
+									$more = 1;
+									$withcomments = 1;
+								?>
+						
 								<?php get_template_part('content', 'post') ?>
 								<?php $count ++; ?>
 							</div>
@@ -39,7 +43,9 @@
 					<div class="preview">
 						<div class="container">
 							<div class="blog-nav">
-								<?php posts_nav_link(' ','Newer &gt;','&lt; Older'); ?>
+								<div class="newer"><?php previous_posts_link('Newer &gt;') ?></div>
+								<div class="older"><?php next_posts_link('&lt; Older','') ?></div>
+								<!--<?php posts_nav_link(' ','Newer &gt;','&lt; Older'); ?>-->
 							</div>
 							<!-- <a href="#older" class="older">&lt; Older</a><a href="#newer" class="newer">Newer &gt;</a> -->
 						</div>

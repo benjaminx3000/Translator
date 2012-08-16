@@ -14,7 +14,7 @@
 
 	<footer id="colophon" role="contentinfo">
 				<div id="contact-footer">
-					<span id="copyright">&copy; Copyright <?php echo date('Y'); ?> Translaor, LLC</span>
+					<span id="copyright">&copy; Copyright <?php echo date('Y'); ?> Transltaor, LLC</span>
 					<div id="social">
 						<a href="http://www.facebook.com/translatordigitalcafe" target="_blank" class="facebook"></a>
 						<a href="https://twitter.com/translatorxd" target="_blank" class="twitter"></a>
@@ -22,6 +22,7 @@
 							Translator<br>
 							415 E. Menomonee St. <br>
 							Milwaukee, WI 53202 <br>
+							<a href="mailto:experience"></a>
 							414.810.1032 
 						</p>
 					</div>
