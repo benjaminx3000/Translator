@@ -1,4 +1,3 @@
-?>
 <div class="article">
 	<div class="post-head author-meta">
 		<?php $twitter_handle = get_the_author_meta('twitter_handle'); ?>
