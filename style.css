@@ -364,6 +364,7 @@ td {
 /*
 colors
 $gray: #464646;
+$mid-gray: #636363;
 $light-gray: #7d7d7d;
 $near-white: #ebebeb;
 $red: #d71921;
@@ -371,7 +372,8 @@ $orange: #f58337;
 $yellow: #fecf5c;
 $green: #86ac90;
 $blue: #008eb0;
-$light-blue: #8fb5c5
+$light-blue: #8fb5c5;
+$bright-blue: #00bff3;
 */
 /*
 	Typography
@@ -415,7 +417,7 @@ p:first-child {
   margin-top: 0; }
 
 a {
-  color: #008eb0;
+  color: #00bff3;
   text-decoration: none;
   font-weight: normal; }
 
@@ -828,6 +830,53 @@ h3.date {
 .image .summary p {
   text-align: justify; }
 
+/*Blog Post Content*/
+.blog {
+  color: #7d7d7d; }
+  .blog .preview .container,
+  .blog .article {
+    float: right;
+    margin: 0;
+    width: 680px; }
+  .blog .preview {
+    background: #fecf5c; }
+  .blog .preview .container {
+    background: #86ac90;
+    height: 100%; }
+  .blog #primary {
+    margin-top: 75px; }
+  .blog #ContentBottom {
+    float: left;
+    width: 64%; }
+  .blog #Sidebar {
+    float: right;
+    width: 36%; }
+    .blog #Sidebar .widget-area {
+      margin-left: 52px;
+      width: 228px; }
+
+.author-meta {
+  line-height: 1.7em;
+  color: #636363; }
+  .author-meta img {
+    margin: 0 15px 15px 0;
+    float: left; }
+
+.tags {
+  margin: 2em 0; }
+
+.older {
+  font-size: 24px;
+  float: left;
+  margin-left: 27px;
+  line-height: 74px; }
+
+.newer {
+  font-size: 24px;
+  float: right;
+  margin-right: 27px;
+  line-height: 74px; }
+
 /*Home Page*/
 #fun-nav {
   width: 762px;
@@ -1140,7 +1189,7 @@ h3.date {
  * Contain floats: h5bp.com/q
  */
 .clearfix:before, .two-col:before, #ContentTop .container:before,
-#ContentMid .container:before, .translator-feed .article:before,
+#ContentMid .container:before, .translator-feed .article:before, .blog:before, .author-meta:before,
 .clearfix:after,
 .two-col:after,
 #ContentTop .container:after, #ContentTop
@@ -1149,16 +1198,18 @@ h3.date {
 #ContentMid
 .container:after,
 .translator-feed .article:after, .translator-feed
-.article:after {
+.article:after,
+.blog:after,
+.author-meta:after {
   content: "";
   display: table; }
 
 .clearfix:after, .two-col:after, #ContentTop .container:after,
-#ContentMid .container:after, .translator-feed .article:after {
+#ContentMid .container:after, .translator-feed .article:after, .blog:after, .author-meta:after {
   clear: both; }
 
 .clearfix, .two-col, #ContentTop .container,
-#ContentMid .container, .translator-feed .article {
+#ContentMid .container, .translator-feed .article, .blog, .author-meta {
   *zoom: 1; }
 
 /* ==|== print styles =======================================================

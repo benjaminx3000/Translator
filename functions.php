@@ -22,6 +22,17 @@ if ( function_exists( 'add_image_size' ) ) {
 	add_image_size( 'post-image', 510, 600 ); //300 pixels wide (and unlimited height)
 }
 
+//add twitter to user profiles
+function my_new_contactmethods( $contactmethods ) {
+// Add Twitter
+$contactmethods['twitter_handle'] = 'Twitter Handle @';
+
+
+ 
+return $contactmethods;
+}
+add_filter('user_contactmethods','my_new_contactmethods',10,1);
+
 //Taxonomy
 add_action( 'init', 'create_event_types' );
 add_action( 'init', 'create_product_names' );
@@ -67,57 +78,57 @@ function create_product_names() {
 //Widget Areas
 
 
-add_action('widgets_init', 'register_my_widgets');
-function register_my_widgets(){
-	register_sidebar( array(
-		'name' => __( 'Home Page Sidebar', 'Translator' ),
-		'id' => 't-sidebar-1',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-	register_sidebar( array(
-		'name' => __( 'Client Sidebar', 'Translator' ),
-		'id' => 't-sidebar-2',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-	register_sidebar( array(
-		'name' => __( 'Lab Sidebar', 'Translator' ),
-		'id' => 't-sidebar-3',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-	register_sidebar( array(
-		'name' => __( 'Product Studio Sidebar', 'Translator' ),
-		'id' => 't-sidebar-4',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-	register_sidebar( array(
-		'name' => __( 'XSMKE Sidebar', 'Translator' ),
-		'id' => 't-sidebar-5',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-	register_sidebar( array(
-		'name' => __( 'Calendar Sidebar', 'Translator' ),
-		'id' => 't-sidebar-6',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-}
+// add_action('widgets_init', 'register_my_widgets');
+// function register_my_widgets(){
+// 	register_sidebar( array(
+// 		'name' => __( 'Home Page Sidebar', 'Translator' ),
+// 		'id' => 't-sidebar-1',
+// 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+// 		'after_widget' => "</aside>",
+// 		'before_title' => '<h3 class="widget-title">',
+// 		'after_title' => '</h3>',
+// 	) );
+// 	register_sidebar( array(
+// 		'name' => __( 'Client Sidebar', 'Translator' ),
+// 		'id' => 't-sidebar-2',
+// 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+// 		'after_widget' => "</aside>",
+// 		'before_title' => '<h3 class="widget-title">',
+// 		'after_title' => '</h3>',
+// 	) );
+// 	register_sidebar( array(
+// 		'name' => __( 'Lab Sidebar', 'Translator' ),
+// 		'id' => 't-sidebar-3',
+// 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+// 		'after_widget' => "</aside>",
+// 		'before_title' => '<h3 class="widget-title">',
+// 		'after_title' => '</h3>',
+// 	) );
+// 	register_sidebar( array(
+// 		'name' => __( 'Product Studio Sidebar', 'Translator' ),
+// 		'id' => 't-sidebar-4',
+// 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+// 		'after_widget' => "</aside>",
+// 		'before_title' => '<h3 class="widget-title">',
+// 		'after_title' => '</h3>',
+// 	) );
+// 	register_sidebar( array(
+// 		'name' => __( 'XSMKE Sidebar', 'Translator' ),
+// 		'id' => 't-sidebar-5',
+// 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+// 		'after_widget' => "</aside>",
+// 		'before_title' => '<h3 class="widget-title">',
+// 		'after_title' => '</h3>',
+// 	) );
+// 	register_sidebar( array(
+// 		'name' => __( 'Calendar Sidebar', 'Translator' ),
+// 		'id' => 't-sidebar-6',
+// 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+// 		'after_widget' => "</aside>",
+// 		'before_title' => '<h3 class="widget-title">',
+// 		'after_title' => '</h3>',
+// 	) );
+// }
 
 /*-------------------------------------------------------------------------------------------*/
 /* t_client Post Type */
