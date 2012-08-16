@@ -852,8 +852,26 @@ h3.date {
     float: right;
     width: 36%; }
     .blog #Sidebar .widget-area {
+      margin-top: 30px;
       margin-left: 52px;
       width: 228px; }
+
+.widget-area ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+.widget-area li {
+  line-height: 1.7em; }
+.widget-area a {
+  color: #ebebeb; }
+  .widget-area a:after {
+    content: " >"; }
+  .widget-area a:hover {
+    color: #fecf5c; }
+
+.widget-title {
+  color: #464646;
+  font-size: 14px; }
 
 .author-meta {
   line-height: 1.7em;

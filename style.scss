@@ -496,6 +496,7 @@ h3.date{
 /*Blog Post Content*/
 //media queries
 .blog{
+	color: $light-gray;
 	@extend .clearfix;
 	.preview .container,
 	.article{
@@ -514,12 +515,36 @@ h3.date{
 		float: right;
 		width: 36%;
 		.widget-area{
+			margin-top: 30px;
 			margin-left: 52px;
 			width: 280px - 52;
 		}
 	}
-	color: $light-gray;
 }
+.widget-area{
+	ul{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	li{
+		line-height: 1.7em;
+	}
+	a{
+		color: $near-white;
+		&:after{
+			content: " >";
+		}
+		&:hover{
+			color: $yellow;
+		}
+	}
+}
+.widget-title{
+	color: $gray;
+	font-size: 14px;
+}
+
 .author-meta{
 	@extend .clearfix;
 	line-height: 1.7em;
