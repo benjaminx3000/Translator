@@ -38,7 +38,10 @@
 					<?php endwhile; ?>
 					<div class="preview">
 						<div class="container">
-							<a href="#older" class="older">&lt; Older</a><a href="#newer" class="newer">Newer &gt;</a>
+							<div class="blog-nav">
+								<?php posts_nav_link(' ','Newer &gt;','&lt; Older'); ?>
+							</div>
+							<!-- <a href="#older" class="older">&lt; Older</a><a href="#newer" class="newer">Newer &gt;</a> -->
 						</div>
 					</div>
 				</div><!-- End #ContentBottom -->
