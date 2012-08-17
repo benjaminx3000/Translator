@@ -485,6 +485,7 @@ textarea {
   height: 25px;
   font-size: 16px;
   color: #464646;
+  padding: 3px 8px;
   border: 0 none;
   width: 100%;
   -webkit-box-sizing: border-box;
@@ -867,7 +868,7 @@ h3.date {
   .blog .article {
     float: right;
     margin: 0;
-    width: 680px; }
+    width: 683px; }
   .blog .author-meta,
   .blog .post-preview,
   .blog .post-footer {

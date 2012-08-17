@@ -159,6 +159,7 @@ textarea{
 	height: 25px;
 	font-size: 16px;
 	color: $gray;
+	padding: 3px 8px;
 	border: 0 none;
 	width: 100%;
 	@include box-sizing;
@@ -534,7 +535,7 @@ h3.date{
 	.article{
 		float: right;
 		margin: 0;
-		width: 680px;
+		width: 683px;
 	}
 	.author-meta,
 	.post-preview,
