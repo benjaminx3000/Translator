@@ -435,6 +435,8 @@ a {
   .nav-link:hover, #Utility a:hover, #menu-main-navigation li a:hover, #fun-nav h3:hover {
     color: white; }
 
+input[type="submit"],
+button
 .button {
   background: #f58337;
   color: #fff !important;
