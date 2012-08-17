@@ -21,6 +21,7 @@
 					<div class="container">
 					<?php switch ($page_name) {
 						case 'client' :
+						case 'agency' :
 							get_template_part('content', 'client');
 							break;
 						case 'lab' :

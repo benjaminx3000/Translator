@@ -612,9 +612,6 @@ textarea {
   width: 960px;
   margin: 0 auto; }
 
-.admin-bar #primary {
-  margin-top: 103px; }
-
 #primary {
   margin-top: 75px; }
 
@@ -1090,7 +1087,7 @@ h3.date {
   background-position: -34px 0; }
 
 .wpcf7 p {
-  margin: 0.2em 0; }
+  margin: 1.2em 0; }
 
 /*Hidden forms*/
 #SignupForm {
