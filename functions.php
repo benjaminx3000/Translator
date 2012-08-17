@@ -172,7 +172,7 @@ class t_client {
 			'hierarchical' => true,
 			'supports' => array('title','editor','excerpt','custom-fields','page-attributes','post-formats', 'sticky'),
 			'has_archive' => true,
-			// 'rewrite' => array('slug' => 'your-slug', 'with_front' => 'before-your-slug'),
+			'rewrite' => array('slug' => 'agency'),
 			'query_var' => true,
 			'can_export' => true,
 			'register_meta_box_cb' => 'add_feet_title_metaboxes'
@@ -225,7 +225,7 @@ class t_lab {
 			'hierarchical' => true,
 			'supports' => array('title','editor','excerpt','custom-fields','page-attributes','post-formats'),
 			'has_archive' => true,
-			// 'rewrite' => array('slug' => 'your-slug', 'with_front' => 'before-your-slug'),
+			'rewrite' => array('slug' => 'lab'),
 			'query_var' => true,
 			'can_export' => true,
 			'register_meta_box_cb' => 'add_feet_title_metaboxes'
@@ -278,7 +278,7 @@ class t_product_studio {
 			'hierarchical' => true,
 			'supports' => array('title','editor','excerpt','custom-fields','page-attributes','post-formats'),
 			'has_archive' => true,
-			// 'rewrite' => array('slug' => 'your-slug', 'with_front' => 'before-your-slug'),
+			'rewrite' => array('slug' => 'studio'),
 			'query_var' => true,
 			'can_export' => true,
 			'register_meta_box_cb' => 'add_feet_title_metaboxes'
@@ -331,7 +331,7 @@ class t_xsmke {
 			'hierarchical' => true,
 			'supports' => array('title','editor','excerpt','custom-fields','page-attributes','post-formats'),
 			'has_archive' => true,
-			// 'rewrite' => array('slug' => 'your-slug', 'with_front' => 'before-your-slug'),
+			'rewrite' => array('slug' => 'experience-series'),
 			'query_var' => true,
 			'can_export' => true,
 			'register_meta_box_cb' => 'add_feet_title_metaboxes'

@@ -15,7 +15,7 @@
 					$post_title = get_the_title();
 					switch ($post_type) {
 						case 'post':
-							$post_title = get_the_title() .  " <span class='author'>by " . get_the_author() . "</span>";
+							$post_title = get_the_title() .  " <span class='author'>by " . get_the_author_meta('user_nicename',($post->post_author)) . "</span>";
 							break;
 						default:
 							($special_title == '')? $post_title = get_the_title() : $post_title = $special_title;

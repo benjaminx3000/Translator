@@ -6,11 +6,11 @@ function init($){
 	console.log('Theme JS Initialized!');	
 	var path = window.location.pathname.split('/');
 		path = path[path.length - 2];
-	handleHash($, window.location.hash);
 	$('a[href="#SignupForm"], .fancy').fancybox();
-	templateCompare($);
+	
 	navigation($);
 	initUI($);
+	handleHash($, window.location.hash);
 
 	switch(path){
 		case 'lab' :
@@ -35,6 +35,11 @@ function adminInit($){
 
 function handleHash($, hash){
 	console.log(hash);
+
+	console.log($(hash).find('.preview'));
+	$(hash).find('.preview').click();
+
+	//$.scrollTo({left:0, top: $(hash).offset().top - parseInt($('#primary').css('marginTop')) + 2}, delay * 1000);	
 }
 
 function initUI($){
