@@ -436,7 +436,7 @@ a {
     color: white; }
 
 input[type="submit"],
-button
+button,
 .button {
   background: #f58337;
   color: #fff !important;
