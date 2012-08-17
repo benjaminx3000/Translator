@@ -72,7 +72,7 @@
 				<div id="ContentBottom" class="translator-feed">
 					<?php $count = 0; global $more;?>
 					<?php  while ( $loop->have_posts() ) : $loop->the_post() ; ?>
-					<div id="<?php the_ID(); ?>" <?php post_class(); ?>>
+					<div id="<?php echo basename(get_permalink()); ?>" <?php post_class(); ?>>
 						<div class="entry-content">
 							<div class="preview">
 								<?php $post_type = get_post_type();

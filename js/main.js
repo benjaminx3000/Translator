@@ -6,10 +6,12 @@ function init($){
 	console.log('Theme JS Initialized!');	
 	var path = window.location.pathname.split('/');
 		path = path[path.length - 2];
+	handleHash($, window.location.hash);
 	$('a[href="#SignupForm"], .fancy').fancybox();
 	templateCompare($);
 	navigation($);
 	initUI($);
+
 	switch(path){
 		case 'lab' :
 			tabInator($, function(index){
@@ -29,6 +31,10 @@ function adminInit($){
     	dateFormat: 'DD<br>MM-d, yy',
     	autoSize: true
     });
+}
+
+function handleHash($, hash){
+	console.log(hash);
 }
 
 function initUI($){
