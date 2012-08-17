@@ -375,7 +375,7 @@ function t_events_date() {
     
     $et = get_post_meta($post->ID, '_event_end_time', true);
     echo '<p><label for="_event_end_time">End Time</label><br>';
-    echo '<input type="text" name="_event_end_time" value="' . $st  . '" class="time" /></p>';
+    echo '<input type="text" name="_event_end_time" value="' . $et  . '" class="time" /></p>';
 
     // Get the location data if its already been entered
     $location = get_post_meta($post->ID, '_location', true);
