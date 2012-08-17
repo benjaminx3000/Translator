@@ -1,11 +1,12 @@
+@import url("http://fonts.googleapis.com/css?family=Montserrat");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,700");
 /*
 Theme Name: Translator
 Description: Awesome Translator Theme 
 Author: Ben
+Version: 1.0
 Template: twentyeleven
 */
-@import url("http://fonts.googleapis.com/css?family=Montserrat");
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,700");
 /*
  * HTML5 Boilerplate
  *
@@ -438,6 +439,7 @@ a {
   background: #f58337;
   color: #fff !important;
   padding: 0.2em 0.5em;
+  border: 0 none;
   border-top: 1px solid #fbceb0;
   border-left: 1px solid #fbceb0;
   -webkit-box-shadow: 1px 1px 0 #7d7d7d;
@@ -1229,13 +1231,9 @@ h3.date {
 #ContentMid .container:before, .translator-feed .article:before, .blog:before, .author-meta:before,
 .clearfix:after,
 .two-col:after,
-#ContentTop .container:after, #ContentTop
-.container:after,
+#ContentTop .container:after,
 #ContentMid .container:after,
-#ContentMid
-.container:after,
-.translator-feed .article:after, .translator-feed
-.article:after,
+.translator-feed .article:after,
 .blog:after,
 .author-meta:after {
   content: "";

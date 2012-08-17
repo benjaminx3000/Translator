@@ -2,8 +2,10 @@
 Theme Name: Translator
 Description: Awesome Translator Theme 
 Author: Ben
+Version: 1.0
 Template: twentyeleven
 */
+
 
 @import url("http://fonts.googleapis.com/css?family=Montserrat");
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:400,700");
@@ -104,6 +106,7 @@ a {
 	background: $orange;
 	color: #fff !important;
 	padding: 0.2em 0.5em;
+	border: 0 none;
 	border-top: 1px solid lighten($orange, 25);
 	border-left: 1px solid lighten($orange, 25);	
 	@include box-shadow(1px, 1px, 0, $light-gray);
@@ -197,6 +200,8 @@ $header-width: 965px + ($header-margin * 2);
 		height: 75px;
 	}
 }
+
+
 
 	#site-title{
 		width: 255px;
