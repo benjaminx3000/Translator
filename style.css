@@ -772,7 +772,7 @@ textarea {
   background: #008eb0; }
   .translator-feed .t_lab .plus,
   .translator-feed .open-lab .plus {
-    background: white; }
+    background: #8fb5c5; }
   .translator-feed .t_lab polygon,
   .translator-feed .open-lab polygon {
     fill: #008eb0; }
@@ -797,6 +797,9 @@ textarea {
     background: #d71921; }
   .translator-feed .post polygon {
     fill: #86ac90; }
+
+.page-lab .hentry.xsmke {
+  display: none; }
 
 .entry-content h2 {
   margin: 0;

@@ -433,7 +433,7 @@ $header-width: 965px + ($header-margin * 2);
 	.t_lab,
 	.open-lab{
 		background: $blue;
-		.plus{background: white;}
+		.plus{background: $light-blue;}
 		polygon{fill: $blue;}
 	}
 	.t_product_studio{
@@ -451,6 +451,12 @@ $header-width: 965px + ($header-margin * 2);
 		background: $green;
 		.plus{background: $red;}
 		polygon{fill: $green;}
+	}
+}
+
+.page-lab{
+	.hentry{
+		&.xsmke{display: none;}
 	}
 }
 .entry-content{

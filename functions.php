@@ -24,12 +24,9 @@ if ( function_exists( 'add_image_size' ) ) {
 
 //add twitter to user profiles
 function my_new_contactmethods( $contactmethods ) {
-// Add Twitter
-$contactmethods['twitter_handle'] = 'Twitter Handle @';
-
-
- 
-return $contactmethods;
+	// Add Twitter
+	$contactmethods['twitter_handle'] = 'Twitter Handle @';
+	return $contactmethods;
 }
 add_filter('user_contactmethods','my_new_contactmethods',10,1);
 
@@ -75,60 +72,7 @@ function create_product_names() {
     'labels' => $labels
   ));
 }
-//Widget Areas
 
-
-// add_action('widgets_init', 'register_my_widgets');
-// function register_my_widgets(){
-// 	register_sidebar( array(
-// 		'name' => __( 'Home Page Sidebar', 'Translator' ),
-// 		'id' => 't-sidebar-1',
-// 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-// 		'after_widget' => "</aside>",
-// 		'before_title' => '<h3 class="widget-title">',
-// 		'after_title' => '</h3>',
-// 	) );
-// 	register_sidebar( array(
-// 		'name' => __( 'Client Sidebar', 'Translator' ),
-// 		'id' => 't-sidebar-2',
-// 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-// 		'after_widget' => "</aside>",
-// 		'before_title' => '<h3 class="widget-title">',
-// 		'after_title' => '</h3>',
-// 	) );
-// 	register_sidebar( array(
-// 		'name' => __( 'Lab Sidebar', 'Translator' ),
-// 		'id' => 't-sidebar-3',
-// 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-// 		'after_widget' => "</aside>",
-// 		'before_title' => '<h3 class="widget-title">',
-// 		'after_title' => '</h3>',
-// 	) );
-// 	register_sidebar( array(
-// 		'name' => __( 'Product Studio Sidebar', 'Translator' ),
-// 		'id' => 't-sidebar-4',
-// 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-// 		'after_widget' => "</aside>",
-// 		'before_title' => '<h3 class="widget-title">',
-// 		'after_title' => '</h3>',
-// 	) );
-// 	register_sidebar( array(
-// 		'name' => __( 'XSMKE Sidebar', 'Translator' ),
-// 		'id' => 't-sidebar-5',
-// 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-// 		'after_widget' => "</aside>",
-// 		'before_title' => '<h3 class="widget-title">',
-// 		'after_title' => '</h3>',
-// 	) );
-// 	register_sidebar( array(
-// 		'name' => __( 'Calendar Sidebar', 'Translator' ),
-// 		'id' => 't-sidebar-6',
-// 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-// 		'after_widget' => "</aside>",
-// 		'before_title' => '<h3 class="widget-title">',
-// 		'after_title' => '</h3>',
-// 	) );
-// }
 
 /*-------------------------------------------------------------------------------------------*/
 /* t_client Post Type */
@@ -384,7 +328,7 @@ class t_event {
 			'hierarchical' => false,
 			'supports' => array('title','editor','custom-fields','page-attributes'),
 			'has_archive' => true,
-			'rewrite' => array('slug' => 'events', 'with_front' => 'before-your-slug'),
+			'rewrite' => array('slug' => 'calendar'),
 			'query_var' => true,
 			'can_export' => true,
 			'register_meta_box_cb' => 'add_events_metaboxes'
@@ -422,13 +366,21 @@ function t_events_date() {
     // Get the date data if its already been entered
     $date = get_post_meta($post->ID, '_event_date', true);
     // Echo out the field
-    echo '<label for="_event_date">Event Date</label>';
-    echo '<input type="text" name="_event_date" value="' . $date  . '" class="datepicker " />';
+    echo '<p><label for="_event_date">Event Date</label><br>';
+    echo '<input type="text" name="_event_date" value="' . $date  . '" class="datepicker " /></p>';
+
+    $st = get_post_meta($post->ID, '_event_start_time', true);
+    echo '<p><label for="_event_start_time">Start Time</label><br>';
+    echo '<input type="text" name="_event_start_time" value="' . $st  . '" class="time" /></p>';
+    
+    $et = get_post_meta($post->ID, '_event_end_time', true);
+    echo '<p><label for="_event_end_time">End Time</label><br>';
+    echo '<input type="text" name="_event_end_time" value="' . $st  . '" class="time" /></p>';
 
     // Get the location data if its already been entered
     $location = get_post_meta($post->ID, '_location', true);
     // Echo out the field
-    echo '<label for="_location">Event Location</label>';
+    echo '<label for="_location">Event Location</label><br>';
     echo '<input type="text" name="_location" value="' . $location  . '" class="" />';
 }
 
@@ -461,6 +413,8 @@ function t_save_events_meta($post_id, $post) {
     // OK, we're authenticated: we need to find and save the data
     // We'll put it into an array to make it easier to loop though.
     $events_meta['_event_date'] = $_POST['_event_date'];
+    $events_meta['_event_start_time'] = $_POST['_event_start_time'];
+    $events_meta['_event_end_time'] = $_POST['_event_end_time'];
     $events_meta['_location'] = $_POST['_location'];
     // Add values of $events_meta as custom fields
     foreach ($events_meta as $key => $value) { // Cycle through the $events_meta array!

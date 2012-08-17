@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 		<?php $page_name = $post->post_name; ?>
-		<div id="primary">
+		<div id="primary" class="<?php echo 'page-' . $page_name; ?>">
 			<div id="content" role="main">
 				<div id="ContentTop" class="interior-page <?php echo $page_name; ?>">
 					<?php while ( have_posts() ) : the_post(); ?>
@@ -48,7 +48,7 @@
 							$query = array('t_product_studio');
 							break;
 						case 'lab':
-							$query = array('t_lab' , 't_event');
+							$query = array('t_lab', 't_event');
 							break;
 						case 'calendar':
 							$query = array('t_event');
@@ -63,7 +63,7 @@
 							$query = array('t_product_studio', 't_event', 't_client', 't_lab', 't_xsmke');
 							break;
 					}
-
+					
 					$args = array( 'post_type' => $query,
 						'posts_per_page' => 10,
 						'orderby' => 'date' );
