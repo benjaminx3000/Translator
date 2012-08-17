@@ -1,7 +1,7 @@
 <ul class="tab-nav">
 	<li class="current"><h2>OPEN LAB</h2></li>
 	<li><h2>FOCUSED LAB</h2></li>
-	<li><h2>MyLAB</h2></li>
+	<li><h2>myLAB</h2></li>
 	
 </ul>
 <div class="two-over-three">
