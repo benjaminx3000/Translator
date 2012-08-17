@@ -16,6 +16,7 @@
 	     }
  ?>
 <div class="article <?php echo($has_attachments ? 'image' : 'no-image'); ?>">
+	<h2 class="post-title"><?php the_title(); ?></h2>
 	<div class="summary">
 		<?php echo $post->post_content; ?>
 		<?php edit_post_link( __( 'Edit', 'Translator' ), '<span class="edit-link">', '</span>' ); ?>
