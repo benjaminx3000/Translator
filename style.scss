@@ -316,7 +316,7 @@ $header-width: 965px + ($header-margin * 2);
 #ContentTop{
 	//@extend .body;
 	h1, h2{margin: 0 0 0.4em;color: white;}
-	p{color: white; line-height: 1.8em; margin: 0 5px;}
+	p{line-height: 1.8em; margin: 0 5px;}
 	ul, ol{color: white; line-height: 1.8em; margin: 0 5px;}
 	&.interior-page{
 		background: white;

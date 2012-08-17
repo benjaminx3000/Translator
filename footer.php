@@ -2,7 +2,7 @@
 
 	<footer id="colophon" role="contentinfo">
 				<div id="contact-footer">
-					<span id="copyright">&copy; Copyright <?php echo date('Y'); ?> Transltaor, LLC</span>
+					<span id="copyright">&copy; Copyright <?php echo date('Y'); ?> Translator, LLC</span>
 					<div id="social">
 						<a href="http://www.facebook.com/translatordigitalcafe" target="_blank" class="facebook"></a>
 						<a href="https://twitter.com/translatorxd" target="_blank" class="twitter"></a>
