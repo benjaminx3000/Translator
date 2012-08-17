@@ -834,6 +834,7 @@ textarea {
   text-transform: none; }
 
 h2.post-title {
+  font-size: 48px;
   margin: 32px 0 30px; }
 
 .article h2 {
@@ -861,9 +862,6 @@ h3.date {
 .image-gallery {
   width: 510px;
   float: right; }
-
-.post-title {
-  font-size: 48px; }
 
 .summary {
   width: 236px;
