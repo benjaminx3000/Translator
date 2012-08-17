@@ -16,20 +16,12 @@
 	     }
  ?>
 <div class="article <?php echo($has_attachments ? 'image' : 'no-image'); ?>">
-	<div class="summary">
+	<div class="post-preview">
 		<?php the_content(); ?>
-		<?php //echo $post->post_content; ?>
 
 		<?php edit_post_link( __( 'Edit', 'Translator' ), '<span class="edit-link">', '</span>' ); ?>
 	</div>
-	<div class="image-gallery">
-		<?php if($has_attachments){
-			//echo wp_get_attachment_image( $attachments[0]->ID, 'post-image' );
-	        // foreach ( $attachments as $attachment ) {
-	        //    echo wp_get_attachment_image( $attachment->ID, 'post-image' );
-		} ?>
 	
-	</div>
 	<div class="comments">
 		<?php // comments_template( '', true ); ?>
 	</div>

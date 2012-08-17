@@ -120,11 +120,10 @@
 										case 't_event':
 											get_template_part('content', 'event');
 											break;
-										//case 'post' :
-										//get_template_part('content', 'post');
-										default:
+										case 'post' :
 											get_template_part('content', 'post');
-											//get_template_part('content', 'default');
+										default:
+											get_template_part('content', 'default');
 											break;
 									}
 								?>
