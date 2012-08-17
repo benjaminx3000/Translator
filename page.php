@@ -120,6 +120,9 @@
 										case 't_event':
 											get_template_part('content', 'event');
 											break;
+										case 't_client':
+											get_template_part('content', 'casestudy');
+											break;
 										case 'post' :
 											get_template_part('content', 'post');
 										default:
