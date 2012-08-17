@@ -48,7 +48,16 @@
 			</div>
 			<div id="contetnt<?php the_ID(); ?>" class="collapsable content">
 				<?php $more = 0; ?>
-				<?php get_template_part('content', 'home'); ?>
+				<?php 
+					switch ($post->post_type) {
+						case 't_event':
+							get_template_part('home', 'eventPost');
+							break;
+						default:
+							get_template_part('content', 'home');
+							break;
+					}
+				?>
 			</div>
 		</div>
 	</div>
