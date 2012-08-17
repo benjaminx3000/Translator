@@ -31,6 +31,9 @@
 						case 'product-studio' :
 							get_template_part('content', 'studio');
 							break;
+						case 'experience-series' :
+							get_template_part('content', 'xsmke');
+							break;
 					} ?>
 						
 					</div>

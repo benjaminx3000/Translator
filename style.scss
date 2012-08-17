@@ -89,6 +89,12 @@ a {
 	color: $bright-blue;
 	text-decoration: none;
 	font-weight: normal;
+	&:hover{
+		color: $blue;
+	}
+	&:visited{
+		color: $bright-blue;
+	}
 }
 
 .nav-link{
