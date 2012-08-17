@@ -768,12 +768,15 @@ textarea {
   .translator-feed .t_client polygon {
     fill: #000; }
 .translator-feed .t_lab,
+.translator-feed .focused-lab,
 .translator-feed .open-lab {
   background: #008eb0; }
   .translator-feed .t_lab .plus,
+  .translator-feed .focused-lab .plus,
   .translator-feed .open-lab .plus {
     background: #8fb5c5; }
   .translator-feed .t_lab polygon,
+  .translator-feed .focused-lab polygon,
   .translator-feed .open-lab polygon {
     fill: #008eb0; }
 .translator-feed .t_product_studio {
@@ -783,12 +786,15 @@ textarea {
   .translator-feed .t_product_studio polygon {
     fill: #fecf5c; }
 .translator-feed .t_xsmke,
+.translator-feed .experience-series,
 .translator-feed .xsmke {
   background: #d71921; }
   .translator-feed .t_xsmke .plus,
+  .translator-feed .experience-series .plus,
   .translator-feed .xsmke .plus {
     background: #f58337; }
   .translator-feed .t_xsmke polygon,
+  .translator-feed .experience-series polygon,
   .translator-feed .xsmke polygon {
     fill: #d71921; }
 .translator-feed .post {
@@ -798,7 +804,7 @@ textarea {
   .translator-feed .post polygon {
     fill: #86ac90; }
 
-.page-lab .hentry.xsmke {
+.page-lab .hentry.xsmke, .page-lab .hentry.experience-series {
   display: none; }
 
 .entry-content h2 {

@@ -431,6 +431,7 @@ $header-width: 965px + ($header-margin * 2);
 			polygon{fill: #000;}
 	}
 	.t_lab,
+	.focused-lab,
 	.open-lab{
 		background: $blue;
 		.plus{background: $light-blue;}
@@ -442,6 +443,7 @@ $header-width: 965px + ($header-margin * 2);
 		polygon{fill: $yellow;}
 	}
 	.t_xsmke,
+	.experience-series,
 	.xsmke{
 		background: $red;
 		.plus{background: $orange;}
@@ -456,7 +458,8 @@ $header-width: 965px + ($header-margin * 2);
 
 .page-lab{
 	.hentry{
-		&.xsmke{display: none;}
+		&.xsmke,
+		&.experience-series{display: none;}
 	}
 }
 .entry-content{
