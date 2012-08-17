@@ -5,7 +5,7 @@
 <div class="two-over-three">
 	<div class="left">
 		<div class="tab current">
-				<p>Do these events sound like something you want know about? Sign up for our event email.  If a sponsorship or partnership is more your style, we may have an opportunity for you. Go ahead and share some information with us about what experience you would like to bring to Translator and the Milwaukee community.</p>
+				<p>Want to stay up to date on upcoming events? Be sure to register for our email updates. We'll keep you informed of experiences we are plotting, recaps of past events and give you the chance to make recommendations or share ideas for events you'd like to see us work on.</p>
 		</p>
 		</div>
 	</div>

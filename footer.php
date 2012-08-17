@@ -25,7 +25,7 @@
 
 			<div id="SignupForm">
 				<form action="http://translatordigitalcafe.us2.list-manage2.com/subscribe/post?u=4f0df1102a56ea0f4cc811f93&amp;id=8d4e83ef68" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-					<label for="mce-EMAIL">Subscribe to our mailing list</label>
+					<label for="mce-EMAIL">Stay informed of upcoming lab topics, events and other activities and projects. Don't worry, we promise not to bombard you with awesomeness.</label>
 					<p>
 						email<sup>*</sup><br>
 						<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
