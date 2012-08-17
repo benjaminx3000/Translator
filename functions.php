@@ -380,8 +380,9 @@ function t_events_date() {
     // Get the location data if its already been entered
     $location = get_post_meta($post->ID, '_location', true);
     // Echo out the field
-    echo '<label for="_location">Event Location</label><br>';
-    echo '<input type="text" name="_location" value="' . $location  . '" class="" />';
+    $loc_default = 'Translator <br> 415 E Menomonee St.<br>Milwukee';
+    echo '<p><label for="_location">Event Location</label><br>';
+    echo '<input type="text" name="_location" value="' . $location . '" class="" /></p>';
 }
 
 //Studio product and client name metabox
