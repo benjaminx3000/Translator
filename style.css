@@ -382,6 +382,7 @@ $bright-blue: #00bff3;
 .Montserrat, h1, h2, h3, .nav-link, #Utility a, #menu-main-navigation li a, #fun-nav h3, input[type="text"],
 input[type="email"],
 input[type="number"],
+select,
 textarea {
   font-family: 'Montserrat', Helvetica, sans-serif;
   font-weight: normal; }
@@ -480,6 +481,7 @@ button,
 input[type="text"],
 input[type="email"],
 input[type="number"],
+select,
 textarea {
   background: #fecf5c none;
   height: 25px;
@@ -498,6 +500,7 @@ textarea {
   input[type="text"]:focus,
   input[type="email"]:focus,
   input[type="number"]:focus,
+  select:focus,
   textarea:focus {
     background-color: #fede8f;
     outline-color: white; }
