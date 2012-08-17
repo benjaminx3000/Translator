@@ -801,14 +801,17 @@ textarea {
     fill: #fecf5c; }
 .translator-feed .t_xsmke,
 .translator-feed .experience-series,
+.translator-feed .xseries,
 .translator-feed .xsmke {
   background: #d71921; }
   .translator-feed .t_xsmke .plus,
   .translator-feed .experience-series .plus,
+  .translator-feed .xseries .plus,
   .translator-feed .xsmke .plus {
     background: #f58337; }
   .translator-feed .t_xsmke polygon,
   .translator-feed .experience-series polygon,
+  .translator-feed .xseries polygon,
   .translator-feed .xsmke polygon {
     fill: #d71921; }
 .translator-feed .post {
