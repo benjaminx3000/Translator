@@ -1,5 +1,3 @@
-@import url("http://fonts.googleapis.com/css?family=Montserrat");
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,700");
 /*
 Theme Name: Translator
 Description: Awesome Translator Theme 
@@ -7,6 +5,8 @@ Author: Ben
 Version: 1.0
 Template: twentyeleven
 */
+@import url("http://fonts.googleapis.com/css?family=Montserrat");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,700");
 /*
  * HTML5 Boilerplate
  *
@@ -708,7 +708,8 @@ textarea {
     background: #8fb5c5;
     padding: 26px 33px 52px 0; }
 
-.translator-feed .preview {
+.translator-feed .preview,
+.translator-feed .blog-nav {
   -webkit-box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.75);
   -moz-box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.75);
   box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.75);
@@ -716,12 +717,15 @@ textarea {
   height: 74px;
   text-align: center;
   overflow: hidden; }
-  .translator-feed .preview h1, .translator-feed .preview h2 {
+  .translator-feed .preview h1, .translator-feed .preview h2,
+  .translator-feed .blog-nav h1,
+  .translator-feed .blog-nav h2 {
     position: relative;
     top: -4px;
     display: inline;
     color: #fff; }
-  .translator-feed .preview a {
+  .translator-feed .preview a,
+  .translator-feed .blog-nav a {
     color: #fff; }
 .translator-feed .content {
   background: white; }
@@ -848,6 +852,7 @@ h3.date {
 .blog {
   color: #7d7d7d; }
   .blog .preview .container,
+  .blog .blog-nav .container,
   .blog .article {
     float: right;
     margin: 0;
@@ -856,8 +861,10 @@ h3.date {
   .blog .post-preview,
   .blog .post-footer {
     padding: 0 35px 0 85px; }
-  .blog .preview {
+  .blog .preview,
+  .blog .blog-nav {
     background: #fecf5c; }
+  .blog .blog-nav .container,
   .blog .preview .container {
     background: #86ac90;
     height: 100%; }
@@ -1231,9 +1238,13 @@ h3.date {
 #ContentMid .container:before, .translator-feed .article:before, .blog:before, .author-meta:before,
 .clearfix:after,
 .two-col:after,
-#ContentTop .container:after,
+#ContentTop .container:after, #ContentTop
+.container:after,
 #ContentMid .container:after,
-.translator-feed .article:after,
+#ContentMid
+.container:after,
+.translator-feed .article:after, .translator-feed
+.article:after,
 .blog:after,
 .author-meta:after {
   content: "";

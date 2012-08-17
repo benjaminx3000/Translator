@@ -40,13 +40,13 @@
 						</div>
 					</div>
 					<?php endwhile; ?>
-					<div class="preview">
+					<div class="blog-nav">
 						<div class="container">
-							<div class="blog-nav">
+							
 								<div class="newer"><?php previous_posts_link('Newer &gt;') ?></div>
 								<div class="older"><?php next_posts_link('&lt; Older','') ?></div>
 								<!--<?php posts_nav_link(' ','Newer &gt;','&lt; Older'); ?>-->
-							</div>
+							
 							<!-- <a href="#older" class="older">&lt; Older</a><a href="#newer" class="newer">Newer &gt;</a> -->
 						</div>
 					</div>
