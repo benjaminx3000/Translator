@@ -350,6 +350,15 @@ $header-width: 965px + ($header-margin * 2);
 	ul{color: white; padding: 0; margin: 0;}
 	.list li{@include nav-inline; font-size: 18px; margin-right: 34px; display: inline-block;}
 	p{color: $gray;}
+	a{
+		color: $yellow;
+		&:hover{
+			color: darken($orange, 10);
+		}
+		&:visited{
+			color: $yellow;
+		}
+	}
 	.tab-nav{
 		position: absolute;
 		top: -53px ;left: 0;
@@ -523,7 +532,9 @@ h3.date{
 		font-size: 16px;
 	}
 }
-.image .summary p{
+.image .summary{
+	font-size: 13px;
+	line-height: 1.7em;
 	text-align: justify;
 }
 

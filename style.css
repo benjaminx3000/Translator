@@ -692,6 +692,12 @@ textarea {
     display: inline-block; }
   #ContentMid p {
     color: #464646; }
+  #ContentMid a {
+    color: #fecf5c; }
+    #ContentMid a:hover {
+      color: #ed660c; }
+    #ContentMid a:visited {
+      color: #fecf5c; }
   #ContentMid .tab-nav {
     position: absolute;
     top: -53px;
@@ -865,7 +871,9 @@ h3.date {
     color: #7d7d7d;
     font-size: 16px; }
 
-.image .summary p {
+.image .summary {
+  font-size: 13px;
+  line-height: 1.7em;
   text-align: justify; }
 
 /*Blog Post Content*/

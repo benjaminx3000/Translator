@@ -34,6 +34,9 @@
 						case 'experience-series' :
 							get_template_part('content', 'xsmke');
 							break;
+						case 'calendar' :
+							get_template_part('content', 'calendar');
+							break;
 					} ?>
 						
 					</div>
