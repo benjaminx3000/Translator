@@ -809,7 +809,9 @@ textarea {
   .translator-feed .post polygon {
     fill: #86ac90; }
 
-.page-lab .hentry.xsmke, .page-lab .hentry.experience-series {
+.page-calendar .hentry.xsmke, .page-calendar .hentry.experience-series,
+.page-lab .hentry.xsmke,
+.page-lab .hentry.experience-series {
   display: none; }
 
 .entry-content h2 {
