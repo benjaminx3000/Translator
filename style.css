@@ -671,6 +671,9 @@ textarea {
 #ContentTop .container {
   padding: 52px 0 0; }
 
+.page-xsmke .wp-post-image {
+  margin-bottom: 150px; }
+
 #ContentMid {
   background: #8fb5c5; }
   #ContentMid h1, #ContentMid h2, #ContentMid h3 {
