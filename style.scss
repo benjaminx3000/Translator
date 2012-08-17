@@ -522,13 +522,16 @@ h3.date{
 	width: 510px;
 	float: right;
 }
+.post-title {
+	font-size: 48px;
+}
 .summary{
 	width: 236px;
 	float: left;
 	img{display: none;}
 	h2,h3{
 		@extend .Open-Sans-Bold;
-		color: $light-gray;
+		color: black;
 		font-size: 16px;
 	}
 }
