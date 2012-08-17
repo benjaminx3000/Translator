@@ -40,6 +40,7 @@
 					$query;
 					switch ($page_name) {
 						case 'client':
+						case 'agency' :
 							$query = array('t_client');
 							break;
 						case 'studio':
@@ -110,16 +111,20 @@
 								<?php } ?>
 							</div>
 							<div id="contetnt<?php the_ID(); ?>" class="collapsable content">
-								<?php $more = 0; ?>
+								<?php
+									$more = 1;
+									$withcomments = 1;
+								?>
 								<?php 
 									switch (get_post_type()) {
 										case 't_event':
 											get_template_part('content', 'event');
 											break;
-										case 'post' :
-											get_template_part('content', 'post');
+										//case 'post' :
+										//get_template_part('content', 'post');
 										default:
-											get_template_part('content', 'default');
+											get_template_part('content', 'post');
+											//get_template_part('content', 'default');
 											break;
 									}
 								?>

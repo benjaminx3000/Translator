@@ -11,7 +11,7 @@ function init($){
 	navigation($);
 	initUI($);
 	handleHash($, window.location.hash);
-
+	$('.article').postTemplate();
 	switch(path){
 		case 'lab' :
 			tabInator($, function(index){
@@ -38,8 +38,10 @@ function handleHash($, hash){
 
 	console.log($(hash).find('.preview'));
 	$(hash).find('.preview').click();
+}
 
-	//$.scrollTo({left:0, top: $(hash).offset().top - parseInt($('#primary').css('marginTop')) + 2}, delay * 1000);	
+function tabbedPost($){
+
 }
 
 function initUI($){
@@ -52,6 +54,7 @@ function initUI($){
 	$(preview).click(function(e){
 		e.preventDefault();
 		//find the collapsable content
+		window.location.hash = $(this).parents('.hentry').attr('id');
 		collapser = $(this).siblings('.collapsable');
 		//if it's not the same as from the last click,
 		//then close the last one and open the new
