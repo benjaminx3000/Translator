@@ -51,6 +51,9 @@ function initUI($){
 		height,
 		plus;
 
+	// var commentsLink = $('.comments a'),
+	// 	commentsContainer = $('comments-container');
+
 	$(preview).click(function(e){
 		e.preventDefault();
 		//find the collapsable content
@@ -94,6 +97,19 @@ function initUI($){
 		}, delay * 1000);
 		
 	});
+	$(commentsLink).click(function(e){
+		e.preventDefault();
+		var target = $(this).siblings(commentsContainer);
+		console.log($(target).height())
+		if( $(target).height() == 0 ){
+			$(target).height($(target).find('.comments').height());
+		} else {
+			$(target).height(0);
+		}
+	});
+
+
+
 }
 
 //fun navigation thingie

@@ -12,6 +12,7 @@
 	<h4></h4>
 	<div class="post-preview">
 		<?php the_content('More'); ?>
+		<?php edit_post_link( __( 'Edit', 'Translator' ), '<span class="edit-link">', '</span>' ); ?>
 	</div>
 	<div class="post-footer">
 		<div class="tags">
@@ -20,7 +21,7 @@
 		<div class="comments">
 			<a href="<?php comments_link(); ?>"><?php comments_number(); ?></a>
 
-			<div class="collapsable">
+			<div class="comments-container">
 				<?php comments_template( '', true ); ?>
 			</div>
 			<?php  ?>
@@ -28,6 +29,5 @@
 		</div>
 	</div>
 	
-		<?php edit_post_link( __( 'Edit', 'Translator' ), '<span class="edit-link">', '</span>' ); ?>
 
 </div>
