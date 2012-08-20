@@ -20,6 +20,6 @@
 		</div>
 	</div>
 	<div class="right">
-		<?php echo do_shortcode('[contact-form-7 id="496" title="Lab"]'); ?>
+		<?php echo do_shortcode('[contact-form-7 id="793" title="Lab_copy"]'); ?>
 	</div>
 </div>

@@ -1,3 +1,5 @@
+@import url("http://fonts.googleapis.com/css?family=Montserrat");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,700");
 /*
 Theme Name: Translator
 Description: Awesome Translator Theme 
@@ -5,8 +7,6 @@ Author: Ben
 Version: 1.0
 Template: twentyeleven
 */
-@import url("http://fonts.googleapis.com/css?family=Montserrat");
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,700");
 /*
  * HTML5 Boilerplate
  *
@@ -649,7 +649,7 @@ textarea {
   line-height: 1.8em;
   margin: 0 5px; }
 #ContentTop ul, #ContentTop ol {
-  color: white;
+  color: #636363;
   line-height: 1.8em;
   margin: 0 5px; }
 #ContentTop.interior-page {
@@ -671,7 +671,7 @@ textarea {
 #ContentTop .container {
   padding: 52px 0 0; }
 
-.page-xsmke .wp-post-image {
+.page-experience-series .wp-post-image {
   margin-bottom: 150px; }
 
 #ContentMid {
@@ -800,16 +800,22 @@ textarea {
   .translator-feed .t_product_studio polygon {
     fill: #fecf5c; }
 .translator-feed .t_xsmke,
+.translator-feed .hosted-events,
+.translator-feed .partner-events,
 .translator-feed .experience-series,
 .translator-feed .xseries,
 .translator-feed .xsmke {
   background: #d71921; }
   .translator-feed .t_xsmke .plus,
+  .translator-feed .hosted-events .plus,
+  .translator-feed .partner-events .plus,
   .translator-feed .experience-series .plus,
   .translator-feed .xseries .plus,
   .translator-feed .xsmke .plus {
     background: #f58337; }
   .translator-feed .t_xsmke polygon,
+  .translator-feed .hosted-events polygon,
+  .translator-feed .partner-events polygon,
   .translator-feed .experience-series polygon,
   .translator-feed .xseries polygon,
   .translator-feed .xsmke polygon {
@@ -821,8 +827,11 @@ textarea {
   .translator-feed .post polygon {
     fill: #86ac90; }
 
-.page-calendar .hentry.xsmke, .page-calendar .hentry.experience-series,
+.page-calendar .hentry.xsmke, .page-calendar .hentry.t_xsmke, .page-calendar .hentry.partner-events, .page-calendar .hentry.xseries, .page-calendar .hentry.experience-series,
 .page-lab .hentry.xsmke,
+.page-lab .hentry.t_xsmke,
+.page-lab .hentry.partner-events,
+.page-lab .hentry.xseries,
 .page-lab .hentry.experience-series {
   display: none; }
 
@@ -1114,6 +1123,9 @@ h3.date {
 .wpcf7 p {
   margin: 1.2em 0; }
 
+.wpcf7-list-item-label {
+  font-size: 12px; }
+
 /*Hidden forms*/
 #SignupForm {
   display: none; }
@@ -1270,13 +1282,9 @@ h3.date {
 #ContentMid .container:before, .translator-feed .article:before, .blog:before, .author-meta:before,
 .clearfix:after,
 .two-col:after,
-#ContentTop .container:after, #ContentTop
-.container:after,
+#ContentTop .container:after,
 #ContentMid .container:after,
-#ContentMid
-.container:after,
-.translator-feed .article:after, .translator-feed
-.article:after,
+.translator-feed .article:after,
 .blog:after,
 .author-meta:after {
   content: "";

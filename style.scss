@@ -291,6 +291,8 @@ $header-width: 965px + ($header-margin * 2);
 		|__#ContentBottom
 */
 
+
+
 .body{
 	width: 960px;
 	margin: 0 auto;
@@ -325,7 +327,7 @@ $header-width: 965px + ($header-margin * 2);
 	//@extend .body;
 	h1, h2{margin: 0 0 0.4em;color: white;}
 	p{line-height: 1.8em; margin: 0 5px;}
-	ul, ol{color: white; line-height: 1.8em; margin: 0 5px;}
+	ul, ol{ color: $mid-gray; line-height: 1.8em; margin: 0 5px;}
 	&.interior-page{
 		background: white;
 		h1,h2{margin: 0 0 0.5em; color: $gray;}
@@ -343,7 +345,7 @@ $header-width: 965px + ($header-margin * 2);
 	}
 	.container{padding: 52px 0 0;}
 }
-.page-xsmke .wp-post-image{margin-bottom: 150px;}
+.page-experience-series .wp-post-image{margin-bottom: 150px;}
 #ContentMid{
 	background: $light-blue;
 	h1, h2, h3{color: white;}
@@ -461,6 +463,8 @@ $header-width: 965px + ($header-margin * 2);
 		polygon{fill: $yellow;}
 	}
 	.t_xsmke,
+	.hosted-events,
+	.partner-events,
 	.experience-series,
 	.xseries,
 	.xsmke{
@@ -474,10 +478,14 @@ $header-width: 965px + ($header-margin * 2);
 		polygon{fill: $green;}
 	}
 }
+
 .page-calendar,
 .page-lab{
 	.hentry{
 		&.xsmke,
+		&.t_xsmke,
+		&.partner-events,
+		&.xseries,
 		&.experience-series{display: none;}
 	}
 }
@@ -486,6 +494,7 @@ $header-width: 965px + ($header-margin * 2);
 	.author{font-size: 18px; text-transform: none;}
 	.secondary-title{font-size: 36px; text-transform: none;}
 }
+
 
 
 h2.post-title{
@@ -781,6 +790,9 @@ h3.date{
 		}
 .wpcf7 p{
 	margin: 1.2em 0;
+}
+.wpcf7-list-item-label{
+	font-size: 12px;
 }
 /*Hidden forms*/
 //#ContentTop .wpcf7,

@@ -24,16 +24,19 @@
 						case 'agency' :
 							get_template_part('content', 'client');
 							break;
+						case 'xdlab' :
 						case 'lab' :
 							get_template_part('content', 'lab');
 							break;
 						case 'studio' :
-						case 'product-studio' :
+						case 'translator-studio' :
 							get_template_part('content', 'studio');
 							break;
+						case 'xsmke' :
 						case 'experience-series' :
 							get_template_part('content', 'xsmke');
 							break;
+						case 'events' :
 						case 'calendar' :
 							get_template_part('content', 'calendar');
 							break;
@@ -52,15 +55,19 @@
 							break;
 						case 'studio':
 						case 'product-studio':
+						case 'translator-studio':
 							$query = array('t_product_studio');
 							break;
 						case 'lab':
+						case 'xdlab':
 							$query = array('t_lab', 't_event');
 							break;
 						case 'calendar':
+						case 'events':
 							$query = array('t_event');
 							break;
 						case 'experience-series':
+						case 'xsmke':
 							$query = array('t_xsmke');
 							break;
 						case 'about':
@@ -76,7 +83,7 @@
 						'orderby' => 'date' );
 					$loop = new WP_Query( $args );
 				?>
-
+				<a name="blue">
 				<div id="ContentBottom" class="translator-feed">
 					<?php $count = 0; global $more;?>
 					<?php  while ( $loop->have_posts() ) : $loop->the_post() ; ?>

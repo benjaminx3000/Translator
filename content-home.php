@@ -20,7 +20,14 @@
 	<div class="summary">
 		<?php echo $post->post_excerpt; ?>
 		<div class="more">
-			<a class="button" href="<?php echo dirname(get_permalink()) . '#' . basename(get_permalink()); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'Translator' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">Read more</a>
+			<?php 
+			$blog = '';
+				if($post->post_type == 'post'){
+					$blog = '/our-thinking';
+				}
+			?>
+
+			<a class="button" href="<?php echo dirname(get_permalink()) . $blog . '#' . basename(get_permalink()); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'Translator' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">Read more</a>
 		</div>
 		<?php edit_post_link( __( 'Edit', 'Translator' ), '<span class="edit-link">', '</span>' ); ?>
 	</div>

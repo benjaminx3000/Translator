@@ -1,5 +1,5 @@
 	<div id="fun-nav">
-		<a href="<?php echo site_url('/client/') ?>" id="folio">
+		<a href="<?php echo site_url('/agency/') ?>" id="folio">
 			
 			<div class="sprite fun-nav_folio-back"></div>
 			<div class="sprite fun-nav_folio-front"><h3>AGENCY</h3></div>

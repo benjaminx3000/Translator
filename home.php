@@ -6,7 +6,7 @@
 				<div id="ContentBottom" class="translator-feed">
 					<?php $count = 0; global $more; global $withcomments;?>
 					<?php  while ( have_posts() ) : the_post() ; ?>
-					<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<div id="<?php echo basename(get_permalink()); ?>" <?php post_class(); ?>>
 						<div class="entry-content">
 							<div class="preview">
 								<div class="container">
@@ -15,7 +15,6 @@
 									$post_title = get_the_title();
 								 ?>
 
-								
 
 								<h2><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'Translator' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php echo $post_title; ?></a></h2>
 

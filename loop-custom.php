@@ -7,7 +7,7 @@
 		    $post = wp_get_single_post($menu_item->object_id);
 	?>
 	
-	<div id="<?php echo basename(get_permalink()); ?>" class="<?php echo '' . $post->post_type;?> hentry <?php post_class(); ?>">
+	<div id="<?php echo basename(get_permalink()); ?>"  <?php post_class(); ?>>
 		<div class="entry-content">
 			<div class="preview">
 				<?php $post_type = get_post_type();

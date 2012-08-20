@@ -11,7 +11,7 @@
 	</div>
 	<div class="right">
 		<form action="http://translatordigitalcafe.us2.list-manage2.com/subscribe/post?u=4f0df1102a56ea0f4cc811f93&amp;id=8d4e83ef68" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-			<label for="mce-EMAIL">Subscribe to our mailing list</label>
+			<p>Stay informed of upcoming lab topics, events and other activities and projects. Don't worry, we promise not to bombard you with awesomeness.</p>
 			<p>
 				email<sup>*</sup><br>
 				<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
@@ -29,7 +29,6 @@
 			<div class="clear">
 				<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
 			</div>
-			<p>Translator promises never to sell your name or send you spammy emails!</p>
 		</form>
 	</div>
 </div>
