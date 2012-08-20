@@ -1159,6 +1159,9 @@ li.comment {
 .wpcf7-list-item-label {
   font-size: 12px; }
 
+.wpcf7-textarea {
+  height: 100px; }
+
 /*Hidden forms*/
 #SignupForm {
   display: none; }
