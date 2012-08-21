@@ -656,7 +656,8 @@ textarea {
   background: white; }
   #ContentTop.interior-page h1, #ContentTop.interior-page h2 {
     margin: 0 0 0.5em;
-    color: #464646; }
+    color: #464646;
+    font-size: 42px; }
   #ContentTop.interior-page p {
     margin: 0 5px 1.2em;
     color: #7d7d7d; }

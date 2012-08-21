@@ -5,7 +5,11 @@
 				<div id="ContentTop" class="interior-page <?php echo $page_name; ?>">
 					<?php while ( have_posts() ) : the_post(); ?>
 					<div class="container" >
-						<h1 class="page-title"><?php echo( get_post_meta(get_the_id(), '_stream_title', true)); ?></h1>
+						<?php 
+						$_stream_title = get_post_meta(get_the_id(), '_stream_title', true);
+						if( $_stream_title != '') { ?>
+						<h1 class="page-title"><?php echo($_stream_title); ?></h1>
+						<?php } ?>
 						<?php 
 							if ( has_post_thumbnail() ) { 
 								the_post_thumbnail(array(300, 1000));

@@ -12,7 +12,7 @@
 					<?php endwhile; // end of the loop. ?>
 				</div><!--End #ContentTop -->
 
-				<?php get_template_part('loop', 'custom') ?>
+				<?php get_template_part('loop', 'custom'); ?>
 
 			</div><!-- #content -->
 		</div><!-- #primary -->

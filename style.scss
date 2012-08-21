@@ -330,10 +330,9 @@ $header-width: 965px + ($header-margin * 2);
 	ul, ol{ color: $mid-gray; line-height: 1.8em; margin: 0 5px;}
 	&.interior-page{
 		background: white;
-		h1,h2{margin: 0 0 0.5em; color: $gray;}
+		h1,h2{margin: 0 0 0.5em; color: $gray; font-size: 42px;}
 		p{margin: 0 5px 1.2em;color: $light-gray;}
 		.container{padding: 52px 0;}
-		//padding: 46px 0;
 	}
 	&.lab.interior-page{
 		h1.page-title{margin: 0;}
