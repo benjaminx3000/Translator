@@ -4,9 +4,6 @@
 			<div id="content" role="main">
 				<div id="ContentTop">
 					<?php $items = wp_get_nav_menu_items( 'Home Page Feed' ); ?>
-					<!-- <pre>
-						<?php print_r($items); ?>
-					</pre> -->
 					<?php while ( have_posts() ) : the_post(); ?>
 						<div class="container">
 						<?php the_content(); ?>

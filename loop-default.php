@@ -1,31 +1,62 @@
+<?php 
+	global $more;
+	$count = 0;
+	$query;
+	$page_name = $post->post_name;
+	
+	switch ($page_name) {
+		case 'client':
+		case 'agency' :
+			$query = array('t_client');
+			break;
+		case 'studio':
+		case 'product-studio':
+		case 'translator-studio':
+			$query = array('t_product_studio');
+			break;
+		case 'lab':
+		case 'xdlab':
+			$query = array('t_lab', 't_event');
+			break;
+		case 'calendar':
+		case 'events':
+			$query = array('t_event');
+			break;
+		case 'experience-series':
+		case 'xsmke':
+			$query = array('t_xsmke');
+			break;
+		case 'about':
+			$query = array();
+			break;
+		default:
+			$query = array('t_product_studio', 't_event', 't_client', 't_lab', 't_xsmke');
+			break;
+	}
+	
+	$args = array( 'post_type' => $query,
+		'posts_per_page' => 10,
+		'orderby' => 'date' );
+	$loop = new WP_Query( $args );
+?>
+
 <div id="ContentBottom" class="translator-feed">
-	
-	<?php
-		$count = 0;
-		global $more;
-		
-		$post_ids = array();
-		$menu_items = wp_get_nav_menu_items( 'Home Page Feed' );
-		foreach ( (array) $menu_items as $key => $menu_item ) {
-		    $post = wp_get_single_post($menu_item->object_id);
-	?>
-	
-	<div id="<?php echo basename(get_permalink()); ?>"  <?php post_class(); ?>>
+	<?php  while ( $loop->have_posts() ) : $loop->the_post() ; ?>
+	<div id="<?php echo basename(get_permalink()); ?>" <?php post_class(); ?>>
 		<div class="entry-content">
 			<div class="preview">
 				<?php $post_type = get_post_type();
-					$special_title = $post_title = get_post_meta(get_the_id(), '_stream_title', true);
+					$special_title = get_post_meta(get_the_id(), '_stream_title', true);
 					$post_title = get_the_title();
 					switch ($post_type) {
 						case 'post':
-							$post_title = get_the_title() .  " <span class='author'>by " . get_the_author_meta('user_nicename',($post->post_author)) . "</span>";
+							$post_title = get_the_title() .  " <span class='author'>by " . get_the_author() . "</span>";
 							break;
 						default:
 							($special_title == '')? $post_title = get_the_title() : $post_title = $special_title;
 							break;
 					}
 				?>
-								
 				<?php if($count % 2 == 0) { ?>
 				<div class="svg-container plus left">
 					<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -47,23 +78,30 @@
 					</svg>
 				</div>
 				<?php } ?>
-
 			</div>
 			<div id="contetnt<?php the_ID(); ?>" class="collapsable content">
-				<?php $more = 0; ?>
+				<?php
+					$more = 1;
+					$withcomments = 1;
+				?>
 				<?php 
-					switch ($post->post_type) {
+					switch (get_post_type()) {
 						case 't_event':
-							get_template_part('home', 'eventPost');
+							get_template_part('content', 'event');
 							break;
+						case 't_client':
+							get_template_part('content', 'casestudy');
+							break;
+						case 'post' :
+							get_template_part('content', 'post');
 						default:
-							get_template_part('content', 'home');
+							get_template_part('content', 'default');
 							break;
 					}
 				?>
+				<?php $count ++; ?>
 			</div>
 		</div>
 	</div>
-	<?php $count ++; ?>
-	<?php } ?>
-</div><!-- End #ContentBottom -->
+	<?php endwhile; ?>
+</div>
