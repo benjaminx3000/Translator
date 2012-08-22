@@ -135,10 +135,25 @@ button,
 $width: 960px;
 $onethird: 960px * 0.33;
 $margin: 44px;
+
+.alignright{
+	float: right;
+	margin-left: 10px;
+}
+.alignleft{
+	float: left;
+	margin-right: 10px;
+}
+.aligncenter{
+	text-align: center;
+	margin: 0 auto;
+}
+
 .two-col{
 	@extend .clearfix;
 }
 .two-over-three{
+	@extend .clearfix;
 	.left{
 		float: left;
 		width: ($onethird * 2) - $margin;

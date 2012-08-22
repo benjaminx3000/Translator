@@ -470,6 +470,18 @@ button,
 .tab.current {
   display: block; }
 
+.alignright {
+  float: right;
+  margin-left: 10px; }
+
+.alignleft {
+  float: left;
+  margin-right: 10px; }
+
+.aligncenter {
+  text-align: center;
+  margin: 0 auto; }
+
 .two-over-three .left {
   float: left;
   width: 589.6px; }
@@ -1315,10 +1327,11 @@ li.comment {
 /*
  * Contain floats: h5bp.com/q
  */
-.clearfix:before, .two-col:before, #ContentTop .container:before,
+.clearfix:before, .two-col:before, .two-over-three:before, #ContentTop .container:before,
 #ContentMid .container:before, .translator-feed .article:before, .blog:before, .author-meta:before,
 .clearfix:after,
 .two-col:after,
+.two-over-three:after,
 #ContentTop .container:after, #ContentTop
 .container:after,
 #ContentMid .container:after,
@@ -1331,11 +1344,11 @@ li.comment {
   content: "";
   display: table; }
 
-.clearfix:after, .two-col:after, #ContentTop .container:after,
+.clearfix:after, .two-col:after, .two-over-three:after, #ContentTop .container:after,
 #ContentMid .container:after, .translator-feed .article:after, .blog:after, .author-meta:after {
   clear: both; }
 
-.clearfix, .two-col, #ContentTop .container,
+.clearfix, .two-col, .two-over-three, #ContentTop .container,
 #ContentMid .container, .translator-feed .article, .blog, .author-meta {
   *zoom: 1; }
 

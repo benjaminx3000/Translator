@@ -10,6 +10,7 @@ function init($){
 	
 	navigation($);
 	initUI($);
+	registerCustomAnylitics($);
 	handleHash($, window.location.hash);
 	$('.article').postTemplate();
 	switch(path){
@@ -23,6 +24,22 @@ function init($){
 			break
 	}
 
+}
+
+function registerCustomAnylitics($){
+	$('#fun-nav a').click(function(e){
+		console.log('sending custom anylitics');
+		_gaq.push(['_setCustomVar',
+		      1,                   // This custom var is set to slot #1.  Required parameter.
+		      'Clicked Fun Nav',     // The name acts as a kind of category for the user activity.  Required parameter.
+		      'Yes',               // This value of the custom variable.  Required parameter.
+		      2                    // Sets the scope to session-level.  Optional parameter.
+		   ]);
+		 _gaq.push(['_trackEvent',
+		      'Navigation', // category of activity
+		      'Useed Fun Nav', // Action
+		   ]);
+	});
 }
 
 function adminInit($){
@@ -40,9 +57,6 @@ function handleHash($, hash){
 	$(hash).find('.preview').click();
 }
 
-function tabbedPost($){
-
-}
 
 function initUI($){
 	var preview = $('.preview'),
@@ -50,9 +64,6 @@ function initUI($){
 		lastArticle,
 		height,
 		plus;
-
-	// var commentsLink = $('.comments a'),
-	// 	commentsContainer = $('comments-container');
 
 	$(preview).click(function(e){
 		e.preventDefault();
@@ -96,16 +107,6 @@ function initUI($){
 			$.scrollTo({left:0, top: $(ref).offset().top - parseInt($('#primary').css('marginTop')) - 27}, delay * 1000);
 		}, delay * 1000);
 		
-	});
-	$(commentsLink).click(function(e){
-		e.preventDefault();
-		var target = $(this).siblings(commentsContainer);
-		console.log($(target).height())
-		if( $(target).height() == 0 ){
-			$(target).height($(target).find('.comments').height());
-		} else {
-			$(target).height(0);
-		}
 	});
 
 
