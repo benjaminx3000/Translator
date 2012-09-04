@@ -22,8 +22,12 @@
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>" />
-<meta name="viewport" content="width=device-width" />
+	<meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="cleartype" content="on">
+	<meta charset="<?php bloginfo( 'charset' ); ?>" />
+	<meta name="google-site-verification" content="Gij3gFJnKWT-wBCZLUmzgBXvnWtDKDJiEZFMDI_ZI2I" />
 <title><?php
 	/*
 	 * Print the <title> tag based on what is being viewed.
@@ -88,7 +92,7 @@
 		<div class="left"></div>
 		<div class="right"></div>
 		<div class="content">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><h1 id="site-title"><span><?php bloginfo( 'name' ); ?></span></h1></a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><h1 id="site-title"><span><?php bloginfo( 'name' ); ?></span></h1></a>
 					
 				<nav id="Utility">
 					<div class="search-container">

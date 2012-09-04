@@ -119,6 +119,8 @@ button,
 	border-left: 1px solid lighten($orange, 25);	
 	@include box-shadow(1px, 1px, 0, $light-gray);
 }
+
+
 /* Tabs */
 .tab-nav {
 	li{
@@ -188,54 +190,35 @@ textarea{
 	}
 }
 textarea{height: auto;}
+
+
 /*Main Styles*/
 /*Header Region*/
-$header-margin: 48px;
-$header-width: 965px + ($header-margin * 2);
+
 .admin-bar{
 	#branding{top: 28px;}
 }
 #branding{
+	position: absolute;
 	height: 75px;
-	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 100;
 	.content{
 		background: #000;
-		width: $header-width;
-		position: absolute;
-		top: 0;
-		left: 50%;
-		margin-left: - $header-width / 2;
+		width: 100%;
 	}
-	.left{
-		position: absolute;
-		left: 0;
-		right: 50%;
-		height: 75px;
-		background: $blue;
-	}
-	.right{
-		background: #000;
-		position: absolute;
-		left: 50%;
-		right: 0;
-		height: 75px;
-	}
+	
 }
 
-
-
-	#site-title{
-		width: 255px;
-		height: 75px;
-		float: left;
-		margin-left: $header-margin;
-		background: $gray url("css/img/translator-logo.png") 25px 10px no-repeat;
-		@extend .ir;
-	}
+#site-title{
+	width: 255px;
+	height: 75px;
+	float: left;
+	background: $gray url("css/img/translator-logo.png") 25px 10px no-repeat;
+	@extend .ir;
+}
 
 	#Utility{
 		position: absolute;
@@ -256,10 +239,8 @@ $header-width: 965px + ($header-margin * 2);
 			@extend .nav-link;
 		}	
 	}
-		
 		.search-container{
 			float: right;
-			margin-right: $header-margin;
 			position: relative;
 			.field{
 				width: 150px;
@@ -277,7 +258,6 @@ $header-width: 965px + ($header-margin * 2);
 
 	#menu-main-navigation{
 		position: absolute;
-		right: $header-margin;
 		bottom: 12px;
 		margin: 0;
 		padding: 0;
@@ -309,8 +289,7 @@ $header-width: 965px + ($header-margin * 2);
 
 
 .body{
-	width: 960px;
-	margin: 0 auto;
+	width: 100%;
 }
 // .admin-bar #primary{
 // 	margin-top: 75px + 28px;
@@ -416,11 +395,23 @@ $header-width: 965px + ($header-margin * 2);
 		text-align: center;
 		overflow: hidden;
 		h1, h2{
-			position: relative;
-			top: -4px;
-			display: inline;
-		color: #fff; //text-transform: uppercase;
-	}
+			font-size: 18px;
+			position: absolute;
+			left: 85px;
+			right: 30px;
+			top: 0;
+			height: 75px;
+			line-height: 75px;
+			text-overflow: ellipsis;
+			text-overflow: ellipsis;
+  			overflow: hidden;
+  			white-space: nowrap;
+			color: #fff;}
+		&.even{
+			h1, h2{
+				right: 85px;
+				left: 30px;}
+		}
 		a{color: #fff}
 	}
 	.content{background: white;}
@@ -437,12 +428,10 @@ $header-width: 965px + ($header-margin * 2);
 	.more{padding: 22px 0;}
 	.plus{
 		@include box-shadow-inset(1px, 1px, 2px, rgba(255, 255, 255, 0.75) );	
-		display: inline-block;
-		width: 75px;
+		float: right;
 		height: 75px;
-		margin: 0 0 0 32px;
-		background: rgba(255, 255, 255, 0.6);
-		&.left{margin: 0 32px 0 0;}
+		width: 	75px;
+		&.left{float: left;}
 		svg{
 			margin-top: (75px - 35) / 2;
 		}
@@ -691,6 +680,7 @@ li.comment{
 }
 /*Home Page*/
 #fun-nav{
+	display: none;
 	width: 762px;
 	height: 254px;
 	margin: 0 auto 8px;
@@ -886,7 +876,6 @@ li.comment{
 	position: absolute;
 	top: 100px;
 }
-
 
 .plus .plust{
 	@include transform-origin;

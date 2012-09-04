@@ -12,7 +12,7 @@
 	
 	<div id="<?php echo basename(get_permalink()); ?>"  <?php post_class(); ?>>
 		<div class="entry-content">
-			<div class="preview">
+			<div class="preview <?php echo (($count % 2 == 0)? 'odd' : 'even'); ?>">
 				<?php $post_type = get_post_type();
 					$special_title = $post_title = get_post_meta(get_the_id(), '_stream_title', true);
 					$post_title = get_the_title();

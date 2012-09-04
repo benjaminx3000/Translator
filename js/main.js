@@ -4,13 +4,15 @@ jQuery(document).ready(function($) {
 
 function init($){
 	console.log('Theme JS Initialized!');	
+	console.log(navigator.appCodeName);
+
 	var path = window.location.pathname.split('/');
 		path = path[path.length - 2];
 	$('a[href="#SignupForm"], .fancy').fancybox();
 	
 	navigation($);
 	initUI($);
-	registerCustomAnylitics($);
+	registerCustomAnalytics($);
 	handleHash($, window.location.hash);
 	$('.article').postTemplate();
 	switch(path){
@@ -26,9 +28,8 @@ function init($){
 
 }
 
-function registerCustomAnylitics($){
+function registerCustomAnalytics($){
 	$('#fun-nav a').click(function(e){
-		console.log('sending custom anylitics');
 		_gaq.push(['_setCustomVar',
 		      1,                   // This custom var is set to slot #1.  Required parameter.
 		      'Clicked Fun Nav',     // The name acts as a kind of category for the user activity.  Required parameter.
@@ -51,9 +52,6 @@ function adminInit($){
 }
 
 function handleHash($, hash){
-	console.log(hash);
-
-	console.log($(hash).find('.preview'));
 	$(hash).find('.preview').click();
 }
 
@@ -73,7 +71,6 @@ function initUI($){
 		//if it's not the same as from the last click,
 		//then close the last one and open the new
 		if(!lastArticle){
-			console.log(lastArticle);
 			$(lastArticle).height(0);
 			$(plus).removeClass('open');
 			height = $(collapser).find('.article').outerHeight();
@@ -100,11 +97,14 @@ function initUI($){
 			}
 		}
 		var ref = $(this);
-		console.log($(ref).css('margin-top'));
 		var delay = parseFloat($(collapser).css('-webkit-transition-duration'));
 		console.log(delay * 1000);
 		setTimeout(function(){
-			$.scrollTo({left:0, top: $(ref).offset().top - parseInt($('#primary').css('marginTop')) - 27}, delay * 1000);
+			if(navigator.platform == 'iPhone' || navigator.platform == 'iPad'){
+				window.scrollTo(0, $(ref).offset().top - parseInt($('#primary').css('marginTop')) - 27);
+			} else {
+				$.scrollTo({left:0, top: $(ref).offset().top - parseInt($('#primary').css('marginTop')) - 27}, delay * 1000);
+			}
 		}, delay * 1000);
 		
 	});

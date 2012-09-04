@@ -14,7 +14,7 @@
 							414.810.1032 
 						</p>
 					</div>
-		</div>
+				</div>
 			<?php
 				/* A sidebar in the footer? Yep. You can can customize
 				 * your footer with three columns of widgets.
@@ -45,6 +45,7 @@
 					</div>
 				</form>
 			</div>
+
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
