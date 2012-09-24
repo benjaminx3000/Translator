@@ -70,9 +70,9 @@ h1,h2,h3{
 
 
 
-h1{font-size: 54px};
-h2{font-size: 36px};
-h3{font-size: 24px};
+h1{font-size: 22px};
+h2{font-size: 18px};
+h3{font-size: 14px};
 
 body {
 	background: $light-blue;
@@ -213,31 +213,13 @@ textarea{height: auto;}
 }
 
 #site-title{
-	width: 255px;
 	height: 75px;
-	float: left;
-	background: $gray url("css/img/translator-logo.png") 25px 10px no-repeat;
+	background: $gray url("css/img/translator-logo.png") 50% 10px no-repeat;
 	@extend .ir;
 }
 
 	#Utility{
-		position: absolute;
-		top: 9px;
-		right: 0;
-		margin: 0;
-		padding: 0;
-		display: inline-block;
-		ul{
-			margin-top: -4px;
-			float: right;
-		}
-		li{
-			@include nav-inline;
-			margin-right: 20px;
-		}
-		a{
-			@extend .nav-link;
-		}	
+		display: none;
 	}
 		.search-container{
 			float: right;
@@ -302,8 +284,9 @@ textarea{height: auto;}
 #ContentMid{
 	position: relative;
 	.container{
-		@extend .body;
+		@include box-sizing();
 		@extend .clearfix;
+		padding: 10px;
 		position: relative;
 		z-index: 1; 
 	}
@@ -326,7 +309,7 @@ textarea{height: auto;}
 		background: white;
 		h1,h2{margin: 0 0 0.5em; color: $gray; font-size: 42px;}
 		p{margin: 0 5px 1.2em;color: $light-gray;}
-		.container{padding: 52px 0;}
+		.container{padding-bottom: 52px;}
 	}
 	&.lab.interior-page{
 		h1.page-title{margin: 0;}
@@ -336,7 +319,7 @@ textarea{height: auto;}
 		float: right;
 		margin-left: 74px;
 	}
-	.container{padding: 52px 0 0;}
+	.container{padding-top: 52px;}
 }
 .page-experience-series .wp-post-image{margin-bottom: 150px;}
 #ContentMid{
@@ -385,23 +368,31 @@ textarea{height: auto;}
 }
 #ContentBottom{}
 
+
+
+/*
+	The translator-feed
+*/
+
+$row-height: 55px;
+
 .translator-feed{
 	.preview,
 	.blog-nav{
 		@include box-shadow-inset(1px, 1px, 2px, rgba(255, 255, 255, 0.75) );	
 		//border-bottom:1px solid $gray;
 		position: relative;
-		height: 74px;
+		height: $row-height;
 		text-align: center;
 		overflow: hidden;
 		h1, h2{
 			font-size: 18px;
 			position: absolute;
-			left: 85px;
+			left: $row-height + 10px;
 			right: 30px;
 			top: 0;
-			height: 75px;
-			line-height: 75px;
+			height: $row-height;
+			line-height: $row-height;
 			text-overflow: ellipsis;
 			text-overflow: ellipsis;
   			overflow: hidden;
@@ -409,7 +400,7 @@ textarea{height: auto;}
 			color: #fff;}
 		&.even{
 			h1, h2{
-				right: 85px;
+				right: $row-height + 10px;;
 				left: 30px;}
 		}
 		a{color: #fff}
@@ -417,7 +408,6 @@ textarea{height: auto;}
 	.content{background: white;}
 	.article{
 		@extend .clearfix;
-		width: 790px;
 		margin: 0 auto;
 		position: relative;
 		padding: 33px 0 77px;
@@ -429,12 +419,12 @@ textarea{height: auto;}
 	.plus{
 		@include box-shadow-inset(1px, 1px, 2px, rgba(255, 255, 255, 0.75) );	
 		float: right;
-		height: 75px;
-		width: 	75px;
+		height: $row-height;
+		width: 	$row-height;
 		&.left{float: left;}
 		svg{
-			margin-top: (75px - 35) / 2;
-		}
+			width: 46%;
+			height: 100%;}
 	}
 	//post type colors
 	.t_client,
@@ -498,17 +488,8 @@ textarea{height: auto;}
 	.secondary-title{font-size: 36px; text-transform: none;}
 }
 
-
-
-h2.post-title{
-	font-size: 48px !important;
-	margin: 32px 0 30px;
-}
 .article{
-	h2{
-		font-size: 40px;
-		color: $gray;
-	}
+	
 	p{
 		margin-top: 0;
 	}
@@ -516,11 +497,7 @@ h2.post-title{
 		color: $blue;
 	}
 }
-.no-image{
-	.summary{
-		width: 510px;
-	}
-}
+
 .event-info{
 	width: 216px;
 	float: right;
@@ -536,27 +513,8 @@ h3.date{
 	width: 510px;
 	float: right;
 }
-.post-title {
-	
-}
-.summary{
-	width: 236px;
-	float: left;
-	img{display: none;}
-	h2,h3{
-		@extend .Open-Sans-Bold;
-		color: black;
-		font-size: 16px;
-	}
-}
-.image .summary{
-	font-size: 13px;
-	line-height: 1.7em;
-	text-align: justify;
-}
 
 /*Blog Post Content*/
-//media queries
 .blog{
 	color: $light-gray;
 	@extend .clearfix;
@@ -895,4 +853,4 @@ li.comment{
 	@include opacity(1);	
 }
 
-@import "css/helpers", "css/nav";
+@import "css/helpers", "css/nav", "css/media";

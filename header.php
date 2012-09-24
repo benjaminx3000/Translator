@@ -24,7 +24,8 @@
 <head>
 	<meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
     <meta http-equiv="cleartype" content="on">
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="google-site-verification" content="Gij3gFJnKWT-wBCZLUmzgBXvnWtDKDJiEZFMDI_ZI2I" />
