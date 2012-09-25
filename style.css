@@ -379,7 +379,7 @@ $bright-blue: #00bff3;
 /*
 	Typography
 */
-.Montserrat, h1, h2, h3, .nav-link, #menu-main-navigation li a, #fun-nav h3, #utility a, input[type="text"],
+.Montserrat, h1, h2, h3, .nav-link, #menu-main-navigation li a, #fun-nav h3, #Utility a, input[type="text"],
 input[type="email"],
 input[type="number"],
 select,
@@ -427,7 +427,7 @@ a {
   a:visited {
     color: #00bff3; }
 
-.nav-link, #menu-main-navigation li a, #fun-nav h3, #utility a {
+.nav-link, #menu-main-navigation li a, #fun-nav h3, #Utility a {
   color: #7d7d7d;
   font-size: 13px;
   vertical-align: top;
@@ -437,7 +437,7 @@ a {
   -webkit-transition: color 0.25s ease-in-out;
   -ms-transition: color 0.25s ease-in-out;
   transition: color 0.25s ease-in-out; }
-  .nav-link:hover, #menu-main-navigation li a:hover, #fun-nav h3:hover, #utility a:hover {
+  .nav-link:hover, #menu-main-navigation li a:hover, #fun-nav h3:hover, #Utility a:hover {
     color: white; }
 
 input[type="submit"],
@@ -1464,23 +1464,23 @@ li.comment {
     background: #464646 url("css/img/translator-logo.png") 25px 10px no-repeat;
     margin-left: 48px; }
 
-  #utility {
+  #Utility {
     position: absolute;
     top: 9px;
     right: 0;
     margin: 0;
     padding: 0;
     display: inline-block; }
-    #utility ul {
+    #Utility ul {
       margin-top: -4px;
       float: right; }
-    #utility li {
+    #Utility li {
       list-style-type: none;
       padding: 0;
       margin: 0;
       display: inline;
       margin-right: 20px; }
-    #utility .search-container {
+    #Utility .search-container {
       margin-right: 48px; }
 
   #menu-main-navigation {
