@@ -54,8 +54,6 @@
 			float: right;}
 		li{@include nav-inline;
 			margin-right: 20px;}
-		a{@extend .nav-link;}	
-	
 		.search-container{
 			margin-right: $header-margin;
 		}
@@ -69,7 +67,6 @@
 		position: relative;
 		.container{
 			@extend .body;
-			
 		}
 	}
 	$row-height: 75px;

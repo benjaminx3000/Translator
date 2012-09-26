@@ -1,3 +1,5 @@
+@import url("http://fonts.googleapis.com/css?family=Montserrat");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,700");
 /*
 Theme Name: Translator
 Description: Awesome Translator Theme 
@@ -5,8 +7,6 @@ Author: Ben
 Version: 1.0
 Template: twentyeleven
 */
-@import url("http://fonts.googleapis.com/css?family=Montserrat");
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,700");
 /*
  * HTML5 Boilerplate
  *
@@ -379,7 +379,7 @@ $bright-blue: #00bff3;
 /*
 	Typography
 */
-.Montserrat, h1, h2, h3, .nav-link, #menu-main-navigation li a, #fun-nav h3, #Utility a, input[type="text"],
+.Montserrat, h1, h2, h3, .nav-link, #Utility a, #menu-main-navigation li a, #fun-nav h3, input[type="text"],
 input[type="email"],
 input[type="number"],
 select,
@@ -391,7 +391,7 @@ textarea {
   font-family: 'Open Sans', Helvetica, sans-serif;
   font-weight: 400; }
 
-.Open-Sans-Bold, .summary h2, .summary h3 {
+.Open-Sans-Bold {
   font-family: 'Open Sans', Helvetica, sans-serif;
   font-weight: 700; }
 
@@ -427,7 +427,7 @@ a {
   a:visited {
     color: #00bff3; }
 
-.nav-link, #menu-main-navigation li a, #fun-nav h3, #Utility a {
+.nav-link, #Utility a, #menu-main-navigation li a, #fun-nav h3 {
   color: #7d7d7d;
   font-size: 13px;
   vertical-align: top;
@@ -437,7 +437,7 @@ a {
   -webkit-transition: color 0.25s ease-in-out;
   -ms-transition: color 0.25s ease-in-out;
   transition: color 0.25s ease-in-out; }
-  .nav-link:hover, #menu-main-navigation li a:hover, #fun-nav h3:hover, #Utility a:hover {
+  .nav-link:hover, #Utility a:hover, #menu-main-navigation li a:hover, #fun-nav h3:hover {
     color: white; }
 
 input[type="submit"],
@@ -592,8 +592,7 @@ textarea {
 		|__#ContentMid
 		|__#ContentBottom
 */
-.body, #contact-footer, #ContentTop .container,
-#ContentMid .container {
+.body, #contact-footer {
   width: 100%; }
 
 #primary {
@@ -651,9 +650,6 @@ textarea {
   margin-left: 74px; }
 #ContentTop .container {
   padding-top: 52px; }
-
-.page-experience-series .wp-post-image {
-  margin-bottom: 150px; }
 
 #ContentMid {
   background: #8fb5c5; }
@@ -1291,13 +1287,9 @@ li.comment {
 .clearfix:after,
 .two-col:after,
 .two-over-three:after,
-#ContentTop .container:after, #ContentTop
-.container:after,
+#ContentTop .container:after,
 #ContentMid .container:after,
-#ContentMid
-.container:after,
-.translator-feed .article:after, .translator-feed
-.article:after,
+.translator-feed .article:after,
 .blog:after,
 .author-meta:after {
   content: "";
@@ -1552,6 +1544,5 @@ li.comment {
 
   .no-image .summary {
     width: 510px; } }
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-       only screen and (min-resolution: 144dpi) {
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
   /* Style adjustments for viewports that meet the condition */ }

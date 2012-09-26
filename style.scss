@@ -220,6 +220,9 @@ textarea{height: auto;}
 
 	#Utility{
 		display: none;
+		a{
+			@extend .nav-link;
+		}
 	}
 		.search-container{
 			float: right;
@@ -235,8 +238,8 @@ textarea{height: auto;}
 				}
 			}
 		}
-			#searchform{display: inline-block;}
-			#searchsubmit{display: none;}
+		#searchform{display: inline-block;}
+		#searchsubmit{display: none;}
 
 	#menu-main-navigation{
 		position: absolute;
@@ -321,7 +324,6 @@ textarea{height: auto;}
 	}
 	.container{padding-top: 52px;}
 }
-.page-experience-series .wp-post-image{margin-bottom: 150px;}
 #ContentMid{
 	background: $light-blue;
 	h1, h2, h3{color: white;}

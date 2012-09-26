@@ -31,7 +31,6 @@
 				</div>
 
 				<a name="blue">
-
 				<?php get_template_part('loop', 'default'); ?>
 
 			</div><!-- #content -->
