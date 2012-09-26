@@ -818,12 +818,7 @@ textarea {
   .translator-feed .post polygon {
     fill: #86ac90; }
 
-.page-calendar .hentry.xsmke, .page-calendar .hentry.t_xsmke, .page-calendar .hentry.partner-events, .page-calendar .hentry.xseries, .page-calendar .hentry.experience-series,
-.page-lab .hentry.xsmke,
-.page-lab .hentry.t_xsmke,
-.page-lab .hentry.partner-events,
-.page-lab .hentry.xseries,
-.page-lab .hentry.experience-series {
+.page-lab .hentry.xsmke, .page-lab .hentry.t_xsmke, .page-lab .hentry.partner-events, .page-lab .hentry.xseries, .page-lab .hentry.experience-series {
   display: none; }
 
 .entry-content h2 {
@@ -1537,12 +1532,15 @@ li.comment {
       color: black;
       font-size: 16px; }
 
+  .event .summary {
+    width: 510px;
+    float: left; }
+    .event .summary img {
+      display: block; }
+
   .image .summary {
     font-size: 13px;
     line-height: 1.7em;
-    text-align: justify; }
-
-  .no-image .summary {
-    width: 510px; } }
+    text-align: justify; } }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
   /* Style adjustments for viewports that meet the condition */ }

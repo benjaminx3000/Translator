@@ -15,7 +15,7 @@
 	     	$has_attachments = false;
 	     }
  ?>
-<div class="article <?php echo($has_attachments ? 'image' : 'no-image'); ?>">
+<div class="article event">
 	<?php if(get_post_type() != 'post') { ?>
 	<h2 class="post-title"><?php the_title(); ?></h2>
 	<?php } ?>
@@ -33,6 +33,7 @@
 
 		<p class="location"><?php echo get_post_meta(get_the_id(), '_location', true); ?></p>
 	</div>
+	
 	<div class="comments">
 		<?php comments_template( '', true ); ?>
 	</div>

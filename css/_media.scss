@@ -133,16 +133,18 @@
 			font-size: 16px;
 		}
 	}
+	.event .summary{
+		width: 510px;
+		float: left;
+		img{display: block;}
+	}
 	.image .summary{
 		font-size: 13px;
 		line-height: 1.7em;
 		text-align: justify;
 	}
-	.no-image{
-		.summary{
-			width: 510px;
-		}
-	}
+	
+	
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
