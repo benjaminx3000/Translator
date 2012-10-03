@@ -31,8 +31,12 @@
 				</div>
 
 				<a name="blue">
-				<?php get_template_part('loop', 'default'); ?>
-
+					<!-- hi ben -->
+					<?php if($page_name === 'calendar'){
+						get_template_part('loop', 'calendar');
+					} else {
+						get_template_part('loop', 'default');
+					}?>
 			</div><!-- #content -->
 		</div><!-- #primary -->
 

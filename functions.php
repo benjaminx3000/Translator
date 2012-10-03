@@ -22,6 +22,11 @@ if ( function_exists( 'add_image_size' ) ) {
 	add_image_size( 'post-image', 510, 600 ); //300 pixels wide (and unlimited height)
 }
 
+//edit role capabilites
+$edit_contributor = get_role('editor');
+# Contributor can upload media #
+$edit_contributor->add_cap('edit_theme_options');
+
 //add twitter to user profiles
 function my_new_contactmethods( $contactmethods ) {
 	// Add Twitter
@@ -175,7 +180,7 @@ class t_client {
 			'hierarchical' => true,
 			'supports' => array('title','editor','excerpt','custom-fields','page-attributes','post-formats', 'sticky'),
 			'has_archive' => true,
-			'rewrite' => array('slug' => 'agency'),
+			'rewrite' => array('slug' => 'agency-posts'),
 			'query_var' => true,
 			'can_export' => true,
 			'register_meta_box_cb' => 'add_feet_title_metaboxes'
@@ -228,7 +233,7 @@ class t_lab {
 			'hierarchical' => true,
 			'supports' => array('title','editor','excerpt','custom-fields','page-attributes','post-formats'),
 			'has_archive' => true,
-			'rewrite' => array('slug' => 'lab'),
+			'rewrite' => array('slug' => 'lab-posts'),
 			'query_var' => true,
 			'can_export' => true,
 			'register_meta_box_cb' => 'add_feet_title_metaboxes'
@@ -281,7 +286,7 @@ class t_product_studio {
 			'hierarchical' => true,
 			'supports' => array('title','editor','excerpt','custom-fields','page-attributes','post-formats'),
 			'has_archive' => true,
-			'rewrite' => array('slug' => 'studio'),
+			'rewrite' => array('slug' => 'studio-posts'),
 			'query_var' => true,
 			'can_export' => true,
 			'register_meta_box_cb' => 'add_feet_title_metaboxes'
@@ -334,7 +339,7 @@ class t_xsmke {
 			'hierarchical' => true,
 			'supports' => array('title','editor','excerpt','custom-fields','page-attributes','post-formats'),
 			'has_archive' => true,
-			'rewrite' => array('slug' => 'experience-series'),
+			'rewrite' => array('slug' => 'experience-series-posts'),
 			'query_var' => true,
 			'can_export' => true,
 			'register_meta_box_cb' => 'add_feet_title_metaboxes'
@@ -387,7 +392,7 @@ class t_event {
 			'hierarchical' => false,
 			'supports' => array('title','editor','custom-fields','page-attributes'),
 			'has_archive' => true,
-			'rewrite' => array('slug' => 'calendar'),
+			'rewrite' => array('slug' => 'calendar-events'),
 			'query_var' => true,
 			'can_export' => true,
 			'register_meta_box_cb' => 'add_events_metaboxes'

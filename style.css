@@ -1541,6 +1541,9 @@ li.comment {
   .image .summary {
     font-size: 13px;
     line-height: 1.7em;
-    text-align: justify; } }
+    text-align: justify; }
+
+  .comments {
+    clear: both; } }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
   /* Style adjustments for viewports that meet the condition */ }
