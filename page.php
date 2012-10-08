@@ -32,7 +32,7 @@
 
 				<a name="blue">
 					<!-- hi ben -->
-					<?php if($page_name === 'calendar'){
+					<?php if($page_name === 'calendar' || $page_name === 'events'){
 						get_template_part('loop', 'calendar');
 					} else {
 						get_template_part('loop', 'default');

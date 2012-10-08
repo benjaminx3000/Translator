@@ -18,7 +18,11 @@
 <div class="article <?php echo($has_attachments ? 'image' : 'no-image'); ?>">
 	<h2 class="post-title"><?php the_title(); ?></h2>
 	<div class="summary">
-		<?php echo $post->post_excerpt; ?>
+		<?php 
+			$content = apply_filters('the_content', $post->post_content);
+		?>
+		<?php echo $content; ?>
+		<?php edit_post_link( __( 'Edit', 'Translator' ), '<span class="edit-link">', '</span>' ); ?>
 		<div class="more">
 			<?php 
 			$blog = '';
@@ -27,15 +31,12 @@
 				}
 			?>
 
-			<a class="button" href="<?php echo dirname(get_permalink()) . $blog . '#' . basename(get_permalink()); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'Translator' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">Read more</a>
+			<!-- <a class="button" href="<?php echo dirname(get_permalink()) . $blog . '#' . basename(get_permalink()); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'Translator' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">Read more</a> -->
 		</div>
-		<?php edit_post_link( __( 'Edit', 'Translator' ), '<span class="edit-link">', '</span>' ); ?>
 	</div>
 	<div class="image-gallery">
 		<?php if($has_attachments){
 			echo wp_get_attachment_image( $attachments[0]->ID, 'post-image' );
-	        // foreach ( $attachments as $attachment ) {
-	        //    echo wp_get_attachment_image( $attachment->ID, 'post-image' );
 		} ?>
 	
 	</div>
