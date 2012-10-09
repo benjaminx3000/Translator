@@ -858,9 +858,6 @@ h3.date {
   width: 510px;
   float: right; }
 
-.thumb {
-  margin: 10px 10px 0 0; }
-
 .thumb.current {
   opacity: 1 !important; }
 

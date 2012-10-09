@@ -50,7 +50,8 @@ window.log = function f() {
             thumbHeight:        '120',
             thumbWidth:         '120',
             opacity:            0.7,
-            transitionSpeed:    'fast'
+            transitionSpeed:    'fast',
+            'margin': '10px 10px 0 0', 
         }, options);
 
         this.each(function(index){
@@ -89,11 +90,15 @@ window.log = function f() {
                     $(thumb).css({
                         'height':   settings.thumbHeight,
                         'width':    settings.thumbWidth,
+                        'margin':   settings.margin,
                         'test-align': 'center',
                         'overflow': 'hidden',
                         'display':  'inline-block',
                         'opacity':  settings.opacity
                     });
+                    if((index + 1) % 4 == 0){
+                        $(thumb).css({'margin-right' : 0});
+                    }
                     var img = $('<img src="'+ $(this).attr('src') +'" />');
                     $(img).css({
                         width: 'auto',

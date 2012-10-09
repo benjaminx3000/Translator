@@ -14,7 +14,7 @@ function init($){
 	navigation($);
 	initUI($);
 	registerCustomAnalytics($);
-	$('.article').postTemplate();
+	$('.case-study').postTemplate();
 	handleHash($, window.location.hash);
 	
 	switch(path){

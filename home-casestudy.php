@@ -15,7 +15,7 @@
 	     	$has_attachments = false;
 	     }
  ?>
-<div class="article <?php echo($has_attachments ? 'image' : 'no-image'); ?>">
+<div class="article case-study <?php echo($has_attachments ? 'image' : 'no-image'); ?>">
 	<h2 class="post-title"><?php the_title(); ?></h2>
 	<div class="summary">
 		<?php 
