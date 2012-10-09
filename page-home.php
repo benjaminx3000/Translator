@@ -11,7 +11,6 @@
 						<?php get_template_part('nav', 'fun'); ?>
 					<?php endwhile; // end of the loop. ?>
 				</div><!--End #ContentTop -->
-
 				<?php get_template_part('loop', 'custom'); ?>
 
 			</div><!-- #content -->

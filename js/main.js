@@ -14,8 +14,8 @@ function init($){
 	navigation($);
 	initUI($);
 	registerCustomAnalytics($);
-	handleHash($, window.location.hash);
 	$('.article').postTemplate();
+	handleHash($, window.location.hash);
 	
 	switch(path){
 		case 'lab' :

@@ -818,6 +818,9 @@ textarea {
   .translator-feed .post polygon {
     fill: #86ac90; }
 
+.past {
+  opacity: 0.6; }
+
 .page-lab .hentry.xsmke, .page-lab .hentry.t_xsmke, .page-lab .hentry.partner-events, .page-lab .hentry.xseries, .page-lab .hentry.experience-series {
   display: none; }
 
@@ -854,6 +857,15 @@ h3.date {
 .image-gallery {
   width: 510px;
   float: right; }
+
+.thumb {
+  margin: 10px 10px 0 0; }
+
+.thumb.current {
+  opacity: 1 !important; }
+
+.thumb:last-child {
+  margin-right: 0; }
 
 /*Blog Post Content*/
 .blog {
@@ -1530,17 +1542,14 @@ li.comment {
   .summary {
     width: 236px;
     float: left; }
-    .summary img {
-      display: none; }
     .summary h2, .summary h3 {
       color: black;
       font-size: 16px; }
 
+  .no-gallery .summary,
   .event .summary {
     width: 510px;
     float: left; }
-    .event .summary img {
-      display: block; }
 
   .image .summary {
     font-size: 13px;

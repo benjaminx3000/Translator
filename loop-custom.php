@@ -1,15 +1,14 @@
 <div id="ContentBottom" class="translator-feed">
 	
+<?php echo "$post->post_name"; ?>
 	<?php
 		$count = 0;
-		global $more;
 		
 		$post_ids = array();
 		$menu_items = wp_get_nav_menu_items( 'Home Page Feed' );
 		foreach ( (array) $menu_items as $key => $menu_item ) {
 		    $post = wp_get_single_post($menu_item->object_id);
 	?>
-	
 	<div id="<?php echo basename(get_permalink()); ?>"  <?php post_class(); ?>>
 		<div class="entry-content">
 			<div class="preview <?php echo (($count % 2 == 0)? 'odd' : 'even'); ?>">
@@ -50,14 +49,16 @@
 
 			</div>
 			<div id="contetnt<?php the_ID(); ?>" class="collapsable content">
-				<?php $more = 0; ?>
 				<?php 
 					switch ($post->post_type) {
 						case 't_event':
 							get_template_part('home', 'eventPost');
 							break;
+						case 't_client':
+							get_template_part('home', 'casestudy');
+							break;
 						default:
-							get_template_part('content', 'home');
+							get_template_part('home', 'content');
 							break;
 					}
 				?>

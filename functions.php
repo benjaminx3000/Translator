@@ -19,8 +19,9 @@ function load_custom_scripts(){
 }
 // register custom image sizes
 if ( function_exists( 'add_image_size' ) ) { 
-	add_image_size( 'post-image', 510, 600 ); //300 pixels wide (and unlimited height)
-}
+	add_image_size( 'post-image', 510, 382, true); //300 pixels wide (and unlimited height)
+}//382
+
 
 //edit role capabilites
 $edit_contributor = get_role('editor');
@@ -176,7 +177,7 @@ class t_client {
 			'show_in_admin_bar' => true,
 			'menu_position' => 20,
 			//'menu_icon' => '/absolute/url/to/icon',
-			'capability_type' => 'post',
+			'capability_type' => 'page',
 			'hierarchical' => true,
 			'supports' => array('title','editor','excerpt','custom-fields','page-attributes','post-formats', 'sticky'),
 			'has_archive' => true,

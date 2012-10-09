@@ -44,18 +44,106 @@ window.log = function f() {
 
 // place any jQuery/helper plugins in here, instead of separate, slower script files.
 (function($){
-    $.fn.postTemplate = function(){
-        this.each(function(index){
-            var content = $(this).html(),
-                images = $(content).find('img');
-                text = $(content).text().split('~');
-                console.log(images.length, text.length);
+    $.fn.postTemplate = function(options){
+        var settings = $.extend({
+            gallerySelector:    '.image-gallery',
+            thumbHeight:        '120',
+            thumbWidth:         '120',
+            opacity:            0.7,
+            transitionSpeed:    'fast'
+        }, options);
 
+        this.each(function(index){
+            var self = $(this),
+                gallery = $(self).find(settings.gallerySelector),
+                images = $(self).find('img'),
+                text = $(self).text().split('~'),
+                imageContainer = $('<div class="image-container"/>'),
+                thumbContainer = $('<div class="thumb-container" />'),
+                thumb = $('<div class="thumb" />'),
+                thumbs,
+                current,
+                currentThumb;
+
+                /*
+                    1 Build the UI
+                */
+                
+                $(imageContainer).css({'position' : 'relative'});
+                $(gallery).append(imageContainer);
+                $(imageContainer).append(images);
+                $(images).css({'opacity': 0});
+                $(images).each(function(index){
+                    if(index > 0){
+                        // leave the first image staticaly postiioned to prevent
+                        // the container from collapsing
+                        $(this).css({
+                            'position': 'absolute',
+                            'left': 0,
+                            'top': 0
+                        });
+                    }
+
+                    thumb = $('<div class="thumb" />');
+
+                    $(thumb).css({
+                        'height':   settings.thumbHeight,
+                        'width':    settings.thumbWidth,
+                        'test-align': 'center',
+                        'overflow': 'hidden',
+                        'display':  'inline-block',
+                        'opacity':  settings.opacity
+                    });
+                    var img = $('<img src="'+ $(this).attr('src') +'" />');
+                    $(img).css({
+                        width: 'auto',
+                        height: '100%'
+                    });
+
+                    $(thumb).append(img);
+                    $(thumbContainer).append(thumb);
+                });
+                thumbs = $(thumbContainer).find('.thumb');
+                $(gallery).append(thumbContainer);
+
+                /*
+                    2 Add Behavior
+                */
+                //bind events
+
+                $(thumbs).hover(hoverIn, hoverOut);
+                $(thumbs).click(onClick);
+
+                //define methods
+                function cycle (index) {
+                    $(current).fadeTo(settings.transitionSpeed, 0);
+                    current = $(images).eq(index);
+                    $(current).fadeTo(settings.transitionSpeed, 1);
+                }
+
+                //thumbnails
+                function hoverIn (e) {
+                    $(this).stop().fadeTo('fast', 1.0);
+                }
+                function hoverOut (e) {
+                    $(this).stop().fadeTo('fast', settings.opacity);
+                }
+                function onClick () {
+                    
+                    if(!$(this).hasClass('current')){
+                        $(currentThumb).removeClass('current');
+                        currentThumb = $(this);
+                        $(currentThumb).addClass('current');
+                        cycle($(thumbs).index($(this)));
+                    }
+                }
+                $(thumbs).eq(0).click();
         });
-    }
+        
+    };
 })(jQuery);
 
-;(function( $ ){
+(function( $ ){
     
     var $scrollTo = $.scrollTo = function( target, duration, settings ){
         $(window).scrollTo( target, duration, settings );
