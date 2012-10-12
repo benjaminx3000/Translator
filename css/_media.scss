@@ -108,7 +108,25 @@
     			margin-top: 0;
     		}
     	}
-
+    }
+    #this-week-at .article{
+    	width: 945px;
+    }
+    .row{
+    	clear: both;
+		@extend .clearfix;
+    }
+    .row-1{
+    	padding-right: 600px;
+    }
+    .row-2{
+    	padding-right: 300px;
+    }
+    .event-card{
+    	float: right;
+    	padding-bottom: 10px;
+    	display: inline-block;
+    	width: 300px;
     }
     #fun-nav{
     	display: block;

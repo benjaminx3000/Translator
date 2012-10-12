@@ -67,7 +67,10 @@ h1,h2,h3{
 	line-height: 1.2em;
 }
 
-
+h4{
+	font-size: 18px;
+	font-weight: lighter;
+}
 
 
 h1{font-size: 22px};
@@ -96,6 +99,7 @@ a{
 		color: $bright-blue;
 	}
 }
+
 
 .nav-link{
 	color: $light-gray;
@@ -435,6 +439,7 @@ $row-height: 55px;
 	.t_product_studio,
 	.t_xsmke,
 	.t_event,
+	.this-week,
 	.xsmke,
 	.post{
 		color: $gray;
@@ -467,6 +472,11 @@ $row-height: 55px;
 		.plus{background: $orange;}
 		polygon{fill: $red;}
 	}
+	.this-week{
+		background: $orange;
+		.plus{background: $yellow;}
+		polygon{fill: $orange;}
+	}
 	.post{
 		background: $green;
 		.plus{background: $red;}
@@ -496,10 +506,33 @@ $row-height: 55px;
 	p{
 		margin-top: 0;
 	}
-	a{
-		color: $blue;
+	a{color: $blue;}
+}
+.translator-feed{
+}
+
+.event-card{
+	@extend .clearfix;
+	.icon{
+		float: left;
+		width: 70px;
+		margin-right: -70px;
+		height: auto;
+		border: 1px solid $mid-gray;
+		box-sizing: border-box;
+	}
+	p{
+		font-size: 13px;
+	}
+	.content{
+		float: left;
+		margin-left: 80px;
 	}
 }
+.event-card h3{
+	margin-top: 0;
+}
+
 
 .event-info{
 	width: 216px;
@@ -513,7 +546,6 @@ h3.date{
 	color: #fff;
 }
 .time{
-	font-weight: bold;
 	margin: 0;
 }
 .image-gallery{

@@ -20,6 +20,7 @@ function load_custom_scripts(){
 // register custom image sizes
 if ( function_exists( 'add_image_size' ) ) { 
 	add_image_size( 'post-image', 510, 382, true); //300 pixels wide (and unlimited height)
+	add_image_size( 'icon', 70, 70, true); //300 pixels wide (and unlimited height)
 }//382
 
 
@@ -35,6 +36,12 @@ function my_new_contactmethods( $contactmethods ) {
 	return $contactmethods;
 }
 add_filter('user_contactmethods','my_new_contactmethods',10,1);
+
+function new_excerpt_more($more) {
+       global $post;
+	return ' <a href="'. get_permalink($post->ID) . '">more...</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
 
 //Taxonomy
 add_action( 'init', 'create_event_types' );
@@ -391,7 +398,7 @@ class t_event {
 			// 'menu_icon' => '/absolute/url/to/icon',
 			'capability_type' => 'post',
 			'hierarchical' => false,
-			'supports' => array('title','editor','custom-fields','page-attributes'),
+			'supports' => array('title','editor', 'thumbnail','custom-fields','page-attributes'),
 			'has_archive' => true,
 			'rewrite' => array('slug' => 'calendar-events'),
 			'query_var' => true,
@@ -434,6 +441,10 @@ function t_events_date() {
     echo '<p><label for="_event_date">Event Date</label><br>';
     echo '<input type="text" name="_event_date" value="' . $date  . '" class="datepicker " /></p>';
 
+    $time_stamp = strtotime( str_replace('<br>', ' ',get_post_meta(get_the_id(), "_event_date", true)));
+    echo '<input type="hidden" id="_time_stamp" name="_time_stamp" value="' . $time_stamp  . '" /></p>';
+    echo 'Timestamp: ' . $time_stamp;
+
     $st = get_post_meta($post->ID, '_event_start_time', true);
     echo '<p><label for="_event_start_time">Start Time</label><br>';
     echo '<input type="text" name="_event_start_time" value="' . $st  . '" class="time" /></p>';
@@ -445,9 +456,23 @@ function t_events_date() {
     // Get the location data if its already been entered
     $location = get_post_meta($post->ID, '_location', true);
     // Echo out the field
-    $loc_default = 'Translator <br> 415 E Menomonee St.<br>Milwukee';
+    $loc_default = 'Translator 415 E Menomonee St.<br>Milwukee';
     echo '<p><label for="_location">Event Location</label><br>';
     echo '<input type="text" name="_location" value="' . $location . '" class="" /></p>';
+
+    // Get the location data if its already been entered
+    $address = get_post_meta($post->ID, '_address', true);
+    // Echo out the field
+    $address_default = '415 E Menomonee St.<br>Milwukee';
+    echo '<p><label for="_address">Address</label><br>';
+    echo '<input type="text" name="_address" value="' . $address . '" class="" /></p>';
+
+    $location_link = get_post_meta($post->ID, '_location_link', true);
+    // Echo out the field
+    
+
+    echo '<p><label for="_location_link">Map Link</label><br>';
+    echo '<input type="text" name="_location_link" value="' . $location_link . '" class="" /></p>';
 }
 
 //Studio product and client name metabox
@@ -479,9 +504,12 @@ function t_save_events_meta($post_id, $post) {
     // OK, we're authenticated: we need to find and save the data
     // We'll put it into an array to make it easier to loop though.
     $events_meta['_event_date'] = $_POST['_event_date'];
+    $events_meta['_time_stamp'] = strtotime( str_replace('<br>', ' ',$_POST['_event_date']));
     $events_meta['_event_start_time'] = $_POST['_event_start_time'];
     $events_meta['_event_end_time'] = $_POST['_event_end_time'];
     $events_meta['_location'] = $_POST['_location'];
+    $events_meta['_address'] = $_POST['_address'];
+    $events_meta['_location_link'] = $_POST['_location_link'];
     // Add values of $events_meta as custom fields
     foreach ($events_meta as $key => $value) { // Cycle through the $events_meta array!
         if( $post->post_type == 'revision' ) return; // Don't store custom data twice

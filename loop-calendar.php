@@ -12,7 +12,7 @@
 	
 	<div id="<?php echo basename(get_permalink()); ?>"  <?php post_class(); ?>>
 		<div class="entry-content">
-			<div class="preview <?php echo (($count % 2 == 0)? 'odd' : 'even'); ?>">
+			<div class="preview <?php echo (($count % 2 == 0)? 'odd' : 'even'); if( intval(get_post_meta(get_the_id(), '_time_stamp', true)) <= intval(time()) && intval(get_post_meta(get_the_id(), '_time_stamp', true))!= null){echo ' past';} ?>">
 				<?php $post_type = get_post_type();
 					$special_title = $post_title = get_post_meta(get_the_id(), '_stream_title', true);
 					$post_title = get_the_title();
@@ -51,7 +51,7 @@
 			</div>
 			<div id="contetnt<?php the_ID(); ?>" class="collapsable content">
 				<?php $more = 0; ?>
-				<?php get_template_part('home', 'eventPost');?>
+				<?get_template_part('content', 'event');?>
 			</div>
 		</div>
 	</div>

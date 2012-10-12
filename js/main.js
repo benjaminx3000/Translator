@@ -10,7 +10,6 @@ function init($){
 	var path = window.location.pathname.split('/');
 		path = path[path.length - 2];
 	$('a[href="#SignupForm"], .fancy').fancybox();
-	
 	navigation($);
 	initUI($);
 	registerCustomAnalytics($);
@@ -48,13 +47,13 @@ function registerCustomAnalytics($){
 function adminInit($){
 	console.log('Admin JS Initialized!');
     $('input.datepicker').datepicker({
-		dateFormat: 'DD<br>MM-d, yy',
+		dateFormat: 'DD, m/d',
 		autoSize: true
     });
 }
 
 function handleHash($, hash){
-	$(hash).find('.preview').click();
+		$(hash).find('.preview').click();
 }
 
 
@@ -73,6 +72,7 @@ function initUI($){
 		//if it's not the same as from the last click,
 		//then close the last one and open the new
 		if(!lastArticle){
+			$('#this-week-at').addClass('collapsable');
 			$(lastArticle).height(0);
 			$(plus).removeClass('open');
 			height = $(collapser).find('.article').outerHeight();

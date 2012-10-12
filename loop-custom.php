@@ -1,4 +1,5 @@
 <div id="ContentBottom" class="translator-feed">
+	<?php get_template_part('this', 'week'); ?>
 	<?php
 		$count = 0;
 		
@@ -50,13 +51,13 @@
 				<?php 
 					switch ($post->post_type) {
 						case 't_event':
-							get_template_part('home', 'eventPost');
+							get_template_part('content', 'event');
 							break;
 						case 't_client':
-							get_template_part('home', 'casestudy');
+							get_template_part('content', 'casestudy');
 							break;
 						default:
-							get_template_part('home', 'content');
+							get_template_part('content', 'default');
 							break;
 					}
 				?>
