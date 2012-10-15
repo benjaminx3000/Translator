@@ -72,7 +72,6 @@ h4{
 	font-weight: lighter;
 }
 
-
 h1{font-size: 22px};
 h2{font-size: 18px};
 h3{font-size: 14px};
@@ -551,6 +550,8 @@ h3.date{
 .image-gallery{
 	width: 510px;
 	float: right;
+	padding-bottom: 30px;
+	@extend .clearfix;
 }
 	.thumb.current{
 		opacity: 1 !important;
@@ -864,6 +865,9 @@ li.comment{
 	left: 7.6%;
 }
 
+.related{
+	clear: both;
+}
 .collapsable{
 	height: 0;
 	overflow-y: hidden;

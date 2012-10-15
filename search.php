@@ -21,7 +21,7 @@ get_header(); ?>
 					</div>
 				</div>
 
-			<?php get_template_part('loop', 'default'); ?>
+			<?php get_template_part('loop', 'search'); ?>
 
 			<?php else : ?>
 				<!-- No Entries Found -->

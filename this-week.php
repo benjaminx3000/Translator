@@ -12,7 +12,7 @@
 				</svg>
 			</div>
 		</div>
-		<div id="this-week-at" class="content">
+		<div id="this-week-at" class="collapsable expanded content">
 			<div class="article">
 				<?php
 					$week_start = strtotime( date('Y\WW') );

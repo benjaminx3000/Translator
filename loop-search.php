@@ -1,47 +1,5 @@
-<?php 
-	global $more;
-	$count = 0;
-	$query;
-	$page_name = $post->post_name;
-	
-	switch ($page_name) {
-		case 'client':
-		case 'agency' :
-			$query = array('t_client');
-			break;
-		case 'studio':
-		case 'product-studio':
-		case 'translator-studio':
-			$query = array('t_product_studio');
-			break;
-		case 'lab':
-		case 'xdlab':
-			$query = array('t_lab', 't_event');
-			break;
-		case 'calendar':
-		case 'events':
-			$query = array('t_event');
-			break;
-		case 'experience-series':
-		case 'xsmke':
-			$query = array('t_xsmke');
-			break;
-		case 'about':
-			$query = array();
-			break;
-		default:
-			$query = array('t_product_studio', 't_event', 't_client', 't_lab', 't_xsmke');
-			break;
-	}
-		$args = array( 'post_type' => $query,
-			'posts_per_page' => 10,
-			'post_parent' => 0,
-			'orderby' => 'date' );
-		$loop = new WP_Query( $args );
-?>
-
 <div id="ContentBottom" class="translator-feed">
-	<?php  while ( $loop->have_posts() ) : $loop->the_post() ; ?>
+	<?php  while ( have_posts() ) : the_post() ; $count = 0;?>
 	<div id="<?php echo basename(get_permalink()); ?>" <?php post_class(); ?>>
 		<div class="entry-content">
 			<div class="preview <?php echo (($count % 2 == 0)? 'odd' : 'even'); ?>">
@@ -90,8 +48,7 @@
 							get_template_part('content', 'event');
 							break;
 						case 't_client':
-							include(locate_template('content-casestudy.php'));
-							// get_template_part('content', 'casestudy');
+							get_template_part('content', 'casestudy');
 							break;
 						case 'post' :
 							get_template_part('content', 'post');

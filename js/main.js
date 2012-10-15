@@ -71,26 +71,11 @@ function initUI($){
 		collapser = $(this).siblings('.collapsable');
 		//if it's not the same as from the last click,
 		//then close the last one and open the new
-		if(!lastArticle){
-			$('#this-week-at').addClass('collapsable');
-			$(lastArticle).height(0);
-			$(plus).removeClass('open');
-			height = $(collapser).find('.article').outerHeight();
-			plus = $(this).find('.plus');
-			$(plus).addClass('open');
-			$(collapser).height(height);
-			lastArticle = $(collapser);
-		}
-		if(collapser.attr('id') !== lastArticle.attr('id')){
-			$(lastArticle).height(0);
-			$(plus).removeClass('open');
-			height = $(collapser).find('.article').outerHeight();
-			plus = $(this).find('.plus');
-			$(plus).addClass('open');
-			$(collapser).height(height);
-			lastArticle = $(collapser);
+		
+		if( lastArticle == undefined || collapser.attr('id') !== lastArticle.attr('id') ){
+			processClick();
 		} else {
-			if($(collapser).height() == 0){
+		if($(collapser).height() == 0){
 				$(collapser).height(height);
 				$(plus).addClass('open');
 			} else{
@@ -98,6 +83,17 @@ function initUI($){
 				$(plus).removeClass('open');
 			}
 		}
+
+		function processClick(){
+			$(lastArticle).height(0);
+			$(plus).removeClass('open');
+			height = $(collapser).find('.article').outerHeight();
+			plus = $(this).find('.plus');
+			$(plus).addClass('open');
+			$(collapser).height(height);
+			lastArticle = $(collapser);
+		}
+
 		var ref = $(this);
 		var delay = parseFloat($(collapser).css('-webkit-transition-duration'));
 		console.log(delay * 1000);

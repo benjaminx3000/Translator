@@ -8,21 +8,24 @@
 	if ( count($terms) ) {
 		switch ($terms[0]) {
 			case 'Experience Series':
+			case 'XSMKE':
 				$img = 'icon-xsmke.png';
 				break;
 			case 'Focused Lab':
+			case 'Open Lab':
 				$img = 'icon-lab.jpg';
 				break;
 			default:
-				$img = '';
+				$img = 'icon-default.png';
 				break;
 		}
 	} ?>
-	<?php if($img != '') { ?>
-	<img class="icon" src="<?php echo get_stylesheet_directory_uri() . '/css/img/' . $img ?>">
-	<?php } else { ?>
+	<?php if( has_post_thumbnail() ) { ?>
 		<?php echo get_the_post_thumbnail( $post->ID, 'icon', array('class' => 'icon') ); ?> 
+	<?php } else { ?>
+		<img class="icon" src="<?php echo get_stylesheet_directory_uri() . '/css/img/' . $img ?>">
 	<?php } ?>
+	
 	<div class="content">
 		<h3><?php the_title(); ?></h3>
 		<div class="date-time">

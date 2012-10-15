@@ -882,7 +882,8 @@ h3.date {
 
 .image-gallery {
   width: 510px;
-  float: right; }
+  float: right;
+  padding-bottom: 30px; }
 
 .thumb.current {
   opacity: 1 !important; }
@@ -1188,6 +1189,9 @@ li.comment {
   top: 0;
   left: 7.6%; }
 
+.related {
+  clear: both; }
+
 .collapsable {
   height: 0;
   overflow-y: hidden;
@@ -1317,7 +1321,7 @@ li.comment {
  * Contain floats: h5bp.com/q
  */
 .clearfix:before, .two-col:before, .two-over-three:before, #ContentTop .container:before,
-#ContentMid .container:before, .translator-feed .article:before, .event-card:before, .blog:before, .author-meta:before,
+#ContentMid .container:before, .translator-feed .article:before, .event-card:before, .image-gallery:before, .blog:before, .author-meta:before,
 .clearfix:after,
 .two-col:after,
 .two-over-three:after,
@@ -1325,17 +1329,18 @@ li.comment {
 #ContentMid .container:after,
 .translator-feed .article:after,
 .event-card:after,
+.image-gallery:after,
 .blog:after,
 .author-meta:after {
   content: "";
   display: table; }
 
 .clearfix:after, .two-col:after, .two-over-three:after, #ContentTop .container:after,
-#ContentMid .container:after, .translator-feed .article:after, .event-card:after, .blog:after, .author-meta:after {
+#ContentMid .container:after, .translator-feed .article:after, .event-card:after, .image-gallery:after, .blog:after, .author-meta:after {
   clear: both; }
 
 .clearfix, .two-col, .two-over-three, #ContentTop .container,
-#ContentMid .container, .translator-feed .article, .event-card, .blog, .author-meta {
+#ContentMid .container, .translator-feed .article, .event-card, .image-gallery, .blog, .author-meta {
   *zoom: 1; }
 
 /* ==|== print styles =======================================================
@@ -1583,6 +1588,7 @@ li.comment {
 
   .summary {
     width: 236px;
+    padding-bottom: 30px;
     float: left; }
     .summary h2, .summary h3 {
       color: black;

@@ -6,16 +6,7 @@
 		?>
 		<?php echo $content; ?>
 		<?php edit_post_link( __( 'Edit', 'Translator' ), '<span class="edit-link">', '</span>' ); ?>
-		<div class="more">
-			<?php 
-			$blog = '';
-				if($post->post_type == 'post'){
-					$blog = '/our-thinking';
-				}
-			?>
-
-			<!-- <a class="button" href="<?php echo dirname(get_permalink()) . $blog . '#' . basename(get_permalink()); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'Translator' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">Read more</a> -->
-		</div>
+		
 	</div>
 	<div class="image-gallery">
 		<?php 
@@ -32,4 +23,27 @@
 	      	}
 		?>
 	</div>
+	<div class="related">
+	<?php 
+		$args = array(
+		   'post_type' 		=> 't_client',
+		   'numberposts' 	=> -1,
+		   'orderby'		=> 'menu_order',
+		   'order'		=> 'ASC',
+		   'post_status' 	=> null,
+		   'post_parent' 	=> $post->ID
+		  );
+	  	$post_updates = get_posts( $args );
+	  	
+        foreach ( $post_updates as $post_update ) {
+			echo('<hr>');
+			echo ("<h3>$post_update->post_title</h3>");
+         	$_post =  get_post( $post_update->ID );
+         	echo( apply_filters('the_content', $_post->post_content) );
+      	}
+	?>
+	</div>
+	
+
+
 </div>
