@@ -330,9 +330,14 @@ $row-height: 55px;
 		float: left;
 		margin-left: 80px;
 	}
-}
-.event-card h3{
-	margin-top: 0;
+	h3{
+		margin-top: 0;
+		a{
+			color: $gray;
+			font-weight: normal;
+			&:hover{color: $light-gray;}
+		}
+	}
 }
 
 
@@ -650,6 +655,7 @@ li.comment{
 /*Hidden forms*/
 //#ContentTop .wpcf7,
 #SignupForm{
+	padding: 30px;
 	display: none;
 }
 @media only screen and (min-width: 960px) {

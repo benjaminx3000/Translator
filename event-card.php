@@ -27,7 +27,7 @@
 	<?php } ?>
 	
 	<div class="content">
-		<h3><?php the_title(); ?></h3>
+		<h3><a class="fancy-link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 		<div class="date-time">
 			<h4 class="date-time">
 				<span class="date">

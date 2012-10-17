@@ -11,6 +11,9 @@ $header-width: 965px + ($header-margin * 2);
 h1{font-size: 54px};
 h2{font-size: 36px};
 h3{font-size: 24px};
+.fancybox-wrap #ContentTop .container{
+	padding: 30px 50px;
+}
 .container{padding: 0;}
 #branding{
 	position: fixed;
