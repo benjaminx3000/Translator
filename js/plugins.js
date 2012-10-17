@@ -49,7 +49,7 @@ window.log = function f() {
             gallerySelector:    '.image-gallery',
             thumbHeight:        '120',
             thumbWidth:         '120',
-            opacity:            0.7,
+            opacity:            0.4,
             transitionSpeed:    'fast',
             'margin': '10px 10px 0 0', 
         }, options);

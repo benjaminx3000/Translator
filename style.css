@@ -1100,7 +1100,9 @@ h3.date {
   padding-bottom: 30px; }
 
 .thumb.current {
-  opacity: 1 !important; }
+  opacity: 1 !important;
+  outline: 1px solid #f58337;
+  outline-offset: 2px; }
 
 .thumb:last-child {
   margin-right: 0; }
@@ -2254,7 +2256,8 @@ textarea {
     font-size: 24px; }
 
   .fancybox-wrap #ContentTop .container {
-    padding: 30px 50px; }
+    padding: 30px 50px;
+    width: auto; }
 
   .container {
     padding: 0; }

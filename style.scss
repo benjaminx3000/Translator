@@ -363,6 +363,8 @@ h3.date{
 }
 	.thumb.current{
 		opacity: 1 !important;
+		outline: 1px solid $orange;
+		outline-offset: 2px;
 	}
 	.thumb:last-child{
 		margin-right: 0;

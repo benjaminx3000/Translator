@@ -14,7 +14,7 @@ function init($){
 		e.preventDefault();
 		$.fancybox.showLoading();
 		$('#ajax-container').load( $(this).attr('href') + ' #content', function(){
-			$.fancybox.open('#ajax-container');
+			$.fancybox.open('#ajax-container', {autoSize: false,width: 800});
 			$.fancybox.hideLoading();
 		});
 	});
