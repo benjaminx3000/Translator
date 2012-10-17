@@ -1828,6 +1828,11 @@ textarea {
 .wpcf7-textarea {
   height: 100px; }
 
+div.wpcf7-mail-sent-ok,
+div.wpcf7-validation-errors {
+  border: 0 none !important;
+  background: #fecf5c; }
+
 /*Hidden forms*/
 #SignupForm {
   padding: 30px;
@@ -2258,6 +2263,8 @@ textarea {
   .fancybox-wrap #ContentTop .container {
     padding: 30px 50px;
     width: auto; }
+    .fancybox-wrap #ContentTop .container h2 {
+      font-size: 18px; }
 
   .container {
     padding: 0; }

@@ -654,6 +654,11 @@ li.comment{
 .wpcf7-textarea{
 	height: 100px;
 }
+div.wpcf7-mail-sent-ok,
+div.wpcf7-validation-errors{
+	border: 0 none !important;
+	background: $yellow;
+}
 /*Hidden forms*/
 //#ContentTop .wpcf7,
 #SignupForm{
