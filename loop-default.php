@@ -16,7 +16,7 @@
 			break;
 		case 'lab':
 		case 'xdlab':
-			$query = array('t_lab', 't_event');
+			$query = array('t_lab');
 			break;
 		case 'calendar':
 		case 'events':

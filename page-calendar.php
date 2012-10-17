@@ -17,22 +17,8 @@
 						?>
 						<?php the_content(); ?>
 						
-						<?php
-							$week_start = strtotime( date('Y\WW') );
-						?>
-						<?php 
-							$query = array('t_event');
-							$meta_query = array(array('key' => '_time_stamp',
-								'value' => intval($week_start),
-								'compare' => '>='));
-							$args = array('post_type' => $query,
-								'posts_per_page' => 10,
-								'meta_key' => '_time_stamp',
-								'orderby' => 'meta_value_num',
-								'order' => 'DEC',
-								'meta_query' => $meta_query);
-							$events_loop = new WP_Query( $args );
-						 ?>
+
+					 <?php include(locate_template('calendar.php')); ?>
 
 					</div>
 

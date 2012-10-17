@@ -69,6 +69,9 @@ window.log = function f() {
                 /*
                     1 Build the UI
                 */
+                if(images.length <= 1){
+                    return;
+                }
                 
                 $(imageContainer).css({'position' : 'relative'});
                 $(gallery).append(imageContainer);

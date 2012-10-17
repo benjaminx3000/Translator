@@ -1,5 +1,7 @@
 @import url("http://fonts.googleapis.com/css?family=Montserrat");
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:400,700");
+@import url("http://fonts.googleapis.com/css?family=Montserrat");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,700");
 /*
 Theme Name: Translator
 Description: Awesome Translator Theme 
@@ -354,14 +356,6 @@ td {
   color: #000;
   padding: 0.2em 0; }
 
-/* BACKGROUND GRADIENT */
-/* BACKGROUND SIZE */
-/* BORDER RADIUS */
-/* BOX SHADOW */
-/* BOX SIZING */
-/* COLUMNS */
-/* OPACITY */
-/* TRANSITION */
 /*
 colors
 $gray: #464646;
@@ -376,6 +370,140 @@ $blue: #008eb0;
 $light-blue: #8fb5c5;
 $bright-blue: #00bff3;
 */
+/* BACKGROUND GRADIENT */
+/* BACKGROUND SIZE */
+/* BORDER RADIUS */
+/* BOX SHADOW */
+/* BOX SIZING */
+/* COLUMNS */
+/* OPACITY */
+/* TRANSITION */
+.ir, #site-title {
+  border: 0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent; }
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+.hidden {
+  display: none !important;
+  visibility: hidden; }
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+.invisible {
+  visibility: hidden; }
+
+/*
+ * Contain floats: h5bp.com/q
+ */
+.clearfix:before, .two-col:before, .two-over-three:before, #ContentTop .container:before,
+#ContentMid .container:before, .translator-feed .article:before, .event-card:before, .image-gallery:before, .blog:before, .author-meta:before, .week:before,
+.clearfix:after,
+.two-col:after,
+.two-over-three:after,
+#ContentTop .container:after,
+#ContentMid .container:after,
+.translator-feed .article:after,
+.event-card:after,
+.image-gallery:after,
+.blog:after,
+.author-meta:after,
+.week:after {
+  content: "";
+  display: table; }
+
+.clearfix:after, .two-col:after, .two-over-three:after, #ContentTop .container:after,
+#ContentMid .container:after, .translator-feed .article:after, .event-card:after, .image-gallery:after, .blog:after, .author-meta:after, .week:after {
+  clear: both; }
+
+.clearfix, .two-col, .two-over-three, #ContentTop .container,
+#ContentMid .container, .translator-feed .article, .event-card, .image-gallery, .blog, .author-meta, .week {
+  *zoom: 1; }
+
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  a,
+  a:visited {
+    text-decoration: underline; }
+
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+  .ir a:after, #site-title a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: ""; }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */ }
+
+  tr,
+  img {
+    page-break-inside: avoid; }
+
+  img {
+    max-width: 100% !important; }
+
+  @page {
+    margin: 0.5cm; }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+
+  h2,
+  h3 {
+    page-break-after: avoid; } }
 /*
 	Typography
 */
@@ -523,6 +651,94 @@ textarea {
 
 textarea {
   height: auto; }
+
+.assistive-text {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px); }
+
+#access a.assistive-text:active,
+#access a.assistive-text:focus {
+  background: #eee;
+  border-bottom: 1px solid #ddd;
+  color: #1982d1;
+  clip: auto !important;
+  font-size: 12px;
+  position: absolute;
+  text-decoration: underline;
+  top: 0;
+  left: 7.6%; }
+
+.related {
+  clear: both; }
+
+.collapsable {
+  height: 0;
+  overflow-y: hidden;
+  -moz-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+  -ms-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out; }
+
+.collapsable.expanded {
+  height: auto; }
+
+.bubble {
+  position: absolute;
+  top: 100px; }
+
+.plus .plust {
+  -ms-transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -moz-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+  -ms-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+  filter: alpha(opacity=100);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  opacity: 1;
+  -ms-transform: rotate(0);
+  -moz-transform: rotate(0);
+  -webkit-transform: rotate(0);
+  transform: rotate(0); }
+
+.plus .minus {
+  -moz-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+  -ms-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+  filter: alpha(opacity=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0; }
+
+.plus.open .plust {
+  filter: alpha(opacity=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0;
+  -ms-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg); }
+
+.plus.open .minus {
+  filter: alpha(opacity=100);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  opacity: 1; }
 
 /*Main Styles*/
 /*Header Region*/
@@ -744,7 +960,7 @@ textarea {
 .translator-feed .article {
   margin: 0 auto;
   position: relative;
-  padding: 33px 0 77px; }
+  padding: 33px 0 33px; }
   .translator-feed .article h1, .translator-feed .article h2 {
     margin-top: 0; }
 .translator-feed .more {
@@ -828,12 +1044,6 @@ textarea {
     background: #d71921; }
   .translator-feed .post polygon {
     fill: #86ac90; }
-
-.past {
-  opacity: 0.6; }
-
-.page-lab .hentry.xsmke, .page-lab .hentry.t_xsmke, .page-lab .hentry.partner-events, .page-lab .hentry.xseries, .page-lab .hentry.experience-series {
-  display: none; }
 
 .entry-content h2 {
   margin: 0;
@@ -923,6 +1133,9 @@ h3.date {
       margin-top: 30px;
       margin-left: 52px;
       width: 228px; }
+
+.fancybox-wrap .comments-container {
+  display: none; }
 
 .comments {
   line-height: 2em; }
@@ -1122,55 +1335,303 @@ li.comment {
     top: 0; } }
 
 /*End Fun Nav*/
-/*Footer*/
-#colophon {
-  height: 170px;
-  background: #464646;
-  position: relative;
-  color: #7d7d7d; }
+/*Calendar Page*/
+/*
+colors
+$gray: #464646;
+$mid-gray: #636363;
+$light-gray: #7d7d7d;
+$near-white: #ebebeb;
+$red: #d71921;
+$orange: #f58337;
+$yellow: #fecf5c;
+$green: #86ac90;
+$blue: #008eb0;
+$light-blue: #8fb5c5;
+$bright-blue: #00bff3;
+*/
+/* BACKGROUND GRADIENT */
+/* BACKGROUND SIZE */
+/* BORDER RADIUS */
+/* BOX SHADOW */
+/* BOX SIZING */
+/* COLUMNS */
+/* OPACITY */
+/* TRANSITION */
+.ir, #site-title {
+  border: 0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent; }
 
-#contact-footer {
-  position: relative; }
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+.hidden {
+  display: none !important;
+  visibility: hidden; }
 
-#social {
-  color: white;
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
   position: absolute;
-  top: 28px;
-  right: 97px; }
-  #social p {
-    line-height: 1.1em;
-    margin: 0.8em 0; }
+  width: 1px; }
 
-#copyright {
-  position: relative;
-  top: 28px; }
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
 
-.facebook, .twitter {
-  height: 32px;
-  width: 32px;
-  margin-right: 4px;
-  background: url(css/img/social-icons.png) 0 0;
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+.invisible {
+  visibility: hidden; }
+
+/*
+ * Contain floats: h5bp.com/q
+ */
+.clearfix:before, .two-col:before, .two-over-three:before, #ContentTop .container:before,
+#ContentMid .container:before, .translator-feed .article:before, .event-card:before, .image-gallery:before, .blog:before, .author-meta:before, .week:before,
+.clearfix:after,
+.two-col:after,
+.two-over-three:after,
+#ContentTop .container:after,
+#ContentMid .container:after,
+.translator-feed .article:after,
+.event-card:after,
+.image-gallery:after,
+.blog:after,
+.author-meta:after,
+.week:after {
+  content: "";
+  display: table; }
+
+.clearfix:after, .two-col:after, .two-over-three:after, #ContentTop .container:after,
+#ContentMid .container:after, .translator-feed .article:after, .event-card:after, .image-gallery:after, .blog:after, .author-meta:after, .week:after {
+  clear: both; }
+
+.clearfix, .two-col, .two-over-three, #ContentTop .container,
+#ContentMid .container, .translator-feed .article, .event-card, .image-gallery, .blog, .author-meta, .week {
+  *zoom: 1; }
+
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  a,
+  a:visited {
+    text-decoration: underline; }
+
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+  .ir a:after, #site-title a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: ""; }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */ }
+
+  tr,
+  img {
+    page-break-inside: avoid; }
+
+  img {
+    max-width: 100% !important; }
+
+  @page {
+    margin: 0.5cm; }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+
+  h2,
+  h3 {
+    page-break-after: avoid; } }
+/*
+	Typography
+*/
+.Montserrat, h1, h2, h3, .nav-link, #Utility a, #menu-main-navigation li a, #fun-nav h3, input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-weight: normal; }
+
+.Open-Sans, body {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-weight: 400; }
+
+.Open-Sans-Bold {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-weight: 700; }
+
+h1, h2, h3 {
+  margin: 1em 0 0.1em;
+  line-height: 1.2em; }
+
+h4 {
+  font-size: 18px;
+  font-weight: lighter; }
+
+h1 {
+  font-size: 22px; }
+
+h2 {
+  font-size: 18px; }
+
+h3 {
+  font-size: 14px; }
+
+body {
+  background: #8fb5c5;
+  color: #464646;
+  font-size: 14px; }
+  body p {
+    line-height: 1.5em; }
+
+p:first-child {
+  margin-top: 0; }
+
+a {
+  color: #00bff3;
+  text-decoration: none;
+  font-weight: normal; }
+  a:hover {
+    color: #008eb0; }
+  a:visited {
+    color: #00bff3; }
+
+.nav-link, #Utility a, #menu-main-navigation li a, #fun-nav h3 {
+  color: #7d7d7d;
+  font-size: 13px;
+  vertical-align: top;
+  letter-spacing: 0px;
+  -moz-transition: color 0.25s ease-in-out;
+  -o-transition: color 0.25s ease-in-out;
+  -webkit-transition: color 0.25s ease-in-out;
+  -ms-transition: color 0.25s ease-in-out;
+  transition: color 0.25s ease-in-out; }
+  .nav-link:hover, #Utility a:hover, #menu-main-navigation li a:hover, #fun-nav h3:hover {
+    color: white; }
+
+input[type="submit"],
+button,
+.button {
+  background: #f58337;
+  color: #fff !important;
+  padding: 0.2em 0.5em;
+  border: 0 none;
+  border-top: 1px solid #fbceb0;
+  border-left: 1px solid #fbceb0;
+  -webkit-box-shadow: 1px 1px 0 #7d7d7d;
+  -moz-box-shadow: 1px 1px 0 #7d7d7d;
+  box-shadow: 1px 1px 0 #7d7d7d; }
+
+/* Tabs */
+.tab-nav li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: inline;
   display: inline-block; }
 
-.twitter {
-  margin-right: 0;
-  background-position: -34px 0; }
+.no-js .tab {
+  display: block; }
 
-.wpcf7 p {
-  margin: 1.2em 0; }
-
-.wpcf7-list-item-label {
-  font-size: 12px; }
-
-.wpcf7-textarea {
-  height: 100px; }
-
-/*Hidden forms*/
-#SignupForm {
+.tab {
   display: none; }
 
-/*Styles*/
-/* Assistive text */
+.tab.current {
+  display: block; }
+
+.alignright {
+  float: right;
+  margin-left: 10px; }
+
+.alignleft {
+  float: left;
+  margin-right: 10px; }
+
+.aligncenter {
+  text-align: center;
+  margin: 0 auto; }
+
+.two-over-three .left {
+  float: left;
+  width: 589.6px; }
+.two-over-three .right {
+  float: right;
+  width: 316.8px; }
+
+/*...Common elements */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  background: #fecf5c none;
+  height: 25px;
+  font-size: 16px;
+  color: #464646;
+  padding: 3px 8px;
+  border: 0 none;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.4);
+  text-transform: lowercase; }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  select:focus,
+  textarea:focus {
+    background-color: #fede8f;
+    outline-color: white; }
+
+textarea {
+  height: auto; }
+
 .assistive-text {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
@@ -1259,197 +1720,520 @@ li.comment {
   -khtml-opacity: 1;
   opacity: 1; }
 
-/* ==|== media queries ======================================================
-   EXAMPLE Media Query for Responsive Design.
-   This example overrides the primary ('mobile first') styles
-   Modify as content requires.
-   ========================================================================== */
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */ }
-/* ==|== non-semantic helper classes ========================================
-   Please define your styles before this section.
-   ========================================================================== */
-/*
- * Image replacement
- */
-.ir, #site-title {
-  border: 0;
-  font: 0/0 a;
-  text-shadow: none;
-  color: transparent; }
+.calendar-day, .header, .day {
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 14%;
+  margin-right: 0.28%;
+  margin-bottom: 10px;
+  padding: 10px;
+  overflow-y: hidden; }
+  .calendar-day a, .header a, .day a {
+    font-size: 10px;
+    color: #464646;
+    display: block;
+    margin: 0.3em 0 1.2em; }
+    .calendar-day a:hover, .header a:hover, .day a:hover {
+      color: #8fb5c5; }
+    .calendar-day a:visited, .header a:visited, .day a:visited {
+      color: #464646; }
 
-/*
- * Hide from both screenreaders and browsers: h5bp.com/u
- */
-.hidden {
-  display: none !important;
-  visibility: hidden; }
+#calendar {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5px; }
+  #calendar .title h2 {
+    font-size: 32px;
+    text-align: center; }
+  #calendar .title .nav {
+    font-size: 38px;
+    padding: 0 20px; }
 
-/*
- * Hide only visually, but have it available for screenreaders: h5bp.com/v
- */
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px; }
-
-/*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto; }
-
-/*
- * Hide visually and from screenreaders, but maintain layout
- */
-.invisible {
-  visibility: hidden; }
-
-/*
- * Contain floats: h5bp.com/q
- */
-.clearfix:before, .two-col:before, .two-over-three:before, #ContentTop .container:before,
-#ContentMid .container:before, .translator-feed .article:before, .event-card:before, .image-gallery:before, .blog:before, .author-meta:before,
-.clearfix:after,
-.two-col:after,
-.two-over-three:after,
-#ContentTop .container:after,
-#ContentMid .container:after,
-.translator-feed .article:after,
-.event-card:after,
-.image-gallery:after,
-.blog:after,
-.author-meta:after {
-  content: "";
-  display: table; }
-
-.clearfix:after, .two-col:after, .two-over-three:after, #ContentTop .container:after,
-#ContentMid .container:after, .translator-feed .article:after, .event-card:after, .image-gallery:after, .blog:after, .author-meta:after {
+.week {
   clear: both; }
 
-.clearfix, .two-col, .two-over-three, #ContentTop .container,
-#ContentMid .container, .translator-feed .article, .event-card, .image-gallery, .blog, .author-meta {
-  *zoom: 1; }
+.header {
+  text-align: center;
+  margin-bottom: 0; }
 
-/* ==|== print styles =======================================================
-   Print styles.
-   Inlined to avoid required HTTP connection: h5bp.com/r
-   ========================================================================== */
-@media print {
-  * {
-    background: transparent !important;
-    color: #000 !important;
-    /* Black prints faster: h5bp.com/s */
-    box-shadow: none !important;
-    text-shadow: none !important; }
+.day {
+  background: #fede8f;
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  height: 170px; }
+  .day.today {
+    background: #f7a168; }
+    .day.today:hover {
+      background: #f9b080; }
+  .day.weekend {
+    background: #b1cbd6; }
+    .day.weekend:hover {
+      background: #c1d6df; }
+  .day.blank {
+    opacity: 0.5; }
+  .day:hover {
+    background: #fee5a8; }
 
-  a,
-  a:visited {
-    text-decoration: underline; }
+/*Footer*/
+#colophon {
+  height: 170px;
+  background: #464646;
+  position: relative;
+  color: #7d7d7d; }
 
-  a[href]:after {
-    content: " (" attr(href) ")"; }
+#contact-footer {
+  position: relative; }
 
-  abbr[title]:after {
-    content: " (" attr(title) ")"; }
+#social {
+  color: white;
+  position: absolute;
+  top: 28px;
+  right: 97px; }
+  #social p {
+    line-height: 1.1em;
+    margin: 0.8em 0; }
 
-  /*
-   * Don't show links for images, or javascript/internal links
-   */
-  .ir a:after, #site-title a:after,
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after {
-    content: ""; }
+#copyright {
+  position: relative;
+  top: 28px; }
 
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid; }
+.facebook, .twitter {
+  height: 32px;
+  width: 32px;
+  margin-right: 4px;
+  background: url(css/img/social-icons.png) 0 0;
+  display: inline-block; }
 
-  thead {
-    display: table-header-group;
-    /* h5bp.com/t */ }
+.twitter {
+  margin-right: 0;
+  background-position: -34px 0; }
 
-  tr,
-  img {
-    page-break-inside: avoid; }
+.wpcf7 p {
+  margin: 1.2em 0; }
 
-  img {
-    max-width: 100% !important; }
+.wpcf7-list-item-label {
+  font-size: 12px; }
 
-  @page {
-    margin: 0.5cm; }
+.wpcf7-textarea {
+  height: 100px; }
 
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3; }
-
-  h2,
-  h3 {
-    page-break-after: avoid; } }
-/* ----------------------------------------------------
-   created with http://www.texturepacker.com 
-   ----------------------------------------------------
-   $TexturePacker:SmartUpdate:4e3cd9b2f735eeca4815e57bff40589e$
-   ----------------------------------------------------
-
-   usage: <span class="{-spritename-} sprite"></span>
-
-   replace {-spritename-} with the sprite you like to use
-
-*/
-.sprite {
-  display: inline-block;
-  overflow: hidden;
-  background-repeat: no-repeat;
-  background-image: url(css/img/nav.png); }
-
-.fun-nav_bubble {
-  width: 17px;
-  height: 17px;
-  background-position: -2px -2px; }
-
-.fun-nav_flask {
-  width: 105px;
-  height: 179px;
-  background-position: -21px -2px; }
-
-.fun-nav_folio-back {
-  width: 156px;
-  height: 140px;
-  background-position: -128px -2px; }
-
-.fun-nav_folio-front {
-  width: 156px;
-  height: 140px;
-  background-position: -286px -2px; }
-
-.fun-nav_lamp {
-  width: 189px;
-  height: 188px;
-  background-position: -2px -183px; }
-
-.fun-nav_light-ray {
-  width: 188px;
-  height: 96px;
-  background-position: -193px -183px; }
+/*Hidden forms*/
+#SignupForm {
+  display: none; }
 
 @media only screen and (min-width: 960px) {
   /* Style adjustments for viewports that meet the condition */
+  /*
+  colors
+  $gray: #464646;
+  $mid-gray: #636363;
+  $light-gray: #7d7d7d;
+  $near-white: #ebebeb;
+  $red: #d71921;
+  $orange: #f58337;
+  $yellow: #fecf5c;
+  $green: #86ac90;
+  $blue: #008eb0;
+  $light-blue: #8fb5c5;
+  $bright-blue: #00bff3;
+  */
+  /* BACKGROUND GRADIENT */
+  /* BACKGROUND SIZE */
+  /* BORDER RADIUS */
+  /* BOX SHADOW */
+  /* BOX SIZING */
+  /* COLUMNS */
+  /* OPACITY */
+  /* TRANSITION */
+  .ir, #site-title {
+    border: 0;
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent; }
+
+  /*
+   * Hide from both screenreaders and browsers: h5bp.com/u
+   */
+  .hidden {
+    display: none !important;
+    visibility: hidden; }
+
+  /*
+   * Hide only visually, but have it available for screenreaders: h5bp.com/v
+   */
+  .visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px; }
+
+  /*
+   * Extends the .visuallyhidden class to allow the element to be focusable
+   * when navigated to via the keyboard: h5bp.com/p
+   */
+  .visuallyhidden.focusable:active,
+  .visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto; }
+
+  /*
+   * Hide visually and from screenreaders, but maintain layout
+   */
+  .invisible {
+    visibility: hidden; }
+
+  /*
+   * Contain floats: h5bp.com/q
+   */
+  .clearfix:before, .two-col:before, .two-over-three:before, #ContentTop .container:before,
+  #ContentMid .container:before, .translator-feed .article:before, .event-card:before, .image-gallery:before, .blog:before, .author-meta:before, .week:before, .row:before,
+  .clearfix:after,
+  .two-col:after,
+  .two-over-three:after,
+  #ContentTop .container:after,
+  #ContentMid .container:after,
+  .translator-feed .article:after,
+  .event-card:after,
+  .image-gallery:after,
+  .blog:after,
+  .author-meta:after,
+  .week:after,
+  .row:after {
+    content: "";
+    display: table; }
+
+  .clearfix:after, .two-col:after, .two-over-three:after, #ContentTop .container:after,
+  #ContentMid .container:after, .translator-feed .article:after, .event-card:after, .image-gallery:after, .blog:after, .author-meta:after, .week:after, .row:after {
+    clear: both; }
+
+  .clearfix, .two-col, .two-over-three, #ContentTop .container,
+  #ContentMid .container, .translator-feed .article, .event-card, .image-gallery, .blog, .author-meta, .week, .row {
+    *zoom: 1; }
+
+  /*
+  	Typography
+  */
+  @import url("http://fonts.googleapis.com/css?family=Montserrat");
+  @import url("http://fonts.googleapis.com/css?family=Open+Sans:400,700");
+  .Montserrat, h1, h2, h3, .nav-link, #Utility a, #menu-main-navigation li a, #fun-nav h3, input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  select,
+  textarea {
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    font-weight: normal; }
+
+  .Open-Sans, body {
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-weight: 400; }
+
+  .Open-Sans-Bold, .summary h2, .summary h3 {
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-weight: 700; }
+
+  h1, h2, h3 {
+    margin: 1em 0 0.1em;
+    line-height: 1.2em; }
+
+  h4 {
+    font-size: 18px;
+    font-weight: lighter; }
+
+  h1 {
+    font-size: 22px; }
+
+  h2 {
+    font-size: 18px; }
+
+  h3 {
+    font-size: 14px; }
+
+  body {
+    background: #8fb5c5;
+    color: #464646;
+    font-size: 14px; }
+    body p {
+      line-height: 1.5em; }
+
+  p:first-child {
+    margin-top: 0; }
+
+  a {
+    color: #00bff3;
+    text-decoration: none;
+    font-weight: normal; }
+    a:hover {
+      color: #008eb0; }
+    a:visited {
+      color: #00bff3; }
+
+  .nav-link, #Utility a, #menu-main-navigation li a, #fun-nav h3 {
+    color: #7d7d7d;
+    font-size: 13px;
+    vertical-align: top;
+    letter-spacing: 0px;
+    -moz-transition: color 0.25s ease-in-out;
+    -o-transition: color 0.25s ease-in-out;
+    -webkit-transition: color 0.25s ease-in-out;
+    -ms-transition: color 0.25s ease-in-out;
+    transition: color 0.25s ease-in-out; }
+    .nav-link:hover, #Utility a:hover, #menu-main-navigation li a:hover, #fun-nav h3:hover {
+      color: white; }
+
+  input[type="submit"],
+  button,
+  .button {
+    background: #f58337;
+    color: #fff !important;
+    padding: 0.2em 0.5em;
+    border: 0 none;
+    border-top: 1px solid #fbceb0;
+    border-left: 1px solid #fbceb0;
+    -webkit-box-shadow: 1px 1px 0 #7d7d7d;
+    -moz-box-shadow: 1px 1px 0 #7d7d7d;
+    box-shadow: 1px 1px 0 #7d7d7d; }
+
+  /* Tabs */
+  .tab-nav li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline;
+    display: inline-block; }
+
+  .no-js .tab {
+    display: block; }
+
+  .tab {
+    display: none; }
+
+  .tab.current {
+    display: block; }
+
+  .alignright {
+    float: right;
+    margin-left: 10px; }
+
+  .alignleft {
+    float: left;
+    margin-right: 10px; }
+
+  .aligncenter {
+    text-align: center;
+    margin: 0 auto; }
+
+  .two-over-three .left {
+    float: left;
+    width: 589.6px; }
+  .two-over-three .right {
+    float: right;
+    width: 316.8px; }
+
+  /*...Common elements */
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  select,
+  textarea {
+    background: #fecf5c none;
+    height: 25px;
+    font-size: 16px;
+    color: #464646;
+    padding: 3px 8px;
+    border: 0 none;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.4);
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.4);
+    text-transform: lowercase; }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="number"]:focus,
+    select:focus,
+    textarea:focus {
+      background-color: #fede8f;
+      outline-color: white; }
+
+  textarea {
+    height: auto; }
+
+  .assistive-text {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px); }
+
+  #access a.assistive-text:active,
+  #access a.assistive-text:focus {
+    background: #eee;
+    border-bottom: 1px solid #ddd;
+    color: #1982d1;
+    clip: auto !important;
+    font-size: 12px;
+    position: absolute;
+    text-decoration: underline;
+    top: 0;
+    left: 7.6%; }
+
+  .related {
+    clear: both; }
+
+  .collapsable {
+    height: 0;
+    overflow-y: hidden;
+    -moz-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+    -webkit-transition: all 0.6s ease-in-out;
+    -ms-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out; }
+
+  .collapsable.expanded {
+    height: auto; }
+
+  .bubble {
+    position: absolute;
+    top: 100px; }
+
+  .plus .plust {
+    -ms-transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -moz-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+    -webkit-transition: all 0.6s ease-in-out;
+    -ms-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+    filter: alpha(opacity=100);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+    -ms-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+
+  .plus .minus {
+    -moz-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+    -webkit-transition: all 0.6s ease-in-out;
+    -ms-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+    filter: alpha(opacity=0);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    opacity: 0; }
+
+  .plus.open .plust {
+    filter: alpha(opacity=0);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    opacity: 0;
+    -ms-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg); }
+
+  .plus.open .minus {
+    filter: alpha(opacity=100);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1; }
+
+  .ir, #site-title {
+    border: 0;
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent; }
+
+  /*
+   * Hide from both screenreaders and browsers: h5bp.com/u
+   */
+  .hidden {
+    display: none !important;
+    visibility: hidden; }
+
+  /*
+   * Hide only visually, but have it available for screenreaders: h5bp.com/v
+   */
+  .visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px; }
+
+  /*
+   * Extends the .visuallyhidden class to allow the element to be focusable
+   * when navigated to via the keyboard: h5bp.com/p
+   */
+  .visuallyhidden.focusable:active,
+  .visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto; }
+
+  /*
+   * Hide visually and from screenreaders, but maintain layout
+   */
+  .invisible {
+    visibility: hidden; }
+
+  /*
+   * Contain floats: h5bp.com/q
+   */
+  .clearfix:before, .two-col:before, .two-over-three:before, #ContentTop .container:before,
+  #ContentMid .container:before, .translator-feed .article:before, .event-card:before, .image-gallery:before, .blog:before, .author-meta:before, .week:before, .row:before,
+  .clearfix:after,
+  .two-col:after,
+  .two-over-three:after,
+  #ContentTop .container:after,
+  #ContentMid .container:after,
+  .translator-feed .article:after,
+  .event-card:after,
+  .image-gallery:after,
+  .blog:after,
+  .author-meta:after,
+  .week:after,
+  .row:after {
+    content: "";
+    display: table; }
+
+  .clearfix:after, .two-col:after, .two-over-three:after, #ContentTop .container:after,
+  #ContentMid .container:after, .translator-feed .article:after, .event-card:after, .image-gallery:after, .blog:after, .author-meta:after, .week:after, .row:after {
+    clear: both; }
+
+  .clearfix, .two-col, .two-over-three, #ContentTop .container,
+  #ContentMid .container, .translator-feed .article, .event-card, .image-gallery, .blog, .author-meta, .week, .row {
+    *zoom: 1; }
+
   .body, #contact-footer, #ContentTop .container,
   #ContentMid .container {
     width: 960px;
@@ -1608,3 +2392,175 @@ li.comment {
     clear: both; } }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
   /* Style adjustments for viewports that meet the condition */ }
+.ir, #site-title {
+  border: 0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent; }
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+.hidden {
+  display: none !important;
+  visibility: hidden; }
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+.invisible {
+  visibility: hidden; }
+
+/*
+ * Contain floats: h5bp.com/q
+ */
+.clearfix:before, .two-col:before, .two-over-three:before, #ContentTop .container:before,
+#ContentMid .container:before, .translator-feed .article:before, .event-card:before, .image-gallery:before, .blog:before, .author-meta:before, .week:before,
+.clearfix:after,
+.two-col:after,
+.two-over-three:after,
+#ContentTop .container:after,
+#ContentMid .container:after,
+.translator-feed .article:after,
+.event-card:after,
+.image-gallery:after,
+.blog:after,
+.author-meta:after,
+.week:after {
+  content: "";
+  display: table; }
+
+.clearfix:after, .two-col:after, .two-over-three:after, #ContentTop .container:after,
+#ContentMid .container:after, .translator-feed .article:after, .event-card:after, .image-gallery:after, .blog:after, .author-meta:after, .week:after {
+  clear: both; }
+
+.clearfix, .two-col, .two-over-three, #ContentTop .container,
+#ContentMid .container, .translator-feed .article, .event-card, .image-gallery, .blog, .author-meta, .week {
+  *zoom: 1; }
+
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  a,
+  a:visited {
+    text-decoration: underline; }
+
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+  .ir a:after, #site-title a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: ""; }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */ }
+
+  tr,
+  img {
+    page-break-inside: avoid; }
+
+  img {
+    max-width: 100% !important; }
+
+  @page {
+    margin: 0.5cm; }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+
+  h2,
+  h3 {
+    page-break-after: avoid; } }
+/* ----------------------------------------------------
+   created with http://www.texturepacker.com 
+   ----------------------------------------------------
+   $TexturePacker:SmartUpdate:4e3cd9b2f735eeca4815e57bff40589e$
+   ----------------------------------------------------
+
+   usage: <span class="{-spritename-} sprite"></span>
+
+   replace {-spritename-} with the sprite you like to use
+
+*/
+.sprite {
+  display: inline-block;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-image: url(css/img/nav.png); }
+
+.fun-nav_bubble {
+  width: 17px;
+  height: 17px;
+  background-position: -2px -2px; }
+
+.fun-nav_flask {
+  width: 105px;
+  height: 179px;
+  background-position: -21px -2px; }
+
+.fun-nav_folio-back {
+  width: 156px;
+  height: 140px;
+  background-position: -128px -2px; }
+
+.fun-nav_folio-front {
+  width: 156px;
+  height: 140px;
+  background-position: -286px -2px; }
+
+.fun-nav_lamp {
+  width: 189px;
+  height: 188px;
+  background-position: -2px -183px; }
+
+.fun-nav_light-ray {
+  width: 188px;
+  height: 96px;
+  background-position: -193px -183px; }

@@ -10,6 +10,14 @@ function init($){
 	var path = window.location.pathname.split('/');
 		path = path[path.length - 2];
 	$('a[href="#SignupForm"], .fancy').fancybox();
+	$('.fancy-link').click(function(e){
+		e.preventDefault();
+		$.fancybox.showLoading();
+		$('#ajax-container').load( $(this).attr('href') + ' #content', function(){
+			$.fancybox.open('#ajax-container');
+			$.fancybox.hideLoading();
+		});
+	});
 	navigation($);
 	initUI($);
 	registerCustomAnalytics($);
@@ -48,7 +56,9 @@ function adminInit($){
 	console.log('Admin JS Initialized!');
     $('input.datepicker').datepicker({
 		dateFormat: 'DD, m/d',
-		autoSize: true
+		autoSize: true,
+		altField: ".full-date",
+        altFormat: "m/d/yy"
     });
 }
 

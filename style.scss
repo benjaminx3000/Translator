@@ -6,193 +6,7 @@ Version: 1.0
 Template: twentyeleven
 */
 
-
-@import url("http://fonts.googleapis.com/css?family=Montserrat");
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,700");
-@import "css/hbp", "css/mixins";
-
-
-/*
-colors
-$gray: #464646;
-$mid-gray: #636363;
-$light-gray: #7d7d7d;
-$near-white: #ebebeb;
-$red: #d71921;
-$orange: #f58337;
-$yellow: #fecf5c;
-$green: #86ac90;
-$blue: #008eb0;
-$light-blue: #8fb5c5;
-$bright-blue: #00bff3;
-*/
-$gray: #464646;
-$mid-gray: #636363;
-$light-gray: #7d7d7d;
-$near-white: #ebebeb;
-$red: #d71921;
-$orange: #f58337;
-$yellow: #fecf5c;
-$green: #86ac90;
-$blue: #008eb0;
-$light-blue: #8fb5c5;
-$bright-blue: #00bff3;
-
-/*
-	Typography
-*/
-
-.Montserrat {
-	font:{
-		family:'Montserrat', Helvetica, sans-serif;;
-		weight: normal;
-	}
-}
-.Open-Sans {
-	font:{
-		family:'Open Sans', Helvetica, sans-serif;
-		weight: 400;
-	}
-}
-.Open-Sans-Bold {
-	font:{
-		family:'Open Sans', Helvetica, sans-serif;;
-		weight: 700;
-	}
-}
-
-h1,h2,h3{
-	@extend .Montserrat;
-	margin: 1em 0 0.1em;
-	line-height: 1.2em;
-}
-
-h4{
-	font-size: 18px;
-	font-weight: lighter;
-}
-
-h1{font-size: 22px};
-h2{font-size: 18px};
-h3{font-size: 14px};
-
-body {
-	background: $light-blue;
-	@extend .Open-Sans;
-	p {line-height: 1.5em;}
-	color: $gray;
-	font-size: 14px;
-}
-p:first-child{
-	margin-top: 0;
-}
-
-a{
-	color: $bright-blue;
-	text-decoration: none;
-	font-weight: normal;
-	&:hover{
-		color: $blue;
-	}
-	&:visited{
-		color: $bright-blue;
-	}
-}
-
-
-.nav-link{
-	color: $light-gray;
-	font-size: 13px;
-	vertical-align: top;
-	letter-spacing: 0px;//0.01em;
-	@extend .Montserrat;
-	@include transition(color, 0.25s);
-	&:hover{
-		color: white;
-	}
-}
-input[type="submit"],
-button,
-.button{
-	background: $orange;
-	color: #fff !important;
-	padding: 0.2em 0.5em;
-	border: 0 none;
-	border-top: 1px solid lighten($orange, 25);
-	border-left: 1px solid lighten($orange, 25);	
-	@include box-shadow(1px, 1px, 0, $light-gray);
-}
-
-
-/* Tabs */
-.tab-nav {
-	li{
-		@include nav-inline;
-		display: inline-block;
-	}
-}
-.no-js{
-	.tab{display: block;}
-}
-.tab{display: none;}
-.tab.current{display: block;}
-
-$width: 960px;
-$onethird: 960px * 0.33;
-$margin: 44px;
-
-.alignright{
-	float: right;
-	margin-left: 10px;
-}
-.alignleft{
-	float: left;
-	margin-right: 10px;
-}
-.aligncenter{
-	text-align: center;
-	margin: 0 auto;
-}
-
-.two-col{
-	@extend .clearfix;
-}
-.two-over-three{
-	@extend .clearfix;
-	.left{
-		float: left;
-		width: ($onethird * 2) - $margin;
-
-	}
-	.right{
-		float: right;
-		width: $onethird;
-	}
-}
-
-/*...Common elements */
-input[type="text"],
-input[type="email"],
-input[type="number"],
-select,
-textarea{
-	background: $yellow none;
-	height: 25px;
-	font-size: 16px;
-	color: $gray;
-	padding: 3px 8px;
-	border: 0 none;
-	width: 100%;
-	@include box-sizing;
-	@include box-shadow-inset(1px, 1px, 2px);
-	@extend .Montserrat;
-	text-transform: lowercase;
-	&:focus{
-		background-color: lighten($yellow, 10);
-		outline-color: white;
-	}
-}
-textarea{height: auto;}
+@import "sass/hbp", "sass/base";
 
 
 /*Main Styles*/
@@ -415,7 +229,7 @@ $row-height: 55px;
 		@extend .clearfix;
 		margin: 0 auto;
 		position: relative;
-		padding: 33px 0 77px;
+		padding: 33px 0 33px;
 		h1, h2{
 			margin-top: 0;
 		}
@@ -482,18 +296,7 @@ $row-height: 55px;
 		polygon{fill: $green;}
 	}
 }
-.past{opacity: 0.6;}
 
-// .page-calendar,
-.page-lab{
-	.hentry{
-		&.xsmke,
-		&.t_xsmke,
-		&.partner-events,
-		&.xseries,
-		&.experience-series{display: none;}
-	}
-}
 .entry-content{
 	h2{margin: 0; padding: 0;}
 	.author{font-size: 18px; text-transform: none;}
@@ -597,6 +400,9 @@ h3.date{
 	}
 }
 //comments
+.fancybox-wrap .comments-container{
+display: none;
+}
 .comments{line-height: 2em;}
 .comments-title,
 .reply-title{
@@ -790,8 +596,10 @@ li.comment{
 	75%  {opacity: 1.0;}
 	100% {opacity: 0; top: 0}
 }
+/*End Fun Nav*/ 
 
-	/*End Fun Nav*/ 
+/*Calendar Page*/
+@import 'sass/calendar';
 
 /*Footer*/
 #colophon{
@@ -844,62 +652,14 @@ li.comment{
 #SignupForm{
 	display: none;
 }
-/*Styles*/
-/* Assistive text */
-.assistive-text {
-	position: absolute !important;
-	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-	clip: rect(1px, 1px, 1px, 1px);
+@media only screen and (min-width: 960px) {
+	@import "sass/desktop"
 }
 
-#access a.assistive-text:active,
-#access a.assistive-text:focus {
-	background: #eee;
-	border-bottom: 1px solid #ddd;
-	color: #1982d1;
-	clip: auto !important;
-	font-size: 12px;
-	position: absolute;
-	text-decoration: underline;
-	top: 0;
-	left: 7.6%;
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+    /* Style adjustments for viewports that meet the condition */
 }
 
-.related{
-	clear: both;
-}
-.collapsable{
-	height: 0;
-	overflow-y: hidden;
-	@include transition(all, 0.6s);
-}
-.collapsable.expanded{
-	height: auto;
-}
-	// .translator-feed .entry-content:hover .collapsable{
-	// 		height: 250px;
-	// }
-.bubble{
-	position: absolute;
-	top: 100px;
-}
 
-.plus .plust{
-	@include transform-origin;
-	@include transition(all, 0.6s);
-	@include opacity(1);
-	@include rotate(0);
-}
-.plus .minus{
-	@include transition(all, 0.6s);
-	@include opacity(0);
-}
-.plus.open .plust{
-	@include opacity(0);
-	@include rotate(-90deg);
-}
-.plus.open .minus{
-	@include opacity(1);	
-}
-
-@import "css/helpers", "css/nav", "css/media";
+@import "sass/helpers", "sass/nav";

@@ -1,15 +1,23 @@
 <div id="ContentBottom" class="translator-feed">
 	
-	<?php
-		$count = 0;
-		global $more;
-		
-		$post_ids = array();
-		$menu_items = wp_get_nav_menu_items( 'Events Feed' );
-		foreach ( (array) $menu_items as $key => $menu_item ) {
-		    $post = wp_get_single_post($menu_item->object_id);
-	?>
+	<?php 
+		$now = strtotime( date('d') );
+		$query = array('t_event');
+		$meta_query = array(array('key' => '_time_stamp',
+			'value' => array(intval($now), intval($week_end) ),
+			'compare' => '>='));
+		$args = array('post_type' => $query,
+			'posts_per_page' => 10,
+			'meta_key' => '_time_stamp',
+			'orderby' => 'meta_value_num',
+			'order' => 'DEC',
+			'meta_query' => $meta_query);
+		$loop = new WP_Query( $args );
+		$event_count = 0;
+		$rows = ceil($loop->post_count / 3);
+	 ?>
 	
+	<?php  while ( $loop->have_posts() ) : $loop->the_post() ; ?>
 	<div id="<?php echo basename(get_permalink()); ?>"  <?php post_class(); ?>>
 		<div class="entry-content">
 			<div class="preview <?php echo (($count % 2 == 0)? 'odd' : 'even'); if( intval(get_post_meta(get_the_id(), '_time_stamp', true)) <= intval(time()) && intval(get_post_meta(get_the_id(), '_time_stamp', true))!= null){echo ' past';} ?>">
@@ -56,5 +64,5 @@
 		</div>
 	</div>
 	<?php $count ++; ?>
-	<?php } ?>
+	<?php endwhile; ?>
 </div><!-- End #ContentBottom -->

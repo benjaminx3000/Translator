@@ -10,7 +10,7 @@ function load_admin_scripts(){
 //load custom scripts
 add_action('wp_enqueue_scripts', 'load_custom_scripts');
 function load_custom_scripts(){
-	wp_register_script('fancybox', get_stylesheet_directory_uri() .'/js/fancyBox/source/jquery.fancybox.pack.js' );
+	wp_register_script('fancybox', get_stylesheet_directory_uri() .'/js/fancyBox/source/jquery.fancybox.js' );
 	wp_register_script('plugins', get_stylesheet_directory_uri() .'/js/plugins.js' );
 	wp_enqueue_script('main',
 		get_stylesheet_directory_uri() . '/js/main.js', //this is hack!!! make a separate script for admin panel!!
@@ -398,7 +398,7 @@ class t_event {
 			// 'menu_icon' => '/absolute/url/to/icon',
 			'capability_type' => 'post',
 			'hierarchical' => false,
-			'supports' => array('title','editor', 'thumbnail','custom-fields','page-attributes'),
+			'supports' => array('title', 'comments','editor', 'thumbnail','custom-fields','page-attributes'),
 			'has_archive' => true,
 			'rewrite' => array('slug' => 'calendar-events'),
 			'query_var' => true,
@@ -440,8 +440,10 @@ function t_events_date() {
     // Echo out the field
     echo '<p><label for="_event_date">Event Date</label><br>';
     echo '<input type="text" name="_event_date" value="' . $date  . '" class="datepicker " /></p>';
+    $full_date = get_post_meta($post->ID, '_event_full_date', true);
+    echo '<input type="text" name="_event_full_date" value="' . $full_date  . '" class="full-date " /></p>';
 
-    $time_stamp = strtotime( str_replace('<br>', ' ',get_post_meta(get_the_id(), "_event_date", true)));
+    $time_stamp = strtotime( str_replace('<br>', ' ',get_post_meta(get_the_id(), "_event_full_date", true)));
     echo '<input type="hidden" id="_time_stamp" name="_time_stamp" value="' . $time_stamp  . '" /></p>';
     echo 'Timestamp: ' . $time_stamp;
 
@@ -504,7 +506,8 @@ function t_save_events_meta($post_id, $post) {
     // OK, we're authenticated: we need to find and save the data
     // We'll put it into an array to make it easier to loop though.
     $events_meta['_event_date'] = $_POST['_event_date'];
-    $events_meta['_time_stamp'] = strtotime( str_replace('<br>', ' ',$_POST['_event_date']));
+    $events_meta['_event_full_date'] = $_POST['_event_full_date'];
+    $events_meta['_time_stamp'] = strtotime( $_POST['_event_full_date']);
     $events_meta['_event_start_time'] = $_POST['_event_start_time'];
     $events_meta['_event_end_time'] = $_POST['_event_end_time'];
     $events_meta['_location'] = $_POST['_location'];
@@ -578,8 +581,12 @@ if( !function_exists( 't_post_class' ) ) {
     }
 }
 
+// Register the column
+function time_stamp_column_register( $columns ) {
+	$columns['timestamp'] = __( 'Price', 'my-plugin' );
+ 
+	return $columns;
+}
+add_filter( 'manage_edit-post_columns', 'time_stamp_column_register' );	
 
-	
-
-	
 ?>
