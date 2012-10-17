@@ -498,7 +498,7 @@ li.comment{
 	h3{
 		position: absolute;
 		@extend .nav-link;
-		color: white;
+		color: white !important;
 	}
 }
 	#folio{
