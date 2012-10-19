@@ -1,0 +1,195 @@
+/*
+ Styles for blog feed page and
+ blog post singles
+*/
+
+
+
+/*Blog Post Content*/
+.blog{
+	h2 {
+		margin: 0;
+		line-height: 0.5em;
+		a{
+			color: $gray;
+			font-size: 24px;
+
+		}
+	}
+	.translator-feed{
+		@extend .clearfix;
+		.content{
+			background: transparent;
+		}
+	}
+	color: $light-gray;
+	@extend .clearfix;
+	.preview .container,
+	.blog-nav .container,
+	.article{
+		// float: right;
+		background: transparent;
+		margin: 0;
+		
+	}
+	.author-meta,
+	.post-preview,
+	.post-footer
+	{
+		padding: 0 35px 0 35px;
+	}
+	.preview,
+	.blog-nav{background: $yellow}
+	.blog-nav .container,
+	.preview .container{background: $green;height: 100%;}
+	#primary{margin-top: 75px;}
+	
+	#Sidebar{
+		display: none;
+	}
+	.info{
+		margin-right: 80px;
+		float: left;
+	}
+	.entry-content{
+		background: #fff;
+		&.odd{
+			background: lighten($yellow, 25);
+		}
+	}
+}
+//zebra striping... sort of
+
+
+//comments
+.fancybox-wrap .comments-container{
+display: none;
+}
+.comments{line-height: 2em;}
+.comments-title,
+.reply-title{
+	font-size: 24px !important;
+	border-bottom: 1px dashed $gray;
+	margin: 1.2em 0 1em !important;
+	padding-bottom: .3em !important;
+}
+.commentlist{
+	list-style: none;
+	margin: 20px 0;
+	padding: 0;
+}
+li.comment{
+	margin-bottom: 20px;
+}
+.comment-reply-link{
+	margin-top: 15px;
+}
+.children{
+	list-style: none;
+}
+
+.vcard img{
+	float: right;
+}
+.comment-form-comment{
+	label{display: none;}
+}
+.form-allowed-tags{
+	display: none;
+}
+
+.widget-area{
+	ul{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	li{
+		line-height: 1.7em;
+	}
+	a{
+		color: $near-white;
+		&:after{
+			content: " >";
+		}
+		&:hover{
+			color: $yellow;
+		}
+	}
+}
+.widget-title{
+	color: $gray;
+	font-size: 14px;
+}
+
+.author-meta{
+	@extend .clearfix;
+	line-height: 1.7em;
+	color: $mid-gray;
+	img{
+		margin: 0 15px 15px 0;
+		float: left;
+	}
+
+}
+.tags{margin: 2em 0;}
+.blog-nav{
+	a:hover{
+		color: $yellow;
+	}
+}
+.older{
+	font-size: 24px;
+	float: left;
+	margin-left: 27px;
+	line-height: 74px;
+}
+.newer{
+	font-size: 24px;
+	float: right;
+	margin-right: 27px;
+	line-height: 74px;
+}
+
+
+@media only screen and (min-width: 960px) {
+	.blog{
+		.article{
+			float: right;
+			margin: 0;
+			padding: 30px 0;
+			width: auto;
+			max-width: 683px;
+		}
+		.nav{
+			float: right;
+			width: 100%;
+			max-width: 683px;	
+		}
+		#ContentTop,
+		#ContentBottom{
+			float: left;
+			width: 64%;
+		}
+		#ContentTop,
+		#ContentMid{
+			.container{width: auto;}
+		}
+		#Sidebar{
+			display: block;
+			float: right;
+			width: 36%;
+			.widget-area{
+				margin-top: 30px;
+				margin-left: 52px;
+				width: 280px - 52;
+			}
+		}
+	}
+
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+    	
+}

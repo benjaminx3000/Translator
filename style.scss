@@ -189,113 +189,7 @@ Template: twentyeleven
 
 
 
-/*
-	The translator-feed
-*/
-
-$row-height: 55px;
-
-.translator-feed{
-	.preview,
-	.blog-nav{
-		@include box-shadow-inset(1px, 1px, 2px, rgba(255, 255, 255, 0.75) );	
-		//border-bottom:1px solid $gray;
-		position: relative;
-		height: $row-height;
-		text-align: center;
-		overflow: hidden;
-		h1, h2{
-			font-size: 18px;
-			position: absolute;
-			left: $row-height + 10px;
-			right: 30px;
-			top: 0;
-			height: $row-height;
-			line-height: $row-height;
-			text-overflow: ellipsis;
-			text-overflow: ellipsis;
-  			overflow: hidden;
-  			white-space: nowrap;
-			color: #fff;}
-		&.even{
-			h1, h2{
-				right: $row-height + 10px;;
-				left: 30px;}
-		}
-		a{color: #fff}
-	}
-	.content{background: white;}
-	.article{
-		@extend .clearfix;
-		margin: 0 auto;
-		position: relative;
-		padding: 33px 0 33px;
-		h1, h2{
-			margin-top: 0;
-		}
-	}
-	.more{padding: 22px 0;}
-	.plus{
-		@include box-shadow-inset(1px, 1px, 2px, rgba(255, 255, 255, 0.75) );	
-		float: right;
-		height: $row-height;
-		width: 	$row-height;
-		&.left{float: left;}
-		svg{
-			width: 46%;
-			height: 100%;}
-	}
-	//post type colors
-	.t_client,
-	.t_lab,
-	.open-lab,
-	.t_product_studio,
-	.t_xsmke,
-	.t_event,
-	.this-week,
-	.xsmke,
-	.post{
-		color: $gray;
-		//border-top: 1px solid rgba(255, 255, 255,1);
-	}
-	.t_client{
-			background: #000;
-			.plus{background: $green;}
-			polygon{fill: #000;}
-	}
-	.t_lab,
-	.focused-lab,
-	.open-lab{
-		background: $blue;
-		.plus{background: $light-blue;}
-		polygon{fill: $blue;}
-	}
-	.t_product_studio{
-		background: $yellow;
-		.plus{background: $red;}
-		polygon{fill: $yellow;}
-	}
-	.t_xsmke,
-	.hosted-events,
-	.partner-events,
-	.experience-series,
-	.xseries,
-	.xsmke{
-		background: $red;
-		.plus{background: $orange;}
-		polygon{fill: $red;}
-	}
-	.this-week{
-		background: $orange;
-		.plus{background: $yellow;}
-		polygon{fill: $orange;}
-	}
-	.post{
-		background: $green;
-		.plus{background: $red;}
-		polygon{fill: $green;}
-	}
-}
+@import "sass/translator-feed";
 
 .entry-content{
 	h2{margin: 0; padding: 0;}
@@ -304,57 +198,18 @@ $row-height: 55px;
 }
 
 .article{
-	
 	p{
 		margin-top: 0;
 	}
 	a{color: $blue;}
 }
-.translator-feed{
-}
+ .summary{
+ 	h2,h3{
+		@extend .Open-Sans-Bold;
+		color: black;
+	}
+ }
 
-.event-card{
-	@extend .clearfix;
-	.icon{
-		float: left;
-		width: 70px;
-		margin-right: -70px;
-		height: auto;
-		border: 1px solid $mid-gray;
-		box-sizing: border-box;
-	}
-	p{
-		font-size: 13px;
-	}
-	.content{
-		float: left;
-		margin-left: 80px;
-	}
-	h3{
-		margin-top: 0;
-		a{
-			color: $gray;
-			font-weight: normal;
-			&:hover{color: $light-gray;}
-		}
-	}
-}
-
-
-.event-info{
-	width: 216px;
-	float: right;
-	padding: 10px;
-	background: $light-blue;
-}
-h3.date{
-	margin-top: 0;
-	padding: 3px;
-	color: #fff;
-}
-.time{
-	margin: 0;
-}
 .image-gallery{
 	width: 510px;
 	float: right;
@@ -370,243 +225,12 @@ h3.date{
 		margin-right: 0;
 	}
 
-/*Blog Post Content*/
-.blog{
-	color: $light-gray;
-	@extend .clearfix;
-	.preview .container,
-	.blog-nav .container,
-	.article{
-		float: right;
-		margin: 0;
-		width: 683px;
-	}
-	.author-meta,
-	.post-preview,
-	.post-footer
-	{
-		padding: 0 35px 0 35px;
-	}
-	.preview,
-	.blog-nav{background: $yellow}
-	.blog-nav .container,
-	.preview .container{background: $green;height: 100%;}
-	#primary{margin-top: 75px;}
-	#ContentBottom{
-		float: left;
-		width: 64%;
-	}
-	#Sidebar{
-		float: right;
-		width: 36%;
-		.widget-area{
-			margin-top: 30px;
-			margin-left: 52px;
-			width: 280px - 52;
-		}
-	}
-}
-//comments
-.fancybox-wrap .comments-container{
-display: none;
-}
-.comments{line-height: 2em;}
-.comments-title,
-.reply-title{
-	font-size: 24px !important;
-	border-bottom: 1px dashed $gray;
-	margin: 1.2em 0 1em !important;
-	padding-bottom: .3em !important;
-}
-.commentlist{
-	list-style: none;
-	margin: 20px 0;
-	padding: 0;
-}
-li.comment{
-	margin-bottom: 20px;
-}
-.comment-reply-link{
-	margin-top: 15px;
-}
-.children{
-	list-style: none;
-}
+@import "sass/blog";
 
-.vcard img{
-	float: right;
-}
-.comment-form-comment{
-	label{display: none;}
-}
-.form-allowed-tags{
-	display: none;
-}
-
-.widget-area{
-	ul{
-		margin: 0;
-		padding: 0;
-		list-style: none;
-	}
-	li{
-		line-height: 1.7em;
-	}
-	a{
-		color: $near-white;
-		&:after{
-			content: " >";
-		}
-		&:hover{
-			color: $yellow;
-		}
-	}
-}
-.widget-title{
-	color: $gray;
-	font-size: 14px;
-}
-
-.author-meta{
-	@extend .clearfix;
-	line-height: 1.7em;
-	color: $mid-gray;
-	img{
-		margin: 0 15px 15px 0;
-		float: left;
-	}
-
-}
-.tags{margin: 2em 0;}
-.blog-nav{
-	a:hover{
-		color: $yellow;
-	}
-}
-.older{
-	font-size: 24px;
-	float: left;
-	margin-left: 27px;
-	line-height: 74px;
-}
-.newer{
-	font-size: 24px;
-	float: right;
-	margin-right: 27px;
-	line-height: 74px;
-}
-/*Home Page*/
-#fun-nav{
-	display: none;
-	width: 762px;
-	height: 254px;
-	margin: 0 auto 8px;
-	position: relative;
-	h3{
-		position: absolute;
-		@extend .nav-link;
-		color: white !important;
-	}
-}
-	#folio{
-		@include transition(all, .5s);
-		position: absolute;
-		top: 50%;
-		margin-top: - 140px/2;
-		left: 0;
-		-webkit-transform-style: preserve-3d;
-		-webkit-perspective: 1200;
-		-webkit-transform:rotateY(0);
-		width:158px; height:142px;
-		h3{
-			top: 60px;
-			left: 54px;
-		}
-		.fun-nav_folio-back {
-			-webkit-transform-origin: 50% 100%;
-			position: absolute;
-			bottom: 0;
-			right: 0;
-		}
-		.fun-nav_folio-front{
-			@include transition(all, .5s);
-			position: absolute;
-			bottom: 0;
-			right: 0;
-			-webkit-transform-origin: 50% 100%;
-			-webkit-transform:rotateX(0);
-		}
-		&:hover{
-			//-webkit-transform:rotateY(20deg);
-			.fun-nav_folio-front{
-				-webkit-transform:rotateX(-30deg);		
-			}
-		}
-	}
-	#flask{
-		width:105px; height:179px;
-		position: absolute;
-		top: 50%;
-		left: 308px;
-		margin-top: - 179px/2;
-		h3{
-			top: 55px;
-			left: -20px;
-		}
-		.wrapper{
-			z-index: -1;
-			position: absolute;
-			top: 100px;
-			margin-left: -17px;
-			left: 50%;
-			-webkit-animation: bubbleY 1.5s linear 0 1;
-			&.wrapper-0	{-webkit-animation-duration: 1.7s;}
-			&.wrapper-1	{-webkit-animation-duration: 1.25s;}
-			&.wrapper-2	{-webkit-animation-duration: 1.9s;}
-			&.wrapper-3	{-webkit-animation-duration: 1.6s;}
-			&.wrapper-4	{-webkit-animation-duration: 1.4s;}
-		}
-		.fun-nav_bubble{
-			position: relative;
-			-webkit-animation: bubbleX 0.5s ease-in-out 0 infinite alternate;
-
-		}
-		&:hover{}
-	}
-	
-	#lamp{
-		width:189px; height:188px;
-		position: absolute;
-		top: 50%;
-		right: 0;
-		margin-top: - 188px/2;
-		h3{
-			top: 75px;
-			left: 10px;
-		}
-		.fun-nav_lamp{position: absolute;}
-		.fun-nav_light-ray{
-			@include transition(all, 0.12s);
-			opacity: 0.0;
-			position: absolute;
-			top: 77px;
-			left: -57px;
-		}
-		&:hover .fun-nav_light-ray{ opacity: 0.6;}
-	}
-@-webkit-keyframes bubbleX {
-	0%   {left: 0}
-	100% {left: 17px;}
-}
-@-webkit-keyframes bubbleY {
-	0%   {top: 100px}
-	75%  {opacity: 1.0;}
-	100% {opacity: 0; top: 0}
-}
-/*End Fun Nav*/ 
+@import "sass/fun-nav";
 
 /*Calendar Page*/
-@import 'sass/calendar';
+@import "sass/calendar";
 
 /*Footer*/
 #colophon{
@@ -673,6 +297,3 @@ div.wpcf7-validation-errors{
        only screen and (min-resolution: 144dpi) {
     /* Style adjustments for viewports that meet the condition */
 }
-
-
-@import "sass/helpers", "sass/nav";

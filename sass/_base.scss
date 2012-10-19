@@ -25,7 +25,7 @@ $light-blue: #8fb5c5;
 $bright-blue: #00bff3;
 
 
-@import "sass/mixins", "sass/helpers";
+@import "sass/mixins", "sass/helpers", "sass/nav" ;
 
 /*
 	Typography
@@ -238,4 +238,25 @@ textarea{height: auto;}
 }
 .plus.open .minus{
 	@include opacity(1);	
+}
+//buttons
+.edit-link{
+	display: block;
+	a{
+		float: right;
+		@extend .button;
+	}
+}
+.more{
+	display: inline-block;
+	@extend .button;
+}
+//wordpress styles
+.wp-caption{
+	padding: 5px 0;
+	text-align: center;
+	font-size: 11px;
+	color: $mid-gray;
+	background: $near-white;
+	margin-bottom: 10px;
 }

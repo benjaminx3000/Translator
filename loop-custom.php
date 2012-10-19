@@ -2,7 +2,8 @@
 	<?php get_template_part('this', 'week'); ?>
 	<?php
 		$count = 0;
-		
+		global $more;
+		global $withcomments;
 		$post_ids = array();
 		$menu_items = wp_get_nav_menu_items( 'Home Page Feed' );
 		foreach ( (array) $menu_items as $key => $menu_item ) {
@@ -48,7 +49,9 @@
 
 			</div>
 			<div id="contetnt<?php the_ID(); ?>" class="collapsable content">
-				<?php 
+				<?php
+					$more = 0;
+					$withcomments = 0;
 					switch ($post->post_type) {
 						case 't_event':
 							get_template_part('content', 'event');
@@ -56,6 +59,8 @@
 						case 't_client':
 							get_template_part('content', 'casestudy');
 							break;
+						case 'post' :
+							get_template_part('content', 'post');
 						default:
 							get_template_part('content', 'default');
 							break;
