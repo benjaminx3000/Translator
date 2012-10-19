@@ -108,7 +108,6 @@
 
 /*event info block for singles*/
 .event-info{
-	width: 216px;
 	padding: 10px;
 	background: $light-blue;
 }
@@ -140,6 +139,10 @@
 	}
 	.row-2{
 		padding-right: 300px;
+	}
+	.event-info{
+		float: right;
+		width: 216px;
 	}
 }
 

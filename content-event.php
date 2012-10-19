@@ -3,10 +3,6 @@
 	<?php if(get_post_type() != 'post') { ?>
 	<h2 class="post-title"><?php the_title(); ?></h2>
 	<?php } ?>
-	<div class="summary">
-		<?php echo apply_filters('the_content', $post->post_content); ?>
-		<?php edit_post_link( __( 'Edit', 'Translator' ), '<span class="edit-link">', '</span>' ); ?>
-	</div>
 
 	<div class="event-info">
 		<div class="date-time">
@@ -24,5 +20,9 @@
 			</span><br>
 		
 		<span class="address"><?php echo get_post_meta(get_the_id(), '_address', true); ?></span></p>
+	</div>
+	<div class="summary">
+		<?php echo apply_filters('the_content', $post->post_content); ?>
+		<?php edit_post_link( __( 'Edit', 'Translator' ), '<span class="edit-link">', '</span>' ); ?>
 	</div>
 </div>

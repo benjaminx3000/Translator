@@ -36,7 +36,8 @@
 		$args = array( 'post_type' => $query,
 			'posts_per_page' => 10,
 			'post_parent' => 0,
-			'orderby' => 'date' );
+			'order' => 'ASC',
+			'orderby' => 'menu_order' );
 		$loop = new WP_Query( $args );
 ?>
 
