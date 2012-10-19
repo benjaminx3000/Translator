@@ -81,6 +81,9 @@
 		height: auto;
 		border: 1px solid $mid-gray;
 		box-sizing: border-box;
+		.sharedaddy{
+			display: none !important;
+		}
 	}
 	p{
 		font-size: 13px;

@@ -1513,6 +1513,8 @@ li.comment {
   height: auto;
   border: 1px solid #636363;
   box-sizing: border-box; }
+  .event-card .icon .sharedaddy {
+    display: none !important; }
 .event-card p {
   font-size: 13px; }
 .event-card .content {

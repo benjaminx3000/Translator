@@ -1,5 +1,5 @@
 <?php
-//this adds jquery ui for the datepicker on the enent post type metabox :P
+//this adds jquery ui for the datepicker on the enent post type metabox :
 add_action('admin_init', 'load_admin_scripts');
 function load_admin_scripts(){
 	wp_enqueue_script('main',
@@ -42,6 +42,11 @@ function new_excerpt_more($more) {
 	return ' <a href="'. get_permalink($post->ID) . '">more...</a>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
+
+add_action( 'init', 'my_remove_filters_func' );
+function my_remove_filters_func() {
+     remove_filter( 'the_excerpt', 'sharing_display', 19 );
+}
 
 //Taxonomy
 add_action( 'init', 'create_event_types' );
