@@ -3,14 +3,14 @@ jQuery(document).ready(function($) {
 });
 
 function init($){
-	console.log('Theme JS Initialized!');	
+	console.log('Theme JS Initialized!');
 	console.log(navigator.appCodeName);
 	console.log(navigator.platform);
 
 	var path = window.location.pathname.split('/');
 		path = path[path.length - 2];
 	$('a[href="#SignupForm"], .fancy').fancybox();
-	$('.fancy-link').click(function(e){
+	$('.fancy-link, .event-card .more').click(function(e){
 		e.preventDefault();
 		$.fancybox.showLoading();
 		$('#ajax-container').load( $(this).attr('href') + ' #content', function(){
