@@ -653,11 +653,11 @@ button,
 
 .alignright {
   float: right;
-  margin-left: 10px; }
+  margin: 0 0 30px 15px; }
 
 .alignleft {
   float: left;
-  margin-right: 10px; }
+  margin: 0 15px 30px 0; }
 
 .aligncenter {
   text-align: center;
