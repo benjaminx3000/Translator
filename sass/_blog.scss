@@ -57,6 +57,10 @@
 			background: lighten($yellow, 25);
 		}
 	}
+	.more{
+		display: inline-block;
+		@extend .button;
+	}
 }
 //zebra striping... sort of
 

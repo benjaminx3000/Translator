@@ -623,7 +623,7 @@ input[type="submit"],
 button,
 .button,
 .edit-link a,
-.more {
+.blog .more {
   background: #f58337;
   color: #fff !important;
   padding: 0.2em 0.5em;
@@ -793,9 +793,6 @@ textarea {
   display: block; }
   .edit-link a {
     float: right; }
-
-.more {
-  display: inline-block; }
 
 .wp-caption {
   padding: 5px 0;
@@ -1216,6 +1213,8 @@ textarea {
     background: #fff; }
     .blog .entry-content.odd {
       background: #fff4db; }
+  .blog .more {
+    display: inline-block; }
 
 .fancybox-wrap .comments-container {
   display: none; }
