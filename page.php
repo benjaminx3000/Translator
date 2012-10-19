@@ -30,7 +30,7 @@
 					<div class="box"></div>
 				</div>
 
-				<a name="blue">
+				<a name="blue"></a>
 					<!-- hi ben -->
 					<?php if($page_name === 'calendar' || $page_name === 'events'){
 						get_template_part('loop', 'calendar');
