@@ -1,4 +1,17 @@
-@import "sass/base";
+$gray: #464646;
+$mid-gray: #636363;
+$light-gray: #7d7d7d;
+$near-white: #ebebeb;
+$red: #d71921;
+$orange: #f58337;
+$yellow: #fecf5c;
+$green: #86ac90;
+$blue: #008eb0;
+$light-blue: #8fb5c5;
+$bright-blue: #00bff3;
+
+
+@import "sass/mixins";
 
 ////////////////////
 //Translator Feed //
