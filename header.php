@@ -27,8 +27,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <meta http-equiv="cleartype" content="on">
-	<meta charset="<?php bloginfo( 'charset' ); ?>" />
-	<meta name="google-site-verification" content="Gij3gFJnKWT-wBCZLUmzgBXvnWtDKDJiEZFMDI_ZI2I" />
+	<meta charset="<?php bloginfo( 'charset' ); ?>" >
+	<meta name="google-site-verification" content="Gij3gFJnKWT-wBCZLUmzgBXvnWtDKDJiEZFMDI_ZI2I" >
 <title><?php
 	/*
 	 * Print the <title> tag based on what is being viewed.
@@ -51,12 +51,12 @@
 
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" >
+<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" >
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 
-<link href="<?php echo get_stylesheet_directory_uri(); ?>/css/oldie.js">
+<link rel="stylesheet" type="text/css" media="all" href="<?php echo get_stylesheet_directory_uri(); ?>/css/oldie.js" >
 <![endif]-->
 <?php
 	/* We add some JavaScript to pages with the comment form
