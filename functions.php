@@ -399,7 +399,7 @@ class t_event {
 			'show_in_nav_menus' => true, 
 			'show_in_menu' => true,
 			'show_in_admin_bar' => true,
-			'menu_position' => 27,
+			'menu_position' => 28,
 			// 'menu_icon' => '/absolute/url/to/icon',
 			'capability_type' => 'post',
 			'hierarchical' => false,
