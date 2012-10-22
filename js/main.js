@@ -2,6 +2,10 @@ jQuery(document).ready(function($) {
 	($('body.wp-admin').length > 0 )? adminInit($) : init($);
 });
 
+/**
+ * this is the initialization for the front end
+ * not wp sets up UI caches vars etc..
+ */
 function init($){
 	console.log('Theme JS Initialized!');
 	console.log(navigator.appCodeName);

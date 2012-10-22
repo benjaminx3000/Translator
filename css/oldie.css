@@ -6,6 +6,11 @@
 /* COLUMNS */
 /* OPACITY */
 /* TRANSITION */
+/**
+ * 1. translator-feed
+ * 2. Calendar
+ * 3. Blog
+ */
 .translator-feed .preview,
 .translator-feed .blog-nav {
   height: 75px; }
@@ -14,14 +19,15 @@
   .translator-feed .blog-nav h2 {
     font-size: 36px;
     position: relative;
-    top: -24px;
     display: inline;
+    top: 10px;
     left: auto;
     right: auto;
-    color: #fff; }
+    margin-left: 32px; }
   .translator-feed .preview.even h1, .translator-feed .preview.even h2,
   .translator-feed .blog-nav.even h1,
   .translator-feed .blog-nav.even h2 {
+    margin-right: 32px;
     left: auto;
     right: auto; }
 .translator-feed .plus {
@@ -29,7 +35,8 @@
   float: none;
   width: 75px;
   height: 75px;
-  margin: 0 0 0 32px;
+  position: absolute;
+  top: 0;
   background: rgba(255, 255, 255, 0.6); }
   .translator-feed .plus.left {
     float: none;
@@ -62,6 +69,32 @@
 .event-info {
   float: right;
   width: 216px; }
+
+.blog .article {
+  float: right;
+  margin: 0;
+  padding: 30px 0;
+  width: auto;
+  max-width: 683px; }
+.blog .nav {
+  float: right;
+  width: 100%;
+  max-width: 683px; }
+.blog #ContentTop,
+.blog #ContentBottom {
+  float: left;
+  width: 64%; }
+.blog #ContentTop .container,
+.blog #ContentMid .container {
+  width: auto; }
+.blog #Sidebar {
+  display: block;
+  float: right;
+  width: 36%; }
+  .blog #Sidebar .widget-area {
+    margin-top: 30px;
+    margin-left: 52px;
+    width: 228px; }
 
 h1 {
   font-size: 54px; }
@@ -107,7 +140,6 @@ h3 {
   width: 255px;
   height: 75px;
   float: left;
-  background: #464646 url("css/img/translator-logo.png") 25px 10px no-repeat;
   margin-left: 48px; }
 
 #Utility {
