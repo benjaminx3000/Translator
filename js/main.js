@@ -79,6 +79,7 @@ function initUI($){
 		collapser,
 		lastArticle,
 		height,
+		self,
 		plus;
 
 	$(preview).click(function(e){
