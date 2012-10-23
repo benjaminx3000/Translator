@@ -31,6 +31,7 @@ $bright-blue: #00bff3;
 	Typography
 */
 
+
 @import url("http://fonts.googleapis.com/css?family=Montserrat");
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:400,700");
 
@@ -222,22 +223,49 @@ textarea{height: auto;}
 	top: 100px;
 }
 
+.plus{
+	background-image: url(css/img/plus.png);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	&.open{
+		background-image: url(css/img/minus.png);
+	}
+}
+.svg .plus{
+	background-image: none;
+}
+
 .plus .plust{
 	@include transform-origin;
-	@include transition(all, 0.6s);
-	@include opacity(1);
-	@include rotate(0);
+	-webkit-animation: animation-close 0.6s 1 alternate; /* Safari 5, Chrome */
+	-webkit-animation-fill-mode: forwards;
+     -moz-animation: animation-close 0.6s 1 alternate; /* Firefox 5-15 */
+       -o-animation: animation-close 0.6s 1 alternate; /* Opera 12+ */
+          animation: animation-close 0.6s 1 alternate; /* Safari 5, Chrome, Firefox 16+ */
 }
 .plus .minus{
-	@include transition(all, 0.6s);
-	@include opacity(0);
+	// @include transition(all, 0, 0.5s);
+	// @include opacity(0);
+	-webkit-animation: animation-close-minus 0.6s 1 alternate; /* Safari 5, Chrome */
+	-webkit-animation-fill-mode: forwards;
+     -moz-animation: animation-close-minus 0.6s 1 alternate; /* Firefox 5-15 */
+       -o-animation: animation-close-minus 0.6s 1 alternate; /* Opera 12+ */
+          animation: animation-close-minus 0.6s 1 alternate; /* Safari 5, Chrome, Firefox 16+ */
 }
 .plus.open .plust{
-	@include opacity(0);
-	@include rotate(-90deg);
+	-webkit-animation: animation-open 0.6s 1 alternate; /* Safari 5, Chrome */
+	-webkit-animation-fill-mode: forwards;
+     -moz-animation: animation-open 0.6s 1 alternate; /* Firefox 5-15 */
+       -o-animation: animation-open 0.6s 1 alternate; /* Opera 12+ */
+          animation: animation-open 0.6s 1 alternate; /* Safari 5, Chrome, Firefox 16+ */
 }
 .plus.open .minus{
-	@include opacity(1);	
+	//@include opacity(1);
+	-webkit-animation: animation-open-minus 0.6s 1 alternate; /* Safari 5, Chrome */
+	-webkit-animation-fill-mode: forwards;
+     -moz-animation: animation-open-minus 0.6s 1 alternate; /* Firefox 5-15 */
+       -o-animation: animation-open-minus 0.6s 1 alternate; /* Opera 12+ */
+          animation: animation-open-minus 0.6s 1 alternate; /* Safari 5, Chrome, Firefox 16+ */
 }
 //buttons
 .edit-link{
@@ -247,6 +275,89 @@ textarea{height: auto;}
 		@extend .button;
 	}
 }
+
+//animations
+
+@-webkit-keyframes animation-open {
+  0%   { @include rotate(0); }
+  95% { @include rotate(-90deg); @include opacity(1); }
+  100%	{@include opacity(0);}
+}
+@-moz-keyframes animation-open {
+  0%   { @include rotate(0); }
+  95% { @include rotate(-90deg); @include opacity(1); }
+  100%	{@include opacity(0);}
+}
+@-o-keyframes animation-open {
+  0%   { @include rotate(0); }
+  95% { @include rotate(-90deg); @include opacity(1); }
+  100%	{@include opacity(0);}
+}
+@keyframes animation-open {
+  0%   { @include rotate(0); }
+  95% { @include rotate(-90deg); @include opacity(1); }
+  100%	{@include opacity(0);}
+}
+	@keyframes animation-open-minus {
+	  95%	{@include opacity(0);}
+	  100%   	{@include opacity(1); }
+	}
+	@-webkit-keyframes animation-open-minus {
+	  95%	{@include opacity(0);}
+	  100%   	{@include opacity(1); }
+	}
+	@-moz-keyframes animation-open-minus {
+	  95%	{@include opacity(0);}
+	  100%   	{@include opacity(1); }
+	}
+	@-o-keyframes animation-open-minus {
+	  95%	{@include opacity(0);}
+	  100%   	{@include opacity(1); }
+	}
+	@keyframes animation-open-minus {
+	  95%	{@include opacity(0);}
+	  100%   	{@include opacity(1); }
+	}
+
+@-webkit-keyframes animation-close {
+  0%   	{@include rotate(-90deg); @include opacity(0); }
+  5%	{@include opacity(1);}
+  95% 	{@include rotate(0);}
+  100%	{@include opacity(1);}
+}
+@-moz-keyframes animation-close {
+  0%   	{@include rotate(-90deg); @include opacity(0); }
+  5%	{@include opacity(1);}
+  95% 	{@include rotate(0);}
+  100%	{@include opacity(1);}
+}
+@-o-keyframes animation-close {
+  0%   	{@include rotate(-90deg); @include opacity(0); }
+  5%	{@include opacity(1);}
+  95% 	{@include rotate(0);}
+  100%	{@include opacity(1);}
+}
+	@keyframes animation-close-minus {
+	  0%   	{@include opacity(1); }
+	  1%	{@include opacity(0);}
+	}
+		@-webkit-keyframes animation-close-minus {
+	  0%   	{@include opacity(1); }
+	  1%	{@include opacity(0);}
+	}
+	@-moz-keyframes animation-close-minus {
+	  0%   	{@include opacity(1); }
+	  1%	{@include opacity(0);}
+	}
+	@-o-keyframes animation-close-minus {
+	  0%   	{@include opacity(1); }
+	  1%	{@include opacity(0);}
+	}
+	@keyframes animation-close-minus {
+	  0%   	{@include opacity(1); }
+	  1%	{@include opacity(0);}
+	}
+
 
 //wordpress styles
 .wp-caption{

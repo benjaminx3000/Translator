@@ -6,6 +6,8 @@ jQuery(document).ready(function($) {
  * this is the initialization for the front end
  * not wp sets up UI caches vars etc..
  */
+
+
 function init($){
 	console.log('Theme JS Initialized!');
 	console.log(navigator.appCodeName);
@@ -20,6 +22,7 @@ function init($){
 		$('#ajax-container').load( $(this).attr('href') + ' #content', function(){
 			$.fancybox.open('#ajax-container', {autoSize: false,width: 800});
 			$.fancybox.hideLoading();
+			$(document).trigger('post-load');
 		});
 	});
 	navigation($);
@@ -80,16 +83,18 @@ function initUI($){
 
 	$(preview).click(function(e){
 		e.preventDefault();
+		
 		//find the collapsable content
 		window.location.hash = $(this).parents('.hentry').attr('id');
-		collapser = $(this).siblings('.collapsable');
+		self = $(this);
+		collapser = $(self).siblings('.collapsable');
+		
 		//if it's not the same as from the last click,
 		//then close the last one and open the new
-		
 		if( lastArticle == undefined || collapser.attr('id') !== lastArticle.attr('id') ){
 			processClick();
 		} else {
-		if($(collapser).height() == 0){
+			if($(collapser).height() == 0){
 				$(collapser).height(height);
 				$(plus).addClass('open');
 			} else{
@@ -102,13 +107,13 @@ function initUI($){
 			$(lastArticle).height(0);
 			$(plus).removeClass('open');
 			height = $(collapser).find('.article').outerHeight();
-			plus = $(this).find('.plus');
+			plus = $(self).find('.plus');
 			$(plus).addClass('open');
 			$(collapser).height(height);
 			lastArticle = $(collapser);
 		}
 
-		var ref = $(this);
+		var ref = $(self);
 		var delay = parseFloat($(collapser).css('-webkit-transition-duration'));
 		console.log(delay * 1000);
 		setTimeout(function(){

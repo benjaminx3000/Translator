@@ -72,6 +72,9 @@
 	wp_head();
 ?>
 
+<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/vendor/modernizr-2.5.3.min.js" ></script>
+
+
 <script type="text/javascript">
 
   var _gaq = _gaq || [];

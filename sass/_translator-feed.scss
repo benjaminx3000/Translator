@@ -69,19 +69,19 @@ $row-height: 55px;
 	}
 	.t_client{
 			background: #000;
-			.plus{background: $green;}
+			.plus{background-color: $green;}
 			polygon{fill: #000;}
 	}
 	.t_lab,
 	.focused-lab,
 	.open-lab{
 		background: $blue;
-		.plus{background: $light-blue;}
+		.plus{background-color: $light-blue;}
 		polygon{fill: $blue;}
 	}
 	.t_product_studio{
 		background: $yellow;
-		.plus{background: $red;}
+		.plus{background-color: $red;}
 		polygon{fill: $yellow;}
 	}
 	.t_xsmke,
@@ -91,17 +91,17 @@ $row-height: 55px;
 	.xseries,
 	.xsmke{
 		background: $red;
-		.plus{background: $orange;}
+		.plus{background-color: $orange;}
 		polygon{fill: $red;}
 	}
 	.this-week{
 		background: $orange;
-		.plus{background: $yellow;}
+		.plus{background-color: $yellow;}
 		polygon{fill: $orange;}
 	}
 	.post{
 		background: $green;
-		.plus{background: $red;}
+		.plus{background-color: $red;}
 		polygon{fill: $green;}
 	}
 }
@@ -133,7 +133,7 @@ $row-height: 55px;
 			width: $row-height;
 			height: $row-height;
 			margin: 0 0 0 32px;
-			background: rgba(255, 255, 255, 0.6);
+			//background-color: rgba(255, 255, 255, 0.6);
 			&.left{
 				float: none;
 				margin: 0 32px 0 0;}

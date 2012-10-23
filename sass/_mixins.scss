@@ -95,12 +95,12 @@
 }
 
 /* TRANSITION */
-@mixin transition($what: all, $length: 1s, $easing: ease-in-out) {
-    -moz-transition:    $what $length $easing;
-    -o-transition:      $what $length $easing;
-    -webkit-transition: $what $length $easing;
-    -ms-transition:     $what $length $easing;
-    transition:         $what $length $easing;
+@mixin transition($what: all, $length: 1s, $delay: 0, $easing: ease-in-out) {
+    -moz-transition:    $what $length $delay $easing;
+    -o-transition:      $what $length $delay $easing;
+    -webkit-transition: $what $length $delay $easing;
+    -ms-transition:     $what $length $delay $easing;
+    transition:         $what $length $delay $easing;
 }
 @mixin transform-origin($x:50%, $y:50%){
     -ms-transform-origin:$x $y;
@@ -109,6 +109,7 @@
     -o-transform-origin:$x $y; 
     transform-origin:$x $y;
 }
+
 @mixin scale($scale: 0.5){
   -moz-transform:scale($scale);
   -webkit-transform:scale($scale);
