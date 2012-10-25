@@ -24,7 +24,7 @@
 			?>
 			<div id="ajax-container"></div>
 			<div id="SignupForm" style="width: 380px">
-				<form action="http://translatordigitalcafe.us2.list-manage2.com/subscribe/post?u=4f0df1102a56ea0f4cc811f93&amp;id=8d4e83ef68" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+				<form action="http://translatordigitalcafe.us2.list-manage.com/subscribe/post?u=4f0df1102a56ea0f4cc811f93&amp;id=af6fec3b20" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
 					<label for="mce-EMAIL">Stay informed of upcoming lab topics, events and other activities and projects. Don't worry, we promise not to bombard you with awesomeness.</label>
 					<p>
 						email<sup>*</sup><br>
@@ -40,6 +40,11 @@
 						last name<br>
 						<input type="text" value="" name="LNAME" class="lname" id="mce-LNAME" placeholder="last name">
 					</p>
+					
+					<div class="hidden">
+						<input type="checkbox" checked="checked" id="group_131072" name="group[12729][131072]" value="1">
+					</div>
+
 					<div class="clear">
 						<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
 					</div>

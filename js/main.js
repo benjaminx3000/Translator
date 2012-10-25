@@ -1,14 +1,20 @@
+/**
+ * the global translator scope
+ */
+
+var tran = {}
+
 jQuery(document).ready(function($) {
 	($('body.wp-admin').length > 0 )? adminInit($) : init($);
 });
 
 /**
  * this is the initialization for the front end
- * not wp sets up UI caches vars etc..
+ * sets up UI caches vars etc..
  */
-
-
 function init($){
+	tran.topOffset = 2;
+	tran.lastArticle = $('.collapsable.expanded');
 	console.log('Theme JS Initialized!');
 	console.log(navigator.appCodeName);
 	console.log(navigator.platform);
@@ -60,6 +66,7 @@ function registerCustomAnalytics($){
 }
 
 function adminInit($){
+	tran.topOffset = -27;
 	console.log('Admin JS Initialized!');
     $('input.datepicker').datepicker({
 		dateFormat: 'DD, m/d',
@@ -70,6 +77,7 @@ function adminInit($){
 }
 
 function handleHash($, hash){
+		$(hash).find('.expanded').removeClass('expanded');
 		$(hash).find('.preview').click();
 }
 
@@ -77,7 +85,6 @@ function handleHash($, hash){
 function initUI($){
 	var preview = $('.preview'),
 		collapser,
-		lastArticle,
 		height,
 		self,
 		plus;
@@ -90,12 +97,17 @@ function initUI($){
 		self = $(this);
 		collapser = $(self).siblings('.collapsable');
 		
-		//if it's not the same as from the last click,
-		//then close the last one and open the new
-		if( lastArticle == undefined || collapser.attr('id') !== lastArticle.attr('id') ){
+		
+		if( tran.lastArticle == undefined || collapser.attr('id') !== tran.lastArticle.attr('id') ){
+			//if it's not the same as from the last click,
+			//then close the last one and open the new
 			processClick();
 		} else {
+			//we are clicking on the same content
+			//as last time, meaning we're gonna
+			//toggle it!
 			if($(collapser).height() == 0){
+				height = $(collapser).find('.article').outerHeight();
 				$(collapser).height(height);
 				$(plus).addClass('open');
 			} else{
@@ -105,24 +117,22 @@ function initUI($){
 		}
 
 		function processClick(){
-			$(lastArticle).height(0);
+			$(tran.lastArticle).height(0);
 			$(plus).removeClass('open');
 			height = $(collapser).find('.article').outerHeight();
 			plus = $(self).find('.plus');
 			$(plus).addClass('open');
 			$(collapser).height(height);
-			lastArticle = $(collapser);
+			tran.lastArticle = $(collapser);
 		}
 
 		var ref = $(self);
 		var delay = parseFloat($(collapser).css('-webkit-transition-duration'));
-		console.log(delay * 1000);
 		setTimeout(function(){
 			if(navigator.platform == 'iPhone' || navigator.platform == 'iPad' || navigator.platform == 'iPhone Simulator'){
-				console.log('iphone or ipad');
-				window.scrollTo(0, $(ref).offset().top - parseInt($('#primary').css('marginTop')) - 27);
+				window.scrollTo(0, $(ref).offset().top - parseInt($('#primary').css('marginTop')) + tran.topOffset);
 			} else {
-				$.scrollTo({left:0, top: $(ref).offset().top - parseInt($('#primary').css('marginTop')) - 27}, delay * 1000);
+				$.scrollTo({left:0, top: $(ref).offset().top - parseInt($('#primary').css('marginTop'))+ tran.topOffset}, delay * 1000);
 			}
 		}, delay * 1000);
 		
