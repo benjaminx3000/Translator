@@ -2,10 +2,10 @@
  * the global translator scope
  */
 
-var tran = {}
+var tran = {};
 
 jQuery(document).ready(function($) {
-	($('body.wp-admin').length > 0 )? adminInit($) : init($);
+	( $('body.wp-admin').length > 0 )? adminInit($) : init($);
 });
 
 /**
@@ -14,7 +14,7 @@ jQuery(document).ready(function($) {
  */
 function init($){
 	tran.topOffset = 2;
-	tran.lastArticle = $('.collapsable.expanded');
+	tran.lastArticle = $('.collapsable.expanded');//if there is collapsable content manually set to be open, set the lastArticle variable
 	console.log('Theme JS Initialized!');
 	console.log(navigator.appCodeName);
 	console.log(navigator.platform);
@@ -25,16 +25,15 @@ function init($){
 	$('.fancy-link, .event-card .more').click(function(e){
 		e.preventDefault();
 		$.fancybox.showLoading();
-		$('#ajax-container').load( $(this).attr('href') + ' #content', function(){
+		$('#ajax-container').load( $(this).attr('href') + ' #ContentTop', function(){
 			$.fancybox.open('#ajax-container', {autoSize: false,width: 800});
 			$.fancybox.hideLoading();
-			$(document).trigger('post-load');
 		});
 	});
 	navigation($);
 	initUI($);
 	registerCustomAnalytics($);
-	$('.case-study').postTemplate();
+	$('.case-study .primary').postTemplate();
 	handleHash($, window.location.hash);
 	
 	switch(path){

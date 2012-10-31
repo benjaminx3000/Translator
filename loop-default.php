@@ -26,11 +26,8 @@
 		case 'xsmke':
 			$query = array('t_xsmke');
 			break;
-		case 'about':
-			$query = array();
-			break;
 		default:
-			$query = array('t_product_studio', 't_event', 't_client', 't_lab', 't_xsmke');
+			$query = array();
 			break;
 	}
 		$args = array( 'post_type' => $query,
@@ -92,12 +89,11 @@
 							break;
 						case 't_client':
 							include(locate_template('content-casestudy.php'));
-							// get_template_part('content', 'casestudy');
 							break;
 						case 'post' :
 							get_template_part('content', 'post');
 						default:
-							get_template_part('content', 'default');
+							get_template_part('content', 'default-full');
 							break;
 					}
 				?>

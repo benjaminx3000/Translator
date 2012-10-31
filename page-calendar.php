@@ -2,7 +2,7 @@
 		<?php $page_name = $post->post_name; ?>
 		<div id="primary" class="<?php echo 'page-' . $page_name; ?>">
 			<div id="content" role="main">
-				<div id="ContentTop" class="interior-page <?php echo $page_name; ?>">
+				<!-- <div id="ContentTop" class="interior-page <?php echo $page_name; ?>">
 					<?php while ( have_posts() ) : the_post(); ?>
 					<div class="container" >
 						<?php
@@ -18,11 +18,11 @@
 						<?php the_content(); ?>
 						
 
-					 <?php include(locate_template('calendar.php')); ?>
 
 					</div>
 
-					<?php endwhile; // end of the loop. ?>
+					<?php endwhile; // end of the loop. ?> -->
+				 <?php include(locate_template('calendar.php')); ?>
 				</div><!--End #ContentTop -->
 				<div id="ContentMid">
 					<div class="container">

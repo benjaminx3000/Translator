@@ -3,7 +3,6 @@
 		$terms = wp_get_post_terms($post->ID, 'event-type', array("fields" => "names"));
 		$img = '';
 	?>
-
 	<?php 
 	if ( count($terms) ) {
 		switch ($terms[0]) {
@@ -42,12 +41,8 @@
 				<?php the_excerpt(); ?>
 			</p>
 		
-		<?php $link =  get_post_meta(get_the_id(), '_location_link', true); ?>
+		<?php $link = get_post_meta(get_the_id(), '_location_link', true); ?>
 		<p>
-			<span class="location-name">
-				<?php echo get_post_meta(get_the_id(), '_location', true); ?>
-			</span>
-			<span class="address"><?php echo get_post_meta(get_the_id(), '_address', true); ?></span> 
 			<?php if($link){echo " <a class='location' href='$link' target='_blank'>map</a>";} ?>
 		</p>
 	</div>

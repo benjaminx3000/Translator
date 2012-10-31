@@ -1,3 +1,12 @@
+<?php
+/**
+ * This Loop is used on the home page
+ * instead of running the usual wordpress loop
+ * it grabs a colleciton of posts gererated via a
+ * custom menu named 'Home Page Feed'
+ */
+?>
+
 <div id="ContentBottom" class="translator-feed">
 	<?php get_template_part('this', 'week'); ?>
 	<?php
@@ -56,9 +65,9 @@
 						case 't_event':
 							get_template_part('content', 'event');
 							break;
-						case 't_client':
-							get_template_part('content', 'casestudy');
-							break;
+						// case 't_client':
+						// 	get_template_part('content', 'casestudy');
+						// 	break;
 						case 'post' :
 							get_template_part('content', 'post');
 						default:

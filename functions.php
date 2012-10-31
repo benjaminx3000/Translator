@@ -403,7 +403,7 @@ class t_event {
 			// 'menu_icon' => '/absolute/url/to/icon',
 			'capability_type' => 'post',
 			'hierarchical' => false,
-			'supports' => array('title', 'comments','editor', 'thumbnail','custom-fields','page-attributes'),
+			'supports' => array('title', 'editor', 'thumbnail','custom-fields','page-attributes'),
 			'has_archive' => true,
 			'rewrite' => array('slug' => 'calendar-events'),
 			'query_var' => true,
@@ -446,40 +446,37 @@ function t_events_date() {
     echo '<p><label for="_event_date">Event Date</label><br>';
     echo '<input type="text" name="_event_date" value="' . $date  . '" class="datepicker " /></p>';
     $full_date = get_post_meta($post->ID, '_event_full_date', true);
-    echo '<input type="text" name="_event_full_date" value="' . $full_date  . '" class="full-date " /></p>';
+    echo '<input type="hidden" name="_event_full_date" value="' . $full_date  . '" class="full-date " /></p>';
 
-    $time_stamp = strtotime( str_replace('<br>', ' ',get_post_meta(get_the_id(), "_event_full_date", true)));
+    $time_stamp = strtotime( str_replace('<br>', ' ',get_post_meta(get_the_id(), "_event_full_date", true)) . ' ' . get_post_meta($post->ID, '_event_start_time', true));
     echo '<input type="hidden" id="_time_stamp" name="_time_stamp" value="' . $time_stamp  . '" /></p>';
-    echo 'Timestamp: ' . $time_stamp;
 
     $st = get_post_meta($post->ID, '_event_start_time', true);
     echo '<p><label for="_event_start_time">Start Time</label><br>';
-    echo '<input type="text" name="_event_start_time" value="' . $st  . '" class="time" /></p>';
+    echo '<input type="text" name="_event_start_time" value="' . (($st != '')? $st : '8:00am') . '" class="time" /></p>';
     
     $et = get_post_meta($post->ID, '_event_end_time', true);
     echo '<p><label for="_event_end_time">End Time</label><br>';
-    echo '<input type="text" name="_event_end_time" value="' . $et  . '" class="time" /></p>';
+    echo '<input type="text" name="_event_end_time" value="' . (($et != '')? $et : '10:00am')  . '" class="time" /></p>';
 
     // Get the location data if its already been entered
     $location = get_post_meta($post->ID, '_location', true);
     // Echo out the field
-    $loc_default = 'Translator 415 E Menomonee St.<br>Milwukee';
     echo '<p><label for="_location">Event Location</label><br>';
-    echo '<input type="text" name="_location" value="' . $location . '" class="" /></p>';
+    echo '<input type="text" name="_location" value="' . (($location != '')? $location : 'Translator') . '" class="" /></p>';
 
     // Get the location data if its already been entered
     $address = get_post_meta($post->ID, '_address', true);
     // Echo out the field
-    $address_default = '415 E Menomonee St.<br>Milwukee';
+    $address_default = '415 E Menomonee St.<br>Milwukee WI 53202';
     echo '<p><label for="_address">Address</label><br>';
-    echo '<input type="text" name="_address" value="' . $address . '" class="" /></p>';
+    echo '<input type="text" name="_address" value="' . (($address != '')? $address : $address_default) . '" class="widefat" /></p>';
 
+    $location_link_default = 'https://maps.google.com/maps?q=415+e+menomonee+st&hl=en&sll=43.031528,-87.905339&sspn=87.37131,185.449219&t=v&gl=us&hnear=415+E+Menomonee+St,+Milwaukee,+Wisconsin+53202&z=16';
     $location_link = get_post_meta($post->ID, '_location_link', true);
     // Echo out the field
-    
-
     echo '<p><label for="_location_link">Map Link</label><br>';
-    echo '<input type="text" name="_location_link" value="' . $location_link . '" class="" /></p>';
+    echo '<input type="text" name="_location_link" value="' . (($location_link != '')? $location_link : $location_link_default) . '" class="widefat" /></p>';
 }
 
 //Studio product and client name metabox
@@ -512,7 +509,7 @@ function t_save_events_meta($post_id, $post) {
     // We'll put it into an array to make it easier to loop though.
     $events_meta['_event_date'] = $_POST['_event_date'];
     $events_meta['_event_full_date'] = $_POST['_event_full_date'];
-    $events_meta['_time_stamp'] = strtotime( $_POST['_event_full_date']);
+    $events_meta['_time_stamp'] = strtotime( $_POST['_event_full_date'] . ' ' . $_POST['_event_start_time']);
     $events_meta['_event_start_time'] = $_POST['_event_start_time'];
     $events_meta['_event_end_time'] = $_POST['_event_end_time'];
     $events_meta['_location'] = $_POST['_location'];

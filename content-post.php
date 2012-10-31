@@ -1,4 +1,5 @@
 <div class="article">
+	<?php edit_post_link( __( 'Edit', 'Translator' ), '<span class="edit-link">', '</span>' ); ?>
 	<div class="post-head author-meta">
 		<?php $twitter_handle = get_the_author_meta('twitter_handle', $post->post_author); ?>
 		<img src="http://api.twitter.com/1/users/profile_image?screen_name=<?php echo $twitter_handle; ?>&amp;size=bigger">
@@ -11,8 +12,10 @@
 
 	<h4></h4>
 	<div class="post-preview">
-		<?php echo apply_filters('the_content', $post->post_content); ?>
-		<?php edit_post_link( __( 'Edit', 'Translator' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php echo apply_filters('the_excerpt', $post->post_excerpt); ?>
+		<div>
+			<a href="<?php the_permalink() ?>" class="more">more</a>
+		</div>
 	</div>
 	<div class="post-footer">
 		<div class="tags">

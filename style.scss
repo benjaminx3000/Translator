@@ -131,6 +131,13 @@ Template: twentyeleven
 		p{margin: 0 5px 1.2em;color: $light-gray;}
 		.container{padding-bottom: 52px;}
 	}
+	&.single-post{
+		h1{margin: 0;
+			font-size:32px;}
+	}
+	&.calendar{
+		h1,h2{color: #fff;}
+	}
 	&.lab.interior-page{
 		h1.page-title{margin: 0;}
 	}

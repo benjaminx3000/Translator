@@ -1,5 +1,4 @@
 <div class="article event">
-
 	<?php if(get_post_type() != 'post') { ?>
 	<h2 class="post-title"><?php the_title(); ?></h2>
 	<?php } ?>
